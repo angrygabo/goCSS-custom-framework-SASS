@@ -88,7 +88,7 @@
         @include col($col);
         @for $col from 1 through $col {
             .col-#{$col} {
-                @include col-ajust ($col);
+                @include col($col);
             }
         }
         @each $size in $screen {

@@ -70,20 +70,6 @@ $size-col-10:              83.333333%;
 $size-col-11:              91.666667%;
 $size-col-12:              100%;
 
-// sizes col ajust
-$size-col-1-ajust:         calc(#{$size-col-1} - 2.5px);
-$size-col-2-ajust:         calc(#{$size-col-2} - 5px);
-$size-col-3-ajust:         calc(#{$size-col-3} - 7.5px);
-$size-col-4-ajust:         calc(#{$size-col-4} - 10px);
-$size-col-5-ajust:         calc(#{$size-col-5} - 12.5px);
-$size-col-6-ajust:         calc(#{$size-col-6} - 15px);
-$size-col-7-ajust:         calc(#{$size-col-7} - 17px);
-$size-col-8-ajust:         calc(#{$size-col-8} - 20px);
-$size-col-9-ajust:         calc(#{$size-col-9} - 22px);
-$size-col-10-ajust:        calc(#{$size-col-10} - 24px);
-$size-col-11-ajust:        calc(#{$size-col-11} - 27px);
-$size-col-12-ajust:        calc(#{$size-col-12} - 30px);
-
 // sizes col default
 $size-col-1-flex:          0 0 #{$size-col-1};
 $size-col-2-flex:          0 0 #{$size-col-2};
@@ -97,20 +83,6 @@ $size-col-9-flex:          0 0 #{$size-col-9};
 $size-col-10-flex:         0 0 #{$size-col-10};
 $size-col-11-flex:         0 0 #{$size-col-11};
 $size-col-12-flex:         0 0 #{$size-col-12};
-
-// sizes col flex ajust
-$size-col-1-ajust-flex:    0 0 calc(#{$size-col-1} - 2.5px);
-$size-col-2-ajust-flex:    0 0 calc(#{$size-col-2} - 5px);
-$size-col-3-ajust-flex:    0 0 calc(#{$size-col-3} - 7.5px);
-$size-col-4-ajust-flex:    0 0 calc(#{$size-col-4} - 10px);
-$size-col-5-ajust-flex:    0 0 calc(#{$size-col-5} - 12.5px);
-$size-col-6-ajust-flex:    0 0 calc(#{$size-col-6} - 15px);
-$size-col-7-ajust-flex:    0 0 calc(#{$size-col-7} - 17px);
-$size-col-8-ajust-flex:    0 0 calc(#{$size-col-8} - 20px);
-$size-col-9-ajust-flex:    0 0 calc(#{$size-col-9} - 22px);
-$size-col-10-ajust-flex:   0 0 calc(#{$size-col-10} - 24px);
-$size-col-11-ajust-flex:   0 0 calc(#{$size-col-11} - 27px);
-$size-col-12-ajust-flex:   0 0 calc(#{$size-col-12} - 30px);
 
 // typography
 $font-family-sans-serif:   "Helvetica Neue", Helvetica, Arial, sans-serif;
