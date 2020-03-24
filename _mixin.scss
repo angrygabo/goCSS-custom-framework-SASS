@@ -36,17 +36,6 @@
     }
 }
 
-// default col settings
-@mixin col-default {
-    .col {
-        flex: 0 0 100%;
-        max-width: 100%;
-        width: 100%;
-        margin-right: 0;
-        left: 0;
-    }
-}
-
 // cols
 @mixin col($col) {
     @if $col == 1 {
@@ -97,57 +86,5 @@
     @if $col == 12 {
         flex: $size-col-12-flex;
         max-width: $size-col-12;
-    }
-}
-
-// col widths
-@mixin col-ajust ($col) {
-    @if $col == 1 {
-        flex: 0 0 calc(#{$size-col-1-ajust});
-        max-width: calc(#{$size-col-1-ajust});
-    }
-    @if $col == 2 {
-        flex: 0 0 calc(#{$size-col-2-ajust});
-        max-width: calc(#{$size-col-2-ajust});
-    }
-    @if $col == 3 {
-        flex: 0 0 calc(#{$size-col-3-ajust});
-        max-width: calc(#{$size-col-3-ajust});
-    }
-    @if $col == 4 {
-        flex: 0 0 calc(#{$size-col-4-ajust});
-        max-width: calc(#{$size-col-4-ajust});
-    }
-    @if $col == 5 {
-        flex: 0 0 calc(#{$size-col-5-ajust});
-        max-width: calc(#{$size-col-5-ajust});
-    }
-    @if $col == 6 {
-        flex: 0 0 calc(#{$size-col-6-ajust});
-        max-width: calc(#{$size-col-6-ajust});
-    }
-    @if $col == 7 {
-        flex: 0 0 calc(#{$size-col-7-ajust});
-        max-width: calc(#{$size-col-7-ajust});
-    }
-    @if $col == 8 {
-        flex: 0 0 calc(#{$size-col-8-ajust});
-        max-width: calc(#{$size-col-8-ajust});
-    }
-    @if $col == 9 {
-        flex: 0 0 calc(#{$size-col-9-ajust});
-        max-width: calc(#{$size-col-9-ajust});
-    }
-    @if $col == 10 {
-        flex: 0 0 calc(#{$size-col-10-ajust});
-        max-width: calc(#{$size-col-10-ajust});
-    }
-    @if $col == 11 {
-        flex: 0 0 calc(#{$size-col-11-ajust});
-        max-width: calc(#{$size-col-11-ajust});
-    }
-    @if $col == 12 {
-        flex: 0 0 calc(#{$size-col-12-ajust});
-        max-width: calc(#{$size-col-12-ajust});
     }
 }
