@@ -96,8 +96,7 @@
             @include media-breakpoint-down($size) {
                 @for $col from 1 through $cols {
                     .col-#{$size}-#{$col} {
-                        $col-default:1;
-                        @include col-media($col,$col-default);
+                        @include col($col);
                     }
                 }
             }
@@ -108,8 +107,7 @@
             @for $col from 1 through $cols {
                 .col-#{$size}-#{$col},
                 .child-#{$size}-col-#{$col} > .col {
-                    $col-default:1;
-                    @include col-media($col,$col-default);
+                    @include col($col);
                 }
             }
         }
