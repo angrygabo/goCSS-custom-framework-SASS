@@ -1,0 +1,11 @@
+descargar e instalar node.js
+
+node -v (ver version)
+npm -v (ver paquetes de node)
+
+npm install -g sass (instalar global sass)
+
+terminal directorio proyecto
+sass --watch boogo.scss boogo.min.css compressed
+
+sass --watch boogo.scss boogo.min.css --style compressed

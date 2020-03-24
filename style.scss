@@ -1,0 +1,29 @@
+@import 'boogo';
+
+
+.container {
+    min-height: 100px;
+}
+
+.imagen {
+    display: block;
+    width: 100%;
+    height: 300px;
+}
+.selector {
+    color: red;
+    @include media-breakpoint-between(xs,md) {
+      width: $w-100;
+    }
+}
+.row {
+    margin-bottom: $rem;
+}
+.col {
+    min-height: 100px;
+    background:  $light-color;
+    align-items: center;
+    justify-content: center;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}

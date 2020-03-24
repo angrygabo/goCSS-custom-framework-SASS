@@ -1,0 +1,86 @@
+//clearfix
+.clearfix {
+    @include clearfix;
+}
+
+//default container width
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+}
+@include media-breakpoint-up(xl) {
+    .container {
+        width: $container-xl;
+    }
+}
+@include media-breakpoint-down(xl) {
+    .container {
+        width: $container-xl;
+    }
+}
+@include media-breakpoint-down(lg) {
+    .container {
+        width: $container-lg;
+    }
+}
+@include media-breakpoint-down(md) {
+    .container {
+        width: $container-md;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .container {
+        width: $container-sm;
+    }
+}
+@include media-breakpoint-down(xs) {
+    .container {
+        width: $container-xs;
+    }
+}
+
+// widths
+.full-width-viewport,
+.full-width {
+    position: relative;
+    width: 100vw!important;
+    max-width: 100vw!important;
+    left: 50%;
+    margin-right: 0!important;
+    margin-left: -50vw!important;
+}
+.w-100 {
+    width: $w-100;
+}
+.w-vh {
+    width: $w-vh;
+}
+
+// heights
+.h-100 {
+    height: $h-100;
+}
+.h-vh {
+    height: $h-vh;
+}
+
+// table
+table {
+    border-collapse: collapse;
+}
+caption {
+    padding-top: $table-cell-padding;
+    padding-bottom: $table-cell-padding;
+    color: $table-caption-color;
+    text-align: left;
+    caption-side: bottom;
+}
+th {
+    // Matches default `<td>` alignment by inheriting from the `<body>`, or the
+    // closest parent with a set `text-align`.
+    text-align: inherit;
+}

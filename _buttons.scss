@@ -1,0 +1,160 @@
+.btn {
+    margin-top: $rem;
+    margin-right: $rem*.5;
+    border: 0;
+    min-width: 100px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    color: $white;
+    font-weight: 600;
+    transition: .1s;
+    opacity: 1;
+    &.btn-lg {
+        font-size: $rem*1.25;
+        line-height: 1.5;
+    }
+    &.btn-sm {
+        padding: $rem*.25 $rem*.5;
+        font-size: $rem*.875;
+        line-height: 1.5;
+    }
+    &.btn.disabled, 
+    &.btn:disabled {
+        opacity: .65;
+    }
+    &:hover {
+        opacity: 0.8;
+    }
+    // default buttons
+    &.btn-primary {
+        background: $primary-color;
+    }
+    &.btn-secondary {
+        background: $secondary-color;
+    }
+    &.btn-success {
+        background: $success-color;
+    }
+    &.btn-danger {
+        background: $danger-color;
+    }
+    &.btn-warning {
+        background: $warning-color;
+        color: $black;
+    }
+    &.btn-info {
+        background: $primary-color;
+    }
+    &.btn-light {
+        background: $light-color;
+        color: $black;
+    }
+    &.btn-dark {
+        background: $black;
+        color: $white;
+    }
+        // outline buttons
+        &.btn-outline-primary {
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            &:hover{
+                background: $primary-color;
+                color: $white;
+            }
+        }
+        &.btn-outline-secondary {
+            border: 1px solid $secondary-color;
+            color: $secondary-color;
+            &:hover{
+                background:  $secondary-color;
+                color: $white;
+            }
+        }
+        &.btn-outline-success {
+            border: 1px solid $success-color;
+            color: $success-color;
+            &:hover{
+                background: $success-color;
+                color: $white;
+            }
+        }
+        &.btn-outline-danger {
+            border: 1px solid $danger-color;
+            color: $danger-color;
+            &:hover{
+                background: $danger-color;
+                color: $white;
+            }
+        }
+        &.btn-outline-warning {
+            border: 1px solid $warning-color;
+            color: $warning-color;
+            &:hover{
+                background: $warning-color;
+                color: $black;
+            }
+        }
+        &.btn-outline-info {
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            &:hover{
+                background: $primary-color;
+                color: $white;
+            }
+        }
+        &.btn-outline-light {
+            border: 1px solid $light-color;
+            color: $light-color;
+            &:hover{
+                background: $light-color;
+                color: $black;
+            }
+        }
+        &.btn-outline-dark {
+            border: 1px solid $black;
+            color: $black;
+            &:hover{
+                background: $black;
+                color: $white;
+            }
+        }
+}
+
+.btn-link {
+    position: relative;
+    display: block;
+    width: auto;
+    padding: 10px 20px 10px 0;
+    text-decoration: none;
+    color: #242424;
+    transition: .5s;
+    z-index: 1;
+    i {
+        position: relative;
+        right: 0;
+        z-index: 1;
+    }
+    &:hover {
+        padding: 10px 20px 10px 30px;
+        color: #fff;
+    }
+}
+.btn-link:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+    background: #242424;
+    border-radius: 50px;
+    z-index: -1;
+}
+.btn-link:hover:after {
+    transform: scale(1);
+    color: #fff;
+}
