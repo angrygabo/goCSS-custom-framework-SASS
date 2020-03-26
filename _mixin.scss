@@ -35,56 +35,224 @@
       clear: both;
     }
 }
+// cols
+@mixin col-default($col) {
+  @if $col == 1 {
+      flex: $size-col-1-flex;
+      max-width: $size-col-1;
+  }
+  @if $col == 2 {
+      flex: $size-col-2-flex;
+      max-width: $size-col-2;
+  }
+  @if $col == 3 {
+      flex: $size-col-3-flex;
+      max-width: $size-col-3;
+  }
+  @if $col == 4 {
+      flex: $size-col-4-flex;
+      max-width: $size-col-4;
+  }
+  @if $col == 5 {
+      flex: $size-col-5-flex;
+      max-width: $size-col-5;
+  }
+  @if $col == 6 {
+      flex: $size-col-6-flex;
+      max-width: $size-col-6;
+  }
+  @if $col == 7 {
+      flex: $size-col-7-flex;
+      max-width: $size-col-7;
+  }
+  @if $col == 8 {
+      flex: $size-col-8-flex;
+      max-width: $size-col-8;
+  }
+  @if $col == 9 {
+      flex: $size-col-7-flex;
+      max-width: $size-col-7;
+  }
+  @if $col == 10 {
+      flex: $size-col-10-flex;
+      max-width: $size-col-10;
+  }
+  @if $col == 11 {
+      flex: $size-col-11-flex;
+      max-width: $size-col-11;
+  }
+  @if $col == 12 {
+      flex: $size-col-12-flex;
+      max-width: $size-col-12;
+  }
+}
 
 // cols
-@mixin col($col) {
+@mixin col($col,$spacing) {
     @if $col == 1 {
-        flex: $size-col-1-flex;
-        max-width: $size-col-1;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-1} - 20px);
+          max-width: calc(#{$size-col-1} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-1} - 40px);
+          max-width: calc(#{$size-col-1} - 40px);
+        }
     }
     @if $col == 2 {
-        flex: $size-col-2-flex;
-        max-width: $size-col-2;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-2} - 20px);
+          max-width: calc(#{$size-col-2} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-2} - 40px);
+          max-width: calc(#{$size-col-2} - 40px);
+        }
     }
     @if $col == 3 {
-        flex: $size-col-3-flex;
-        max-width: $size-col-3;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-3} - 20px);
+          max-width: calc(#{$size-col-3} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-3} - 40px);
+          max-width: calc(#{$size-col-3} - 40px);
+        }
     }
     @if $col == 4 {
-        flex: $size-col-4-flex;
-        max-width: $size-col-4;
-        left: 0;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-4} - 20px);
+          max-width: calc(#{$size-col-4} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-4} - 40px);
+          max-width: calc(#{$size-col-4} - 40px);
+        }
     }
     @if $col == 5 {
-        flex: $size-col-5-flex;
-        max-width: $size-col-5;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-5} - 20px);
+          max-width: calc(#{$size-col-5} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-5} - 40px);
+          max-width: calc(#{$size-col-5} - 40px);
+        }
     }
     @if $col == 6 {
-        flex: $size-col-6-flex;
-        max-width: $size-col-6;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-6} - 20px);
+          max-width: calc(#{$size-col-6} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-6} - 40px);
+          max-width: calc(#{$size-col-6} - 40px);
+        }
     }
     @if $col == 7 {
-        flex: $size-col-7-flex;
-        max-width: $size-col-7;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-7} - 20px);
+          max-width: calc(#{$size-col-7} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-7} - 40px);
+          max-width: calc(#{$size-col-7} - 40px);
+        }
     }
     @if $col == 8 {
-        flex: $size-col-8-flex;
-        max-width: $size-col-8;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-8} - 20px);
+          max-width: calc(#{$size-col-8} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-8} - 40px);
+          max-width: calc(#{$size-col-8} - 40px);
+        }
     }
     @if $col == 9 {
-        flex: $size-col-9-flex;
-        max-width: $size-col-9;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-9} - 20px);
+          max-width: calc(#{$size-col-9} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-9} - 40px);
+          max-width: calc(#{$size-col-9} - 40px);
+        }
     }
     @if $col == 10 {
-        flex: $size-col-10-flex;
-        max-width: $size-col-10;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-10} - 20px);
+          max-width: calc(#{$size-col-10} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-10} - 40px);
+          max-width: calc(#{$size-col-10} - 40px);
+        }
     }
     @if $col == 11 {
-        flex: $size-col-11-flex;
-        max-width: $size-col-11;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-11} - 20px);
+          max-width: calc(#{$size-col-11} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-11} - 40px);
+          max-width: calc(#{$size-col-11} - 40px);
+        }
     }
     @if $col == 12 {
-        flex: $size-col-12-flex;
-        max-width: $size-col-12;
+        @if $spacing == 1 {
+          flex: 0 0 calc(#{$size-col-12} - 20px);
+          max-width: calc(#{$size-col-12} - 20px);
+        }
+        @if $spacing == 2 {
+          flex: 0 0 calc(#{$size-col-12} - 40px);
+          max-width: calc(#{$size-col-12} - 40px);
+        }
     }
+}
+
+// cont flex
+
+@mixin col-flex {
+  position: relative;
+  display: flex;
+}
+
+// display
+@mixin d-flex {
+  display: flex;
+}
+@mixin d-inline-flex {
+  display: inline-flex;
+}
+
+// flex direction
+@mixin flex-row  {
+  flex-direction: row;
+}
+@mixin flex-row-reverse {
+  flex-direction: row-reverse;
+}
+@mixin flex-column {
+  flex-direction: column;
+}
+@mixin flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+// justify content
+@mixin justify-content-start {
+  justify-content: flex-start!important;
+}
+@mixin justify-content-end {
+  justify-content: flex-end!important;
+}
+@mixin justify-content-center {
+  justify-content: center!important;
+}
+@mixin justify-content-between {
+  justify-content: space-between!important;
+}
+@mixin justify-content-around {
+  justify-content: space-around!important;
 }
