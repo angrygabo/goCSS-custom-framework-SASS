@@ -35,6 +35,49 @@
       clear: both;
     }
 }
+
+@mixin offset($offset) {
+  @if $offset == 0 {
+    margin-left: 0;
+  }
+  @if $offset == 1 {
+      margin-left: $size-col-1;
+  }
+  @if $offset == 2 {
+      margin-left: $size-col-2;
+  }
+  @if $offset == 3 {
+      margin-left: $size-col-3;
+  }
+  @if $offset == 4 {
+      margin-left: $size-col-4;
+  }
+  @if $offset == 5 {
+      margin-left: $size-col-5;
+  }
+  @if $offset == 6 {
+      margin-left: $size-col-6;
+  }
+  @if $offset == 7 {
+      margin-left: $size-col-7;
+  }
+  @if $offset == 8 {
+      margin-left: $size-col-8;
+  }
+  @if $offset == 9 {
+      margin-left: $size-col-7;
+  }
+  @if $offset == 10 {
+      margin-left: $size-col-10;
+  }
+  @if $offset == 11 {
+      margin-left: $size-col-11;
+  }
+  @if $offset == 12 {
+      margin-left: $size-col-12;
+  }
+}
+
 // cols
 @mixin col-default($col) {
   @if $col == 1 {
@@ -91,122 +134,122 @@
 @mixin col($col,$spacing) {
     @if $col == 1 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-1} - 20px);
-          max-width: calc(#{$size-col-1} - 20px);
+          flex: 0 0 calc(#{$size-col-1} - 10px);
+          max-width: calc(#{$size-col-1} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-1} - 40px);
-          max-width: calc(#{$size-col-1} - 40px);
+          flex: 0 0 calc(#{$size-col-1} - 20px);
+          max-width: calc(#{$size-col-1} - 20px);
         }
     }
     @if $col == 2 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-2} - 20px);
-          max-width: calc(#{$size-col-2} - 20px);
+          flex: 0 0 calc(#{$size-col-2} - 10px);
+          max-width: calc(#{$size-col-2} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-2} - 40px);
-          max-width: calc(#{$size-col-2} - 40px);
+          flex: 0 0 calc(#{$size-col-2} - 20px);
+          max-width: calc(#{$size-col-2} - 20px);
         }
     }
     @if $col == 3 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-3} - 20px);
-          max-width: calc(#{$size-col-3} - 20px);
+          flex: 0 0 calc(#{$size-col-3} - 10px);
+          max-width: calc(#{$size-col-3} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-3} - 40px);
-          max-width: calc(#{$size-col-3} - 40px);
+          flex: 0 0 calc(#{$size-col-3} - 20px);
+          max-width: calc(#{$size-col-3} - 20px);
         }
     }
     @if $col == 4 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-4} - 20px);
-          max-width: calc(#{$size-col-4} - 20px);
+          flex: 0 0 calc(#{$size-col-4} - 10px);
+          max-width: calc(#{$size-col-4} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-4} - 40px);
-          max-width: calc(#{$size-col-4} - 40px);
+          flex: 0 0 calc(#{$size-col-4} - 20px);
+          max-width: calc(#{$size-col-4} - 20px);
         }
     }
     @if $col == 5 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-5} - 20px);
-          max-width: calc(#{$size-col-5} - 20px);
+          flex: 0 0 calc(#{$size-col-5} - 10px);
+          max-width: calc(#{$size-col-5} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-5} - 40px);
-          max-width: calc(#{$size-col-5} - 40px);
+          flex: 0 0 calc(#{$size-col-5} - 20px);
+          max-width: calc(#{$size-col-5} - 20px);
         }
     }
     @if $col == 6 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-6} - 20px);
-          max-width: calc(#{$size-col-6} - 20px);
+          flex: 0 0 calc(#{$size-col-6} - 10px);
+          max-width: calc(#{$size-col-6} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-6} - 40px);
-          max-width: calc(#{$size-col-6} - 40px);
+          flex: 0 0 calc(#{$size-col-6} - 20px);
+          max-width: calc(#{$size-col-6} - 20px);
         }
     }
     @if $col == 7 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-7} - 20px);
-          max-width: calc(#{$size-col-7} - 20px);
+          flex: 0 0 calc(#{$size-col-7} - 10px);
+          max-width: calc(#{$size-col-7} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-7} - 40px);
-          max-width: calc(#{$size-col-7} - 40px);
+          flex: 0 0 calc(#{$size-col-7} - 20px);
+          max-width: calc(#{$size-col-7} - 20px);
         }
     }
     @if $col == 8 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-8} - 20px);
-          max-width: calc(#{$size-col-8} - 20px);
+          flex: 0 0 calc(#{$size-col-8} - 10px);
+          max-width: calc(#{$size-col-8} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-8} - 40px);
-          max-width: calc(#{$size-col-8} - 40px);
+          flex: 0 0 calc(#{$size-col-8} - 20px);
+          max-width: calc(#{$size-col-8} - 20px);
         }
     }
     @if $col == 9 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-9} - 20px);
-          max-width: calc(#{$size-col-9} - 20px);
+          flex: 0 0 calc(#{$size-col-9} - 10px);
+          max-width: calc(#{$size-col-9} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-9} - 40px);
-          max-width: calc(#{$size-col-9} - 40px);
+          flex: 0 0 calc(#{$size-col-9} - 20px);
+          max-width: calc(#{$size-col-9} - 20px);
         }
     }
     @if $col == 10 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-10} - 20px);
-          max-width: calc(#{$size-col-10} - 20px);
+          flex: 0 0 calc(#{$size-col-10} - 10px);
+          max-width: calc(#{$size-col-10} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-10} - 40px);
-          max-width: calc(#{$size-col-10} - 40px);
+          flex: 0 0 calc(#{$size-col-10} - 20px);
+          max-width: calc(#{$size-col-10} - 20px);
         }
     }
     @if $col == 11 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-11} - 20px);
-          max-width: calc(#{$size-col-11} - 20px);
+          flex: 0 0 calc(#{$size-col-11} - 10px);
+          max-width: calc(#{$size-col-11} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-11} - 40px);
-          max-width: calc(#{$size-col-11} - 40px);
+          flex: 0 0 calc(#{$size-col-11} - 20px);
+          max-width: calc(#{$size-col-11} - 20px);
         }
     }
     @if $col == 12 {
         @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-12} - 20px);
-          max-width: calc(#{$size-col-12} - 20px);
+          flex: 0 0 calc(#{$size-col-12} - 10px);
+          max-width: calc(#{$size-col-12} - 10px);
         }
         @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-12} - 40px);
-          max-width: calc(#{$size-col-12} - 40px);
+          flex: 0 0 calc(#{$size-col-12} - 20px);
+          max-width: calc(#{$size-col-12} - 20px);
         }
     }
 }

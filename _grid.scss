@@ -10,7 +10,7 @@
         @include media-breakpoint-down($size) {
             .col-#{$size}-#{$col},
             .col-#{$size}-auto {
-                @include col-flex;;
+                @include col-flex;
             }
         }
     }
