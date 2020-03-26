@@ -151,3 +151,38 @@
         }
     }
 }
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+//order 12 cols
+@for $col from 1 through $cols {
+    .order-#{$col} {
+        order: $col;
+    }
+}
+
+// offset
+@for $offset from 0 through $cols {
+    .offset-#{$offset} { // se cumple
+    // .child-offset-#{$offset} > .col 
+        @include offset($offset);
+    }
+}
+@each $size in $screen {
+    @for $offset from 0 through $cols {
+        @include media-breakpoint-down($size) {
+            .offset-#{$size}-#{$offset}{
+            // .child-#{$size}-offset-#{$offset} > .col {
+                @include offset($offset);
+            }
+        }
+    }
+}
