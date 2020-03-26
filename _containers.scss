@@ -5,9 +5,7 @@
 
 //default container width
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    @include wrap-flex;
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
@@ -172,7 +170,7 @@
 // offset
 @for $offset from 0 through $cols {
     .offset-#{$offset} { // se cumple
-    // .child-offset-#{$offset} > .col 
+    // .child-offset-#{$offset} > .col
         @include offset($offset);
     }
 }
