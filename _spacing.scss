@@ -29,7 +29,7 @@
   .pl-#{$spacing},.px-#{$spacing} {
     @include spacing-pl($spacing);
   }
-  
+
   // margin
   .mt-#{$spacing},.my-#{$spacing} {
     @include spacing-mt($spacing);
