@@ -13,6 +13,12 @@ $screen:                   xl, lg, md, sm, xs;
 // cols
 $cols:                     12;
 
+// cols-margin
+$cols-spacing:             2;
+
+// cols-spacing
+$spacings:                 5;
+
 // default containers
 $container-xs:             100%;
 $container-sm:             calc(100% - 10px);
@@ -70,20 +76,6 @@ $size-col-10:              83.333333%;
 $size-col-11:              91.666667%;
 $size-col-12:              100%;
 
-// sizes col ajust
-$size-col-1-ajust:         calc(#{$size-col-1} - 2.5px);
-$size-col-2-ajust:         calc(#{$size-col-2} - 5px);
-$size-col-3-ajust:         calc(#{$size-col-3} - 7.5px);
-$size-col-4-ajust:         calc(#{$size-col-4} - 10px);
-$size-col-5-ajust:         calc(#{$size-col-5} - 12.5px);
-$size-col-6-ajust:         calc(#{$size-col-6} - 15px);
-$size-col-7-ajust:         calc(#{$size-col-7} - 17px);
-$size-col-8-ajust:         calc(#{$size-col-8} - 20px);
-$size-col-9-ajust:         calc(#{$size-col-9} - 22px);
-$size-col-10-ajust:        calc(#{$size-col-10} - 24px);
-$size-col-11-ajust:        calc(#{$size-col-11} - 27px);
-$size-col-12-ajust:        calc(#{$size-col-12} - 30px);
-
 // sizes col default
 $size-col-1-flex:          0 0 #{$size-col-1};
 $size-col-2-flex:          0 0 #{$size-col-2};
@@ -98,19 +90,33 @@ $size-col-10-flex:         0 0 #{$size-col-10};
 $size-col-11-flex:         0 0 #{$size-col-11};
 $size-col-12-flex:         0 0 #{$size-col-12};
 
-// sizes col flex ajust
-$size-col-1-ajust-flex:    0 0 calc(#{$size-col-1} - 2.5px);
-$size-col-2-ajust-flex:    0 0 calc(#{$size-col-2} - 5px);
-$size-col-3-ajust-flex:    0 0 calc(#{$size-col-3} - 7.5px);
-$size-col-4-ajust-flex:    0 0 calc(#{$size-col-4} - 10px);
-$size-col-5-ajust-flex:    0 0 calc(#{$size-col-5} - 12.5px);
-$size-col-6-ajust-flex:    0 0 calc(#{$size-col-6} - 15px);
-$size-col-7-ajust-flex:    0 0 calc(#{$size-col-7} - 17px);
-$size-col-8-ajust-flex:    0 0 calc(#{$size-col-8} - 20px);
-$size-col-9-ajust-flex:    0 0 calc(#{$size-col-9} - 22px);
-$size-col-10-ajust-flex:   0 0 calc(#{$size-col-10} - 24px);
-$size-col-11-ajust-flex:   0 0 calc(#{$size-col-11} - 27px);
-$size-col-12-ajust-flex:   0 0 calc(#{$size-col-12} - 30px);
+// sizes col x1
+$size-col-1-x1:          calc(#{$size-col-1} - 20px);
+$size-col-2-x1:          calc(#{$size-col-2} - 20px);
+$size-col-3-x1:          calc(#{$size-col-3} - 20px);
+$size-col-4-x1:          calc(#{$size-col-4} - 20px);
+$size-col-5-x1:          calc(#{$size-col-5} - 20px);
+$size-col-6-x1:          calc(#{$size-col-6} - 20px);
+$size-col-7-x1:          calc(#{$size-col-7} - 20px);
+$size-col-8-x1:          calc(#{$size-col-8} - 20px);
+$size-col-9-x1:          calc(#{$size-col-9} - 20px);
+$size-col-10-x1:         calc(#{$size-col-10} - 20px);
+$size-col-11-x1:         calc(#{$size-col-11} - 20px);
+$size-col-12-x1:         calc(#{$size-col-12} - 20px);
+
+// sizes col flex x1
+$size-col-1-flex-x1:          0 0 calc(#{$size-col-1} - 20px);
+$size-col-2-flex-x1:          0 0 calc(#{$size-col-2} - 20px);
+$size-col-3-flex-x1:          0 0 calc(#{$size-col-3} - 20px);
+$size-col-4-flex-x1:          0 0 calc(#{$size-col-4} - 20px);
+$size-col-5-flex-x1:          0 0 calc(#{$size-col-5} - 20px);
+$size-col-6-flex-x1:          0 0 calc(#{$size-col-6} - 20px);
+$size-col-7-flex-x1:          0 0 calc(#{$size-col-7} - 20px);
+$size-col-8-flex-x1:          0 0 calc(#{$size-col-8} - 20px);
+$size-col-9-flex-x1:          0 0 calc(#{$size-col-9} - 20px);
+$size-col-10-flex-x1:         0 0 calc(#{$size-col-10} - 20px);
+$size-col-11-flex-x1:         0 0 calc(#{$size-col-11} - 20px);
+$size-col-12-flex-x1:         0 0 calc(#{$size-col-12} - 20px);
 
 // typography
 $font-family-sans-serif:   "Helvetica Neue", Helvetica, Arial, sans-serif;

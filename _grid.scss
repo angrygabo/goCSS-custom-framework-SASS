@@ -1,125 +1,64 @@
 // col
-.col,
-.col-1,
-.col-10,
-.col-11,
-.col-12,
-.col-2,
-.col-3,
-.col-4,
-.col-5,
-.col-6,
-.col-7,
-.col-8,
-.col-9,
-.col-auto,
-.col-lg,
-.col-lg-1,
-.col-lg-10,
-.col-lg-11,
-.col-lg-12,
-.col-lg-2,
-.col-lg-3,
-.col-lg-4,
-.col-lg-5,
-.col-lg-6,
-.col-lg-7,
-.col-lg-8,
-.col-lg-9,
-.col-lg-auto,
-.col-md,
-.col-md-1,
-.col-md-10,
-.col-md-11,
-.col-md-12,
-.col-md-2,
-.col-md-3,
-.col-md-4,
-.col-md-5,
-.col-md-6,
-.col-md-7,
-.col-md-8,
-.col-md-9,
-.col-md-auto,
-.col-sm,
-.col-sm-1,
-.col-sm-10,
-.col-sm-11,
-.col-sm-12,
-.col-sm-2,
-.col-sm-3,
-.col-sm-4,
-.col-sm-5,
-.col-sm-6,
-.col-sm-7,
-.col-sm-8,
-.col-sm-9,
-.col-sm-auto,
-.col-xl,
-.col-xl-1,
-.col-xl-10,
-.col-xl-11,
-.col-xl-12,
-.col-xl-2,
-.col-xl-3,
-.col-xl-4,
-.col-xl-5,
-.col-xl-6,
-.col-xl-7,
-.col-xl-8,
-.col-xl-9,
-.col-xl-auto {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: 50px;
+.col-auto {
+    @include col-flex;
 }
-
+@for $col from 1 through $cols {
+    .col-#{$col} {
+        @include col-flex;
+    }
+    @each $size in $screen {
+        @include media-breakpoint-down($size) {
+            .col-#{$size}-#{$col},
+            .col-#{$size}-auto {
+                @include col-flex;
+            }
+        }
+    }
+}
 .col {
+    @include col-flex;
+    min-height: 50px;
     flex-wrap: wrap;
-    flex: 0 0 $percent;
-    max-width: $percent;
+    flex-grow: 1;
+    max-width: 100%;
     border: 1px solid rgba(86,61,124,.2);
     left: 0;
 }
 
+// grid
 @for $col from 1 through $cols {
-    .col-#{$col},
+    .col-#{$col}, // se cumple
     .child-col-#{$col} > .col {
-        @include col($col);
-        @for $col from 1 through $col {
-            .col-#{$col} {
-                @include col-ajust ($col);
-            }
-        }
-        @each $size in $screen {
-            @include media-breakpoint-down($size) {
-                @for $col from 1 through $cols {
-                    .col-#{$size}-#{$col} {
-                        $col-default:1;
-                        @include col-media($col,$col-default);
-                    }
-                }
-            }
-        }
+        $spacing : 1;
+        @include col-default($col);
     }
-    @each $size in $screen {
-        @include media-breakpoint-down($size) {
-            @for $col from 1 through $cols {
-                .col-#{$size}-#{$col},
-                .child-#{$size}-col-#{$col} > .col {
-                    $col-default:1;
-                    @include col-media($col,$col-default);
-                }
-            }
+    @for $spacing from 1 through $cols-spacing {
+        .col-#{$col}.x#{$spacing},
+        .child-col-#{$col}.x#{$spacing} > .col {
+            @include col($col,$spacing);
         }
     }
 }
+@each $size in $screen {
+    @for $col from 1 through $cols {
+        @include media-breakpoint-down($size) {
+            .col-#{$size}-#{$col},
+            .child-#{$size}-col-#{$col} > .col {
+                @include col-default($col);
+            }
+            @for $spacing from 1 through $cols-spacing {
+                .col-#{$size}-#{$col}.x#{$spacing},
+                .child-#{$size}-col-#{$col}.x#{$spacing} > .col {
+                    @include col($col,$spacing);
+                }
+            }
 
-// row cols
+        }
+    }
+}
+// row col
 .row {
-    position: relative;
-    display: flex;
+    @include col-flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: $percent;
@@ -132,4 +71,3 @@
         left: 0;
     }
 }
-
