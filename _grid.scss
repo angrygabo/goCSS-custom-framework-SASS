@@ -38,20 +38,21 @@
             @include col($col,$spacing);
         }
     }
-    @each $size in $screen {
+}
+@each $size in $screen {
+    @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
-            @for $col from 1 through $cols {
-                .col-#{$size}-#{$col},
-                .child-#{$size}-col-#{$col} > .col {
-                    @include col-default($col);
-                }
-                @for $spacing from 1 through $cols-spacing {
-                    .col-#{$size}-#{$col}.x#{$spacing},
-                    .child-#{$size}-col-#{$col}.x#{$spacing} > .col {
-                        @include col($col,$spacing);
-                    }
+            .col-#{$size}-#{$col},
+            .child-#{$size}-col-#{$col} > .col {
+                @include col-default($col);
+            }
+            @for $spacing from 1 through $cols-spacing {
+                .col-#{$size}-#{$col}.x#{$spacing},
+                .child-#{$size}-col-#{$col}.x#{$spacing} > .col {
+                    @include col($col,$spacing);
                 }
             }
+
         }
     }
 }
