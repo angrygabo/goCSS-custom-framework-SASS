@@ -1,0 +1,3 @@
+sass --watch boogo.scss boogo.min.css --style compressed
+
+sass --watch style.scss style.css --style compressed
