@@ -68,19 +68,121 @@
     height: $h-vh;
 }
 
-// table
-table {
-    border-collapse: collapse;
+// display flex
+.d-flex {
+    @include d-flex;
 }
-caption {
-    padding-top: $table-cell-padding;
-    padding-bottom: $table-cell-padding;
-    color: $table-caption-color;
-    text-align: left;
-    caption-side: bottom;
+.d-inline-flex  {
+    @include d-inline-flex;
 }
-th {
-    // Matches default `<td>` alignment by inheriting from the `<body>`, or the
-    // closest parent with a set `text-align`.
-    text-align: inherit;
+@each $size in $screen {
+    @include media-breakpoint-down($size) {
+        .d-#{$size}-flex {
+            @include d-flex;
+        }
+        .d-#{$size}-inline-flex {
+            @include d-inline-flex;
+        }
+    }
+}
+
+// flex direction
+.flex-row {
+    @include flex-row;
+}
+.flex-row-reverse {
+    @include flex-row-reverse;
+}
+.flex-column {
+    @include flex-column;
+}
+.flex-column-reverse {
+    @include flex-column-reverse;
+}
+@each $size in $screen {
+    @include media-breakpoint-down($size) {
+        .flex-#{$size}-row {
+            @include flex-row;
+        }
+        .flex-#{$size}-row-reverse {
+            @include flex-row-reverse;
+        }
+        .flex-#{$size}-column {
+            @include flex-column;
+        }
+        .flex-#{$size}-column-reverse {
+            @include flex-column-reverse;
+        }
+    }
+}
+
+// justify content
+.justify-content-start {
+    @include justify-content-start;
+}
+.justify-content-end {
+    @include justify-content-end;
+}
+.justify-content-center {
+    @include justify-content-center;
+}
+.justify-content-between {
+    @include justify-content-between;
+}
+.justify-content-around {
+    @include justify-content-around;
+}
+@each $size in $screen {
+    @include media-breakpoint-down($size) {
+        .justify-content-#{$size}-start {
+            @include justify-content-start;
+        }
+        .justify-content-#{$size}-end {
+            @include justify-content-end;
+        }
+        .justify-content-#{$size}-center {
+            @include justify-content-center;
+        }
+        .justify-content-#{$size}-between {
+            @include justify-content-between;
+        }
+        .justify-content-#{$size}-around {
+            @include justify-content-around;
+        }
+    }
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > .col,
+    > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+//order 12 cols
+@for $col from 1 through $cols {
+    .order-#{$col} {
+        order: $col;
+    }
+}
+
+// offset
+@for $offset from 0 through $cols {
+    .offset-#{$offset} { // se cumple
+    // .child-offset-#{$offset} > .col 
+        @include offset($offset);
+    }
+}
+@each $size in $screen {
+    @for $offset from 0 through $cols {
+        @include media-breakpoint-down($size) {
+            .offset-#{$size}-#{$offset}{
+            // .child-#{$size}-offset-#{$offset} > .col {
+                @include offset($offset);
+            }
+        }
+    }
 }
