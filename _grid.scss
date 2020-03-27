@@ -45,7 +45,7 @@
                 .child-col-#{$size}-#{$col}.x#{$spacing} > *,
                 .row .col-#{$size}-#{$col}.x#{$spacing},
                 .row.col-#{$size}-#{$col}.x#{$spacing} {
-                    @include col($col,$spacing);
+                    @include col($col,$spacing); 
                 }
             }
         }
