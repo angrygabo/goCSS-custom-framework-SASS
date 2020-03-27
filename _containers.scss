@@ -5,9 +5,7 @@
 
 //default container width
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    @include wrap-flex;
     padding-right: 15px;
     padding-left: 15px;
     margin: 0 auto;
@@ -168,11 +166,19 @@
         order: $col;
     }
 }
+@each $size in $screen {
+    @for $col from 0 through $cols {
+        @include media-breakpoint-down($size) {
+            .order-#{$size}-#{$col}{
+                order: $col;
+            }
+        }
+    }
+}
 
 // offset
 @for $offset from 0 through $cols {
     .offset-#{$offset} { // se cumple
-    // .child-offset-#{$offset} > .col 
         @include offset($offset);
     }
 }

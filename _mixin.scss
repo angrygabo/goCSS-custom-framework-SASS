@@ -14,9 +14,48 @@
     }
 }
 @mixin media-breakpoint-only($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-      @media (width: map-get($breakpoints, $breakpoint)) {
-        @content;
+    @if $breakpoint == xl {
+      $breakpoint : lg;
+      @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+        }
+      }
+    }
+    @if $breakpoint == lg {
+      $breakpoint : lg;
+      $upper: lg;
+      $lower: md;
+      @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $lower)) and (max-width: map-get($breakpoints, $upper)) {
+          @content;
+        }
+      }
+    }
+    @if $breakpoint == md {
+      $breakpoint : md;
+      $upper: md;
+      $lower: sm;
+      @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $lower)) and (max-width: map-get($breakpoints, $upper)) {
+          @content;
+        }
+      }
+    }
+    @if $breakpoint == sm {
+      $breakpoint : sm;
+      @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+        }
+      }
+    }
+    @if $breakpoint == xs {
+      $breakpoint : xs;
+      @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+          @content;
+        }
       }
     }
 }
@@ -307,139 +346,139 @@
 
 // padding
 @mixin spacing-pt($spacing) {
-  @if $spacing == 1 {
-    padding-top: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    padding-top: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    padding-top: $rem!important
+  @if $spacing == 5 {
+    padding-top: $rem*3;
   }
   @if $spacing == 4 {
-    padding-top: $rem*1.5!important
+    padding-top: $rem*1.5;
   }
-  @if $spacing == 5 {
-    padding-top: $rem*3!important
+  @if $spacing == 3 {
+    padding-top: $rem;
+  }
+  @if $spacing == 2 {
+    padding-top: $rem*.5;
+  }
+  @if $spacing == 1 {
+    padding-top: $rem*.25;
   }
 }
 @mixin spacing-pb($spacing) {
-  @if $spacing == 1 {
-    padding-bottom: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    padding-bottom: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    padding-bottom: $rem!important
+  @if $spacing == 5 {
+    padding-bottom: $rem*3;
   }
   @if $spacing == 4 {
-    padding-bottom: $rem*1.5!important
+    padding-bottom: $rem*1.5;
   }
-  @if $spacing == 5 {
-    padding-bottom: $rem*3!important
+  @if $spacing == 3 {
+    padding-bottom: $rem;
+  }
+  @if $spacing == 2 {
+    padding-bottom: $rem*.5;
+  }
+  @if $spacing == 1 {
+    padding-bottom: $rem*.25;
   }
 }
 @mixin spacing-pr($spacing) {
-  @if $spacing == 1 {
-    padding-right: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    padding-right: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    padding-right: $rem!important
+  @if $spacing == 5 {
+    padding-right: $rem*3;
   }
   @if $spacing == 4 {
-    padding-right: $rem*1.5!important
+    padding-right: $rem*1.5;
   }
-  @if $spacing == 5 {
-    padding-right: $rem*3!important
+  @if $spacing == 3 {
+    padding-right: $rem;
+  }
+  @if $spacing == 2 {
+    padding-right: $rem*.5;
+  }
+  @if $spacing == 1 {
+    padding-right: $rem*.25;
   }
 }
 @mixin spacing-pl($spacing) {
-  @if $spacing == 1 {
-    padding-left: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    padding-left: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    padding-left: $rem!important
+  @if $spacing == 5 {
+    padding-left: $rem*3;
   }
   @if $spacing == 4 {
-    padding-left: $rem*1.5!important
+    padding-left: $rem*1.5;
   }
-  @if $spacing == 5 {
-    padding-left: $rem*3!important
+  @if $spacing == 3 {
+    padding-left: $rem;
+  }
+  @if $spacing == 2 {
+    padding-left: $rem*.5;
+  }
+  @if $spacing == 1 {
+    padding-left: $rem*.25;
   }
 }
 // margin
 @mixin spacing-mt($spacing) {
-  @if $spacing == 1 {
-    margin-top: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    margin-top: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    margin-top: $rem!important
+  @if $spacing == 5 {
+    margin-top: $rem*3;
   }
   @if $spacing == 4 {
-    margin-top: $rem*1.5!important
+    margin-top: $rem*1.5;
   }
-  @if $spacing == 5 {
-    margin-top: $rem*3!important
+  @if $spacing == 3 {
+    margin-top: $rem;
+  }
+  @if $spacing == 2 {
+    margin-top: $rem*.5;
+  }
+  @if $spacing == 1 {
+    margin-top: $rem*.25;
   }
 }
 @mixin spacing-mb($spacing) {
-  @if $spacing == 1 {
-    margin-bottom: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    margin-bottom: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    margin-bottom: $rem!important
+  @if $spacing == 5 {
+    margin-bottom: $rem*3;
   }
   @if $spacing == 4 {
-    margin-bottom: $rem*1.5!important
+    margin-bottom: $rem*1.5;
   }
-  @if $spacing == 5 {
-    margin-bottom: $rem*3!important
+  @if $spacing == 3 {
+    margin-bottom: $rem;
+  }
+  @if $spacing == 2 {
+    margin-bottom: $rem*.5;
+  }
+  @if $spacing == 1 {
+    margin-bottom: $rem*.25;
   }
 }
 @mixin spacing-mr($spacing) {
-  @if $spacing == 1 {
-    margin-right: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    margin-right: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    margin-right: $rem!important
+  @if $spacing == 5 {
+    margin-right: $rem*3;
   }
   @if $spacing == 4 {
-    margin-right: $rem*1.5!important
+    margin-right: $rem*1.5;
   }
-  @if $spacing == 5 {
-    margin-right: $rem*3!important
+  @if $spacing == 3 {
+    margin-right: $rem;
+  }
+  @if $spacing == 2 {
+    margin-right: $rem*.5;
+  }
+  @if $spacing == 1 {
+    margin-right: $rem*.25;
   }
 }
 @mixin spacing-ml($spacing) {
-  @if $spacing == 1 {
-    margin-left: $rem*.25!important
-  }
-  @if $spacing == 2 {
-    margin-left: $rem*.5!important
-  }
-  @if $spacing == 3 {
-    margin-left: $rem!important
+  @if $spacing == 5 {
+    margin-left: $rem*3;
   }
   @if $spacing == 4 {
-    margin-left: $rem*1.5!important
+    margin-left: $rem*1.5;
   }
-  @if $spacing == 5 {
-    margin-left: $rem*3!important
+  @if $spacing == 3 {
+    margin-left: $rem;
+  }
+  @if $spacing == 2 {
+    margin-left: $rem*.5;
+  }
+  @if $spacing == 1 {
+    margin-left: $rem*.25;
   }
 }
