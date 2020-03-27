@@ -53,15 +53,15 @@
 }
 @for $col from 1 through $cols {
    @for $spacing from 1 through $cols-spacing {
-        .row.row-cols-#{$col} > * {
-            @include row-cols($col);
-        }
         .child-col-#{$col}.x#{$spacing} > *,
         .row .col-#{$col}.x#{$spacing},
         .row.col-#{$col}.x#{$spacing} {
             @include col($col,$spacing);
         }
 
+    }
+    .row-cols-#{$col} > * {
+        @include row-cols($col);
     }
     // se cumple
     .child-col-#{$col} > *,
