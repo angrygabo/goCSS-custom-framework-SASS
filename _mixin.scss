@@ -117,6 +117,58 @@
   }
 }
 
+// row cols
+@mixin row-cols($row-col) {
+  @if $row-col == 1 {
+    flex: $row-col-1-flex;
+    max-width: $row-col-1;
+  }
+  @if $row-col == 2 {
+    flex: $row-col-2-flex;
+    max-width: $row-col-2;
+  }
+  @if $row-col == 3 {
+    flex: $row-col-3-flex;
+    max-width: $row-col-3;
+  }
+  @if $row-col == 4 {
+    flex: $row-col-4-flex;
+    max-width: $row-col-4;
+  }
+  @if $row-col == 5 {
+    flex: $row-col-5-flex;
+    max-width: $row-col-5;
+  }
+  @if $row-col == 6 {
+    flex: $row-col-6-flex;
+    max-width: $row-col-6;
+  }
+  @if $row-col == 7 {
+    flex: $row-col-7-flex;
+    max-width: $row-col-7;
+  }
+  @if $row-col == 8 {
+    flex: $row-col-8-flex;
+    max-width: $row-col-8;
+  }
+  @if $row-col == 9 {
+    flex: $row-col-9-flex;
+    max-width: $row-col-9;
+  }
+  @if $row-col == 10 {
+    flex: $row-col-10-flex;
+    max-width: $row-col-10;
+  }
+  @if $row-col == 11 {
+    flex: $row-col-11-flex;
+    max-width: $row-col-11;
+  }
+  @if $row-col == 12 {
+    flex: $row-col-12-flex;
+    max-width: $row-col-12;
+  }
+}
+
 // cols
 @mixin col-default($col) {
   @if $col == 1 {

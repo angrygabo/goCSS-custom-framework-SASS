@@ -90,33 +90,33 @@ $size-col-10-flex:         0 0 #{$size-col-10};
 $size-col-11-flex:         0 0 #{$size-col-11};
 $size-col-12-flex:         0 0 #{$size-col-12};
 
-// sizes col x1
-$size-col-1-x1:          calc(#{$size-col-1} - 20px);
-$size-col-2-x1:          calc(#{$size-col-2} - 20px);
-$size-col-3-x1:          calc(#{$size-col-3} - 20px);
-$size-col-4-x1:          calc(#{$size-col-4} - 20px);
-$size-col-5-x1:          calc(#{$size-col-5} - 20px);
-$size-col-6-x1:          calc(#{$size-col-6} - 20px);
-$size-col-7-x1:          calc(#{$size-col-7} - 20px);
-$size-col-8-x1:          calc(#{$size-col-8} - 20px);
-$size-col-9-x1:          calc(#{$size-col-9} - 20px);
-$size-col-10-x1:         calc(#{$size-col-10} - 20px);
-$size-col-11-x1:         calc(#{$size-col-11} - 20px);
-$size-col-12-x1:         calc(#{$size-col-12} - 20px);
+// row cols default
+$row-col-1-flex:          0 0  calc(#{$size-col-12} / 1);
+$row-col-2-flex:          0 0  calc(#{$size-col-12} / 2);
+$row-col-3-flex:          0 0  calc(#{$size-col-12} / 3);
+$row-col-4-flex:          0 0  calc(#{$size-col-12} / 4);
+$row-col-5-flex:          0 0  calc(#{$size-col-12} / 5);
+$row-col-6-flex:          0 0  calc(#{$size-col-12} / 6);
+$row-col-7-flex:          0 0  calc(#{$size-col-12} / 7);
+$row-col-8-flex:          0 0  calc(#{$size-col-12} / 8);
+$row-col-9-flex:          0 0  calc(#{$size-col-12} / 9);
+$row-col-10-flex:         0 0  calc(#{$size-col-12} / 10);
+$row-col-11-flex:         0 0  calc(#{$size-col-12} / 11);
+$row-col-12-flex:         0 0  calc(#{$size-col-12} / 12);
 
-// sizes col flex x1
-$size-col-1-flex-x1:          0 0 calc(#{$size-col-1} - 20px);
-$size-col-2-flex-x1:          0 0 calc(#{$size-col-2} - 20px);
-$size-col-3-flex-x1:          0 0 calc(#{$size-col-3} - 20px);
-$size-col-4-flex-x1:          0 0 calc(#{$size-col-4} - 20px);
-$size-col-5-flex-x1:          0 0 calc(#{$size-col-5} - 20px);
-$size-col-6-flex-x1:          0 0 calc(#{$size-col-6} - 20px);
-$size-col-7-flex-x1:          0 0 calc(#{$size-col-7} - 20px);
-$size-col-8-flex-x1:          0 0 calc(#{$size-col-8} - 20px);
-$size-col-9-flex-x1:          0 0 calc(#{$size-col-9} - 20px);
-$size-col-10-flex-x1:         0 0 calc(#{$size-col-10} - 20px);
-$size-col-11-flex-x1:         0 0 calc(#{$size-col-11} - 20px);
-$size-col-12-flex-x1:         0 0 calc(#{$size-col-12} - 20px);
+// sizes col x1
+$row-col-1:          calc(#{$size-col-12} / 1);
+$row-col-2:          calc(#{$size-col-12} / 2);
+$row-col-3:          calc(#{$size-col-12} / 3);
+$row-col-4:          calc(#{$size-col-12} / 4);
+$row-col-5:          calc(#{$size-col-12} / 5);
+$row-col-6:          calc(#{$size-col-12} / 6);
+$row-col-7:          calc(#{$size-col-12} / 7);
+$row-col-8:          calc(#{$size-col-12} / 8);
+$row-col-9:          calc(#{$size-col-12} / 9);
+$row-col-10:         calc(#{$size-col-12} / 10);
+$row-col-11:         calc(#{$size-col-12} / 11);
+$row-col-12:         calc(#{$size-col-12} / 12);
 
 // typography
 $font-family-sans-serif:   "Helvetica Neue", Helvetica, Arial, sans-serif;
