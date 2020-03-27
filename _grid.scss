@@ -3,12 +3,16 @@
     @include col-flex;
 }
 @for $col from 1 through $cols {
-    .col-#{$col} {
+    .col-#{$col},
+    .row .col-#{$col},
+    .row.col-#{$col}  {
         @include col-flex;
     }
     @each $size in $screen {
         @include media-breakpoint-down($size) {
             .col-#{$size}-#{$col},
+            .row .col-#{$size}-#{$col},
+            .row.col-#{$size}-#{$col},
             .col-#{$size}-auto {
                 @include col-flex;
             }
@@ -29,30 +33,40 @@
 @each $size in $screen {
     @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
-            .row-cols-#{$size}-#{$col} > *,
-            .row .col-#{$size}-#{$col} {
+            .row.row-cols-#{$size}-#{$col} > * {
+                @include row-cols($col);
+            }
+            .child-col-#{$size}-#{$col} > *,
+            .row .col-#{$size}-#{$col},
+            .row.col-#{$size}-#{$col} {
                 @include col-default($col);
             }
             @for $spacing from 1 through $cols-spacing {
-                .row-cols-#{$size}-#{$col}.x#{$spacing} > *,
-                .row .col-#{$size}-#{$col}.x#{$spacing} {
+                .child-col-#{$size}-#{$col}.x#{$spacing} > *,
+                .row .col-#{$size}-#{$col}.x#{$spacing},
+                .row.col-#{$size}-#{$col}.x#{$spacing} {
                     @include col($col,$spacing);
                 }
             }
-
         }
     }
 }
 @for $col from 1 through $cols {
    @for $spacing from 1 through $cols-spacing {
-       .row-cols-#{$col}.x#{$spacing} > *,
-       .row .col-#{$col}.x#{$spacing} {
-           @include col($col,$spacing);
-       }
+        .row.row-cols-#{$col} > * {
+            @include row-cols($col);
+        }
+        .child-col-#{$col}.x#{$spacing} > *,
+        .row .col-#{$col}.x#{$spacing},
+        .row.col-#{$col}.x#{$spacing} {
+            @include col($col,$spacing);
+        }
+
     }
     // se cumple
-    .row-cols-#{$col} > *,
-    .row .col-#{$col} {
+    .child-col-#{$col} > *,
+    .row .col-#{$col},
+    .row.col-#{$col} {
         $spacing : 1;
         @include col-default($col);
     }
