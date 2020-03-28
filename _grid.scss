@@ -15,30 +15,24 @@
 // grid
 
 @for $col from 1 through $cols {
-   @for $spacing from 1 through $cols-spacing {
-        .child-col-#{$col}.spacing-#{$spacing} > *,
-        .row .col-#{$col}.spacing-#{$spacing},
-        .row.col-#{$col}.spacing-#{$spacing} {
-            @include col($col,$spacing);
-        }
-
+    // se cumple
+    .col-#{$col} ,
+    .child-col-#{$col} > * {
+         @include col-default($col);
     }
     .row-cols-#{$col} > * {
         @include row-cols($col);
     }
-    // se cumple
-    .row .col-#{$col} ,
-    .child-col-#{$col} > *,
-    .row.col-#{$col} {
-        $spacing : 1;
-        @include col-default($col);
+    @for $spacing from 1 through $cols-spacing {
+        .child-col-#{$col}.spacing-#{$spacing} > *,
+        .col-#{$col}.spacing-#{$spacing} {
+            @include col($col,$spacing);
+        }
     }
-
     @each $size in $screen {
         @include media-breakpoint-down($size) {
             .col-#{$size}-#{$col},
-            .row .col-#{$size}-#{$col},
-            .row.col-#{$size}-#{$col},
+            .col-#{$size}-#{$col},
             .col-#{$size}-auto {
                 @include col-flex;
             }
@@ -48,18 +42,16 @@
 @each $size in $screen {
     @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
-            .row.row-cols-#{$size}-#{$col} > * {
+            .row-cols-#{$size}-#{$col} > * {
                 @include row-cols($col);
             }
             .child-col-#{$size}-#{$col} > *,
-            .row .col-#{$size}-#{$col},
-            .row.col-#{$size}-#{$col} {
+            .col-#{$size}-#{$col} {
                 @include col-default($col);
             }
             @for $spacing from 1 through $cols-spacing {
                 .child-col-#{$size}-#{$col}.spacing-#{$spacing} > *,
-                .row .col-#{$size}-#{$col}.spacing-#{$spacing},
-                .row.col-#{$size}-#{$col}.spacing-#{$spacing} {
+                .col-#{$size}-#{$col}.spacing-#{$spacing} {
                     @include col($col,$spacing);
                 }
             }
