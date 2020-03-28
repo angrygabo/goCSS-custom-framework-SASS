@@ -91,7 +91,6 @@ Justifique la posición de sus elementos con "jutify-content" y aplique reglas p
 	.justify-content-center 
 	.justify-content-between
 	.justify-content-around
-	 //////
 	.justify-content-#{$size}-start
 	.justify-content-#{$size}-end
 	.justify-content-#{$size}-center
