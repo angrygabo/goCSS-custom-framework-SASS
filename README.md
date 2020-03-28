@@ -3,7 +3,7 @@
 </p>
 
 # booGO 1.0 beta
-CSS Framework Mobile First - Release 28/03/2020. (SASS version | LESS próximamente)
+CSS Framework Mobile First - Release 28/03/2020. (versión SASS  | LESS próximamente)
 
 Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
