@@ -40,7 +40,7 @@ Estamos incorporando las librerias JS más potentes.
 	'lg'       :             1536px,
 	'xl'       :             1700px
 
-# Clases disponibles en esta versión
+# clases disponibles en esta versión
 
 	.row
 	.container (xl,lg,md,sm,xs)
@@ -74,9 +74,30 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 	    <div class="col"></div>
 	</div>
 
-# Offset
+# offset
 	.offset-{cols}
 	.offset-{sizes}-{cols}
+
+# contendores
+
+Ordene la posicion de sus elementos en la wen con nuestras clases ".order" y aplique reglas para los diferentes breakpoints (único en booGO)
+
+	.order-{cols}
+	.order-{sizes}-{cols}
+	
+Justifique la posición de sus elementos con ".jutify-content" y aplique reglas para los diferentes breakpoints.
+
+	.justify-content-start
+	.justify-content-end
+	.justify-content-center 
+	.justify-content-between
+	.justify-content-around
+
+        .justify-content-#{$size}-start
+        .justify-content-#{$size}-end
+        .justify-content-#{$size}-center
+        .justify-content-#{$size}-between
+        .justify-content-#{$size}-around
 	
 # márgenes y espaciados
 
