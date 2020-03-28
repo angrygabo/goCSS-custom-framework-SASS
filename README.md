@@ -3,7 +3,7 @@ CSS Framework Mobile First - Releaze 28/03/2020.
 
 booGO incialmente esta desarrollado en SASS, próximamente habilitaremos nuevas versiones es LESS.
 
-booGO es livano y potente, tan solo pesa 100 KB. Hemos incorporado todas las clases existentes en Boostrap 4.1.1
+booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 además de otras clases propias como ".child-col y  .spacing" para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO
 
 # Presets
 
