@@ -5,6 +5,8 @@
 # booGO 1.0 beta
 CSS Framework Mobile First - Release 28/03/2020.
 
+Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
+
 booGO incialmente esta desarrollado en SASS, próximamente habilitaremos nuevas versiones es LESS.
 
 booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 además de otras clases propias como ".child-col y  .spacing" para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO
@@ -26,7 +28,7 @@ Estamos incorporando las librerias JS más potentes.
 	Parallax
 	Animaciones y más...
 
-# Columnas 12
+# 12 Columnas
 
 	$cols:                     12;
 
