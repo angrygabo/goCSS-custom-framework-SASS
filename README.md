@@ -135,7 +135,7 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 		.btn-outline-dark
 		.btn-link
 
-# pasa la prueba de validación w3c
+# booGO pasa la prueba de validación w3c
 
 <p>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer">
