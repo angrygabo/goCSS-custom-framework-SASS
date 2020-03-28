@@ -48,7 +48,7 @@ Estamos incorporando las librerias JS más potentes.
 	.col-{cols}
 	.col-{sizes}-{cols}
 
-# .child-cols (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
+# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)"  (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
 
 	.child-col-{cols}
 	.child-col-{sizes}-{cols}
