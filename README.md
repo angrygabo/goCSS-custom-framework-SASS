@@ -1,5 +1,7 @@
 # boogo
-CSS Framework Mobile First (SASS)
+CSS Framework Mobile First (SASS) 
+
+Livano y potente, tan solo pesa 100 KB
 
 # Presets
 
@@ -112,8 +114,7 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 		.btn-outline-info
 		.btn-outline-light
 		.btn-outline-dark
-
-btn-link
+		.btn-link
 
 # pasa la prueba de validación w3c
 
