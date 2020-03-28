@@ -16,9 +16,9 @@
 
 @for $col from 1 through $cols {
    @for $spacing from 1 through $cols-spacing {
-        .child-col-#{$col}.x#{$spacing} > *,
-        .row .col-#{$col}.x#{$spacing},
-        .row.col-#{$col}.x#{$spacing} {
+        .child-col-#{$col}.spacing-#{$spacing} > *,
+        .row .col-#{$col}.spacing-#{$spacing},
+        .row.col-#{$col}.spacing-#{$spacing} {
             @include col($col,$spacing);
         }
 
@@ -57,9 +57,9 @@
                 @include col-default($col);
             }
             @for $spacing from 1 through $cols-spacing {
-                .child-col-#{$size}-#{$col}.x#{$spacing} > *,
-                .row .col-#{$size}-#{$col}.x#{$spacing},
-                .row.col-#{$size}-#{$col}.x#{$spacing} {
+                .child-col-#{$size}-#{$col}.spacing-#{$spacing} > *,
+                .row .col-#{$size}-#{$col}.spacing-#{$spacing},
+                .row.col-#{$size}-#{$col}.spacing-#{$spacing} {
                     @include col($col,$spacing);
                 }
             }
