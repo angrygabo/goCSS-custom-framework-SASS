@@ -5,7 +5,7 @@ Livano y potente, tan solo pesa 100 KB
 
 # Presets
 
-	Este framewokr CSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
+Este framewokr CSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
 
 # Columnas 12
 
