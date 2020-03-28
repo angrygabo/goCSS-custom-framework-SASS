@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="297" height="157">
+    <img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="240">
 </p>
 
 # booGO 1.0 beta
