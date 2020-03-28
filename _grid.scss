@@ -2,23 +2,6 @@
 .col-auto {
     @include col-flex;
 }
-@for $col from 1 through $cols {
-    .col-#{$col},
-    .row .col-#{$col},
-    .row.col-#{$col}  {
-        @include col-flex;
-    }
-    @each $size in $screen {
-        @include media-breakpoint-down($size) {
-            .col-#{$size}-#{$col},
-            .row .col-#{$size}-#{$col},
-            .row.col-#{$size}-#{$col},
-            .col-#{$size}-auto {
-                @include col-flex;
-            }
-        }
-    }
-}
 .col {
     @include col-flex;
     min-height: 50px;
@@ -30,6 +13,38 @@
 }
 
 // grid
+
+@for $col from 1 through $cols {
+   @for $spacing from 1 through $cols-spacing {
+        .child-col-#{$col}.x#{$spacing} > *,
+        .row .col-#{$col}.x#{$spacing},
+        .row.col-#{$col}.x#{$spacing} {
+            @include col($col,$spacing);
+        }
+
+    }
+    .row-cols-#{$col} > * {
+        @include row-cols($col);
+    }
+    // se cumple
+    .row .col-#{$col} ,
+    .child-col-#{$col} > *,
+    .row.col-#{$col} {
+        $spacing : 1;
+        @include col-default($col);
+    }
+
+    @each $size in $screen {
+        @include media-breakpoint-down($size) {
+            .col-#{$size}-#{$col},
+            .row .col-#{$size}-#{$col},
+            .row.col-#{$size}-#{$col},
+            .col-#{$size}-auto {
+                @include col-flex;
+            }
+        }
+    }
+}
 @each $size in $screen {
     @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
@@ -49,26 +64,6 @@
                 }
             }
         }
-    }
-}
-@for $col from 1 through $cols {
-   @for $spacing from 1 through $cols-spacing {
-        .child-col-#{$col}.x#{$spacing} > *,
-        .row .col-#{$col}.x#{$spacing},
-        .row.col-#{$col}.x#{$spacing} {
-            @include col($col,$spacing);
-        }
-
-    }
-    .row-cols-#{$col} > * {
-        @include row-cols($col);
-    }
-    // se cumple
-    .child-col-#{$col} > *,
-    .row .col-#{$col},
-    .row.col-#{$col} {
-        $spacing : 1;
-        @include col-default($col);
     }
 }
 // row col
