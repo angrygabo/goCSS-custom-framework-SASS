@@ -43,7 +43,6 @@ Estamos incorporando las librerias JS más potentes.
 # clases para "columnas" disponibles en esta versión
 
 	.row
-	.container (xl,lg,md,sm,xs)
 	.col
 	.col-{cols}
 	.col-{sizes}-{cols}
@@ -116,6 +115,8 @@ clases Flexbox
 	
 Aplique clases a contenedores
 
+	.container (xl,lg,md,sm,xs)
+	.container-fluid (width 100% conservando padding laterales 15px)
 	.w-100,.full-width (width 100%)
 	.w-vh,.full-width-viewport  (forzar elemento a ajustarse al width viewport)
 	.h-100 (height 100%)
