@@ -39,7 +39,7 @@ Estamos incorporando las librerias JS más potentes.
 	.col-{cols}
 	.col-{sizes}-{cols}
 
-# .child-cols (añade tamaña a todos los hijos de un child-cold)
+# .child-cols (añade tamaño en común a todos los hijos de un child-cold)
 
 	.child-col-{cols}
 	.child-col-{sizes}-{cols}
