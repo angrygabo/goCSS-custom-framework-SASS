@@ -13,7 +13,6 @@
 }
 
 // grid
-
 @for $col from 1 through $cols {
     // se cumple
     .col-#{$col} ,
@@ -50,14 +49,15 @@
                 @include col-default($col);
             }
             @for $spacing from 1 through $cols-spacing {
-                .child-col-#{$size}-#{$col}.spacing-#{$spacing} > *,
-                .col-#{$size}-#{$col}.spacing-#{$spacing} {
+                .child-col-#{$size}-#{$col}.spacing-#{$spacing} > *{
+                // .col-#{$size}-#{$col}.spacing-#{$spacing} { Se deshabilita sapcing en cols individuales
                     @include col($col,$spacing);
                 }
             }
         }
     }
 }
+
 // row col
 .row {
     @include col-flex;
