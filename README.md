@@ -1,6 +1,10 @@
 # boogo
 CSS Framework Mobile First (SASS)
 
+# Presets
+
+	Este framewokr CSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
+
 # Columnas 12
 
 	$cols:                     12;
@@ -47,6 +51,10 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 	    <div class="col"></div>
 	</div>
 
+# Offset
+	.offset-{cols}
+	.offset-{sizes}-{cols}
+	
 # Mágenes y espciados
 
 	.mt-1, .mt-2, .mt-3, .mt-4, .mt-5 (margin-top)
