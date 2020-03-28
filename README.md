@@ -42,10 +42,12 @@ Estamos incorporando las librerias JS más potentes.
 
 	.row
 	.col
-	.col-{cols}
-	.col-{sizes}-{cols}
+	.col-{cols}  (12 columnas)
+	.col-{sizes}-{cols} (5 breakpoint 12 columnas)
 
 # .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)"  (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
+
+"child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
 
 	.child-col-{cols}
 	.child-col-{sizes}-{cols}
@@ -57,7 +59,6 @@ Estamos incorporando las librerias JS más potentes.
 	    <div class="col"></div>
 	</div>
 
-$child-spacing:             3; (tres niveles de espacio entre columnas, solo aplica a hijos de .child-col)
 
 # .row-cols (divide en columnas a hijos de un row)
 
@@ -137,7 +138,6 @@ Aplique clases a contenedores
 	.pr-1, .pr-2, .pr-3, .pr-4, .pr-5 (padding-right)
 	.px-1, .px-2, .px-3, .px-4, .px-5 (padding-left/padding-right)
 
-	.col-{size}-1, .col-{size}-2, .col-{size}-3, .col-{size}-4, .col-{size}-5, .col-{size}-6, .col-{size}-7, .col-{size}-8, .col-{size}-9, .col-{size}-10, .col-{size}-11, .col-{size}-12
 
 # borders
 
