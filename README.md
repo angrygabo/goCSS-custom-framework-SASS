@@ -13,7 +13,7 @@ booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos 
 
 # Presets
 
-booGO viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
+booGO viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables.
 
 # ¿Qué será lo nuevo?
 
