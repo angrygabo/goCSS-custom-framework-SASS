@@ -13,7 +13,6 @@
 }
 
 // grid
-
 @for $col from 1 through $cols {
     // se cumple
     .col-#{$col} ,
@@ -23,22 +22,29 @@
     .row-cols-#{$col} > * {
         @include row-cols($col);
     }
-    @for $spacing from 1 through $cols-spacing {
-        .child-col-#{$col}.spacing-#{$spacing} > *,
-        .col-#{$col}.spacing-#{$spacing} {
+    @for $spacing from 1 through $child-spacing {
+        .child-col-#{$col}.child-spacing-#{$spacing} > *,
+        .col-#{$col}.child-spacing-#{$spacing} {
             @include col($col,$spacing);
         }
     }
-    @each $size in $screen {
+}
+
+@each $size in $screen {
+    @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
-            .col-#{$size}-#{$col},
-            .col-#{$size}-#{$col},
-            .col-#{$size}-auto {
+            .col-#{$size}-#{$col} {
                 @include col-flex;
             }
         }
     }
+    @include media-breakpoint-down($size) {
+        .col-#{$size}-auto {
+            @include col-flex;
+        }
+    }
 }
+
 @each $size in $screen {
     @for $col from 1 through $cols {
         @include media-breakpoint-down($size) {
@@ -49,15 +55,16 @@
             .col-#{$size}-#{$col} {
                 @include col-default($col);
             }
-            @for $spacing from 1 through $cols-spacing {
-                .child-col-#{$size}-#{$col}.spacing-#{$spacing} > *,
-                .col-#{$size}-#{$col}.spacing-#{$spacing} {
+            @for $spacing from 1 through $child-spacing {
+                .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
+                // .col-#{$size}-#{$col}.child-spacing-#{$spacing} { Se deshabilita sapcing en cols individuales
                     @include col($col,$spacing);
                 }
             }
         }
     }
 }
+
 // row col
 .row {
     @include col-flex;
