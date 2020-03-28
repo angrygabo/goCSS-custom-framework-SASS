@@ -1,4 +1,5 @@
 //spacing
+
 .p-0 {
   padding: 0 !important;
 }
@@ -14,6 +15,7 @@
 
 // spacing
 @for $spacing from 1 through $spacings {
+
   // padding
   .pt-#{$spacing},.py-#{$spacing} {
     @include spacing-pt($spacing);
@@ -30,6 +32,7 @@
   .pl-#{$spacing},.px-#{$spacing} {
     @include spacing-pl($spacing);
   }
+
   // margin
   .mt-#{$spacing},.my-#{$spacing} {
     @include spacing-mt($spacing);
@@ -46,11 +49,14 @@
   .ml-#{$spacing},.mx-#{$spacing} {
     @include spacing-ml($spacing);
   }
+
 }
+
 // spacing media
 @for $spacing from 1 through $spacings {
   @each $size in $screen {
     @include media-breakpoint-only($size) {
+
         // padding
         .pt-#{$size}-#{$spacing},.py-#{$size}-#{$spacing} {
           @include spacing-pt($spacing);
@@ -67,6 +73,7 @@
         .pl-#{$size}-#{$spacing},.px-#{$size}-#{$spacing} {
           @include spacing-pl($spacing);
         }
+
         // margin
         .mt-#{$size}-#{$spacing},.my-#{$size}-#{$spacing} {
           @include spacing-mt($spacing);
@@ -83,6 +90,7 @@
         .ml-#{$size}-#{$spacing},.mx-#{$size}-#{$spacing} {
           @include spacing-ml($spacing);
         }
+
     }
   }
 }
