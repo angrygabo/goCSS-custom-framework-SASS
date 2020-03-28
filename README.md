@@ -44,6 +44,7 @@ Estamos incorporando las librerias JS más potentes.
 
 	.row
 	.col
+	.col-auto
 	.col-{cols}  (12 columnas)
 	.col-{sizes}-{cols} (5 breakpoint 12 columnas)
 
