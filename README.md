@@ -69,7 +69,7 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 	.offset-{cols}
 	.offset-{sizes}-{cols}
 	
-# Mágenes y espciados
+# márgenes y espaciados
 
 	.mt-1, .mt-2, .mt-3, .mt-4, .mt-5 (margin-top)
 	.mb-1, .mb-2, .mb-3, .mb-4, .mb-5 (margin-bottom)
