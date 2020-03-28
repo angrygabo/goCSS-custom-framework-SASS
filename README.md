@@ -1,5 +1,5 @@
 # booGO 1.0 beta
-CSS Framework Mobile First - Releaze 28/03/2020.
+CSS Framework Mobile First - Release 28/03/2020.
 
 booGO incialmente esta desarrollado en SASS, próximamente habilitaremos nuevas versiones es LESS.
 
