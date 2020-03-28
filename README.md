@@ -18,7 +18,10 @@ Este framework CSS viene configurado con un conjunto de parámetros generales co
 Estamos incorporando las librerias JS más potentes.
 
 	Siwper Slider
+	Componentes propios
 	Componentes JS de materializecss (https://materializecss.com/)
+	Layaouts
+	Templates móviles y web
 	Pack de iconos (Fuentes y SVG)
 	Parallax
 	Animaciones y más...
