@@ -40,7 +40,7 @@ Estamos incorporando las librerias JS más potentes.
 	'lg'       :             1536px,
 	'xl'       :             1700px
 
-# clases disponibles en esta versión
+# clases para "columnas" disponibles en esta versión
 
 	.row
 	.container (xl,lg,md,sm,xs)
