@@ -80,7 +80,7 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 
 # contendores
 
-Ordene la posicion de sus elementos en la wen con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
+Ordene la posición de sus elementos en la wen con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
 
 	.order-{cols}
 	.order-{sizes}-{cols}
