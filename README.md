@@ -9,7 +9,7 @@ Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas
 
 booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO.
 
-Además booGO cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}"
+Además booGO cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}" abriendo un mundo de posibilidades, ideal para dispositivos móviles.
 
 # Presets
 
