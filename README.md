@@ -5,7 +5,17 @@ Livano y potente, tan solo pesa 100 KB
 
 # Presets
 
-Este framewokr CSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
+Este framework CSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables
+
+# ¿Qué será lo nuevo?
+
+Estamos incorporando las librerias JS más potentes.
+
+	Siwper Slider
+	Componentes JS de materializecss (https://materializecss.com/)
+	Pack de iconos (Fuentes y SVG)
+	Parallax
+	Animaciones y más...
 
 # Columnas 12
 
