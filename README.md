@@ -7,7 +7,7 @@ CSS Framework Mobile First - Release 28/03/2020. (versión SASS  | LESS próxima
 
 Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
-booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO
+booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO.
 
 Además booGO cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}"
 
