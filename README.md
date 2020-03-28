@@ -128,6 +128,14 @@ Aplique clases a contenedores
 	.ml-1, .ml-2, .ml-3, .ml-4, .ml-5 (margin-left)
 	.mr-1, .mr-2, .mr-3, .mr-4, .mr-5 (margin-right)
 	.mx-1, .mx-2, .mx-3, .mx-4, .mx-5 (margin-left/margin-right)
+	
+	.pt-1, .pt-2, .pt-3, .pt-4, .pt-5 (padding-top)
+	.pb-1, .pb-2, .pb-3, .pb-4, .pb-5 (padding-bottop)
+	.py-1, .py-2, .py-3, .py-4, .py-5 (padding-top/padding-bottop)
+
+	.pl-1, .pl-2, .pl-3, .pl-4, .pl-5 (padding-left)
+	.pr-1, .pr-2, .pr-3, .pr-4, .pr-5 (padding-right)
+	.px-1, .px-2, .px-3, .px-4, .px-5 (padding-left/padding-right)
 
 	.col-{size}-1, .col-{size}-2, .col-{size}-3, .col-{size}-4, .col-{size}-5, .col-{size}-6, .col-{size}-7, .col-{size}-8, .col-{size}-9, .col-{size}-10, .col-{size}-11, .col-{size}-12
 
