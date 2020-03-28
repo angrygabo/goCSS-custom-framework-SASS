@@ -32,7 +32,7 @@ Estamos incorporando las librerias JS más potentes.
 
 	$cols:                     12;
 
-# Sizes
+# breakpoints
 
 	'xs'       :             460px,
 	'sm'       :             760px,
@@ -117,7 +117,7 @@ clases Flexbox
 Aplique clases a contenedores
 
 	.w-100,.full-width (width 100%)
-	.w-vh,.full-width-viewport  (width viewport)
+	.w-vh,.full-width-viewport  (forzar elemento a ajustarse al width viewport)
 	.h-100 (height 100%)
 	.h-vh (height viewport)
 	
