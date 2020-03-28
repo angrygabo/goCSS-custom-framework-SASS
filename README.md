@@ -80,24 +80,46 @@ $child-spacing:             3; (tres niveles de espacio entre columnas, solo apl
 
 # contendores
 
-Ordene la posicion de sus elementos en la wen con nuestras clases ".order" y aplique reglas para los diferentes breakpoints (único en booGO)
+Ordene la posicion de sus elementos en la wen con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
 
 	.order-{cols}
 	.order-{sizes}-{cols}
 	
-Justifique la posición de sus elementos con ".jutify-content" y aplique reglas para los diferentes breakpoints.
+Justifique la posición de sus elementos con "jutify-content" y aplique reglas para los diferentes breakpoints.
 
 	.justify-content-start
 	.justify-content-end
 	.justify-content-center 
 	.justify-content-between
 	.justify-content-around
+	 //////
+	.justify-content-#{$size}-start
+	.justify-content-#{$size}-end
+	.justify-content-#{$size}-center
+	.justify-content-#{$size}-between
+	.justify-content-#{$size}-around
+	
+clases Flexbox
 
-        .justify-content-#{$size}-start
-        .justify-content-#{$size}-end
-        .justify-content-#{$size}-center
-        .justify-content-#{$size}-between
-        .justify-content-#{$size}-around
+	.d-flex
+	.d-inline-flex
+        .d-#{$size}-flex
+        .d-#{$size}-inline-flex
+	.flex-row
+	.flex-row-reverse
+	.flex-column
+	.flex-column-reverse
+        .flex-#{$size}-row
+        .flex-#{$size}-row-reverse
+        .flex-#{$size}-column
+        .flex-#{$size}-column-reverse
+	
+Aplique clases a contenedores
+
+	.w-100,.full-width (width 100%)
+	.w-vh,.full-width-viewport  (width viewport)
+	.h-100 (height 100%)
+	.h-vh (height viewport)
 	
 # márgenes y espaciados
 
