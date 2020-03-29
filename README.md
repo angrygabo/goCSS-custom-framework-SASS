@@ -87,7 +87,7 @@ Alinee verticalmente elementos y plique reglas para los diferentes breakpoints
 		.align-items-{size}-start
 		.align-items-{size}-center
 		.align-items-{size}-end
-	// align self
+
 	.align-self-start
 	.align-self-center
 	.align-self-end
