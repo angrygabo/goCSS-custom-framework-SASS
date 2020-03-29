@@ -4,7 +4,7 @@
 	(100% compatible con desarrollos basados en Boostrap 4.1.1)</br></br>
 	<a href="#breakpoints">breackpoints</a> | 
 	<a href="#grid">grid</a> |  
-	<a href="#child-cols">Child-col (nuevo)</a> | 
+	<a href="#child-cols-único-en-boogo">Child-col (nuevo)</a> | 
 	<a href="#order-único-en-boogo">order (nuevo)</a> </br>
 	<a href="#row-cols-nuevo">row-cols (nuevo)</a> | 
 	<a href="#offset">offset</a> | 
