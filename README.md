@@ -3,7 +3,7 @@
 </p>
 
 # booGO 1.0 beta
-CSS Framework Mobile First - Release 28/03/2020. (versión SASS  | LESS próximamente)
+CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)
 
 Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
@@ -19,8 +19,8 @@ booGO viene configurado con un conjunto de parámetros generales como un punto d
 
 Estamos incorporando las librerias JS más potentes.
 
-	Siwper Slider
-	Componentes propios
+	Swiper Slider
+	Una amplia galería de componentes propios
 	Componentes JS de materializecss (https://materializecss.com/)
 	Layaouts
 	Templates móviles y web
@@ -40,13 +40,6 @@ Estamos incorporando las librerias JS más potentes.
 	'lg'       :             1536px,
 	'xl'       :             1700px
 
-# clases para "columnas" disponibles en esta versión
-
-	.row
-	.col
-	.col-auto
-	.col-{cols}  (12 columnas)
-	.col-{sizes}-{cols} (5 breakpoint 12 columnas)
 
 # .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)"  (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
 
@@ -65,10 +58,10 @@ Estamos incorporando las librerias JS más potentes.
 
 # .row-cols (divide en columnas a hijos de un row)
 
-	.row-col-{cols}
-	.row-col-{sizes}-{cols}
+	.row-cols-{cols}
+	.row-cols-{sizes}-{cols}
 
-	<div class="row row-col-2">
+	<div class="row row-col-6 row-cols-sm-2 row-cols-md-4">
 	    <div class="col"></div>
 	    <div class="col"></div>
 	    <div class="col"></div>
@@ -81,7 +74,22 @@ Estamos incorporando las librerias JS más potentes.
 
 # contendores
 
-Ordene la posición de sus elementos en la wen con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
+	.row
+	.col
+	.col-auto
+	.col-{cols}  (12 columnas)
+	.col-{sizes}-{cols} (5 breakpoint 12 columnas)
+	
+Aplique clases a contenedores
+
+	.container (xl,lg,md,sm,xs)
+	.container-fluid (width 100% conservando padding laterales 15px)
+	.w-100,.full-width (width 100%)
+	.w-vh,.full-width-viewport  (forzar elemento a ajustarse al width viewport)
+	.h-100 (height 100%)
+	.h-vh (height viewport)
+
+Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
 
 	.order-{cols}
 	.order-{sizes}-{cols}
@@ -114,33 +122,32 @@ clases Flexbox
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
 	
-Aplique clases a contenedores
-
-	.container (xl,lg,md,sm,xs)
-	.container-fluid (width 100% conservando padding laterales 15px)
-	.w-100,.full-width (width 100%)
-	.w-vh,.full-width-viewport  (forzar elemento a ajustarse al width viewport)
-	.h-100 (height 100%)
-	.h-vh (height viewport)
-	
 # márgenes y espaciados
 
-	.mt-1, .mt-2, .mt-3, .mt-4, .mt-5 (margin-top)
-	.mb-1, .mb-2, .mb-3, .mb-4, .mb-5 (margin-bottom)
-	.my-1, .my-2, .my-3, .my-4, .my-5 (margin-top/margin-bottom)
+Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}" con nuestros breakpoints y cinco (5) niveles de espaciado.
 
-	.ml-1, .ml-2, .ml-3, .ml-4, .ml-5 (margin-left)
-	.mr-1, .mr-2, .mr-3, .mr-4, .mr-5 (margin-right)
-	.mx-1, .mx-2, .mx-3, .mx-4, .mx-5 (margin-left/margin-right)
+	.mt-{1/2/3/4/5}, .mt-{size}-{1/2/3/4/5} (margin-top)
+	.mb-{1/2/3/4/5}, .mb-{size}-{1/2/3/4/5} (margin-bottom)
+	.my-{1/2/3/4/5}, .my-{size}-{1/2/3/4/5} (margin-top/margin-bottom)
+
+	.ml-{1/2/3/4/5}, .ml-{size}-{1/2/3/4/5} (margin-left)
+	.mr-{1/2/3/4/5}, .mr-{size}-{1/2/3/4/5} (margin-right)
+	.mx-{1/2/3/4/5}, .mx-{size}-{1/2/3/4/5} (margin-left/margin-right)
 	
-	.pt-1, .pt-2, .pt-3, .pt-4, .pt-5 (padding-top)
-	.pb-1, .pb-2, .pb-3, .pb-4, .pb-5 (padding-bottop)
-	.py-1, .py-2, .py-3, .py-4, .py-5 (padding-top/padding-bottop)
+	.pt-{1/2/3/4/5}, .pt-{size}-{1/2/3/4/5} (padding-top)
+	.pb-{1/2/3/4/5}, .pb-{size}-{1/2/3/4/5} (padding-bottop)
+	.py-{1/2/3/4/5},.py-{size}-{1/2/3/4/5} (padding-top/padding-bottop)
 
-	.pl-1, .pl-2, .pl-3, .pl-4, .pl-5 (padding-left)
-	.pr-1, .pr-2, .pr-3, .pr-4, .pr-5 (padding-right)
-	.px-1, .px-2, .px-3, .px-4, .px-5 (padding-left/padding-right)
+	.pl-{1/2/3/4/5}, .pl-{size}-{1/2/3/4/5} (padding-left)
+	.pr-{1/2/3/4/5}, .pr-{size}-{1/2/3/4/5} (padding-right)
+	.px-{1/2/3/4/5}, .px-{size}-{1/2/3/4/5} (padding-left/padding-right)
 
+	<div class="row my-4 my-sm-2 rmy-md-3">
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	</div>
 
 # borders
 
