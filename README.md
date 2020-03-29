@@ -204,6 +204,16 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 	.border-warning
 	.border-danger
 
+# Backgrounds
+
+	.bg-succes
+	.bg-warning
+	.bg-danger
+	.bg-white
+	.bg-black
+	.bg-light-gray
+	.bg-dark-gray
+
 # Botones
 
 	.btn
