@@ -73,11 +73,11 @@ Justifique la posición de sus elementos con "jutify-content" y aplique reglas p
 	.justify-content-center 
 	.justify-content-between
 	.justify-content-around
-	.justify-content-#{$size}-start
-	.justify-content-#{$size}-end
-	.justify-content-#{$size}-center
-	.justify-content-#{$size}-between
-	.justify-content-#{$size}-around
+		.justify-content-#{$size}-start
+		.justify-content-#{$size}-end
+		.justify-content-#{$size}-center
+		.justify-content-#{$size}-between
+		.justify-content-#{$size}-around
 	
 Alinee verticalmente elementos y plique reglas para los diferentes breakpoints
 
