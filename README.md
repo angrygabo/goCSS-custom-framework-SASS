@@ -8,14 +8,16 @@
 	<a href="#order-único-en-boogo">order (nuevo)</a> </br>
 	<a href="#row-cols-nuevo">row-cols (nuevo)</a> | 
 	<a href="#offset">offset</a> | 
-	<a href="#margenes-y-espaciados">márgenes y espaciados</a>
+	<a href="#márgenes-y-espaciados">márgenes y espaciados</a>
 	<a href="#borders">borders</a> | 
 	<a href="#backgrounds">backgrounds</a> | 
 	<a href="#botones" style="color: #b873ff!important">botones</a>
 </p>
 
 
-# booGO 1.0 beta
+# booGO 1.0 beta 
+
+(La versión 1.0 beta solo dispone del sistema de grid basado en flexbox).
 
 booGO fue pensado y desarrollado para sacar su máximo provecho en desarrollos móviles pero tambien puede usarse perfectamente en desarrollos desktop. Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
