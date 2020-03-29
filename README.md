@@ -142,7 +142,7 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 	.pr-{1/2/3/4/5}, .pr-{size}-{1/2/3/4/5} (padding-right)
 	.px-{1/2/3/4/5}, .px-{size}-{1/2/3/4/5} (padding-left/padding-right)
 
-	<div class="row my-4 my-sm-2 rmy-md-3">
+	<div class="row my-4 my-sm-2 my-md-3">
 	    <div class="col"></div>
 	    <div class="col"></div>
 	    <div class="col"></div>
