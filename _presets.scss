@@ -139,8 +139,8 @@ img {
   vertical-align: middle;
   border-style: none;
 }
-.img-cover img,
-img.img-cover {
+.object-fit-cover img,
+img.object-fit-cover {
     height: $percent;
     width: $percent;
     max-width: $percent;
