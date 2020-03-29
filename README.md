@@ -79,6 +79,22 @@ Justifique la posición de sus elementos con "jutify-content" y aplique reglas p
 	.justify-content-#{$size}-between
 	.justify-content-#{$size}-around
 	
+Alinee verticalmente elementos y plique reglas para los diferentes breakpoints
+
+	.align-items-start
+	.align-items-center
+	.align-items-end
+		.align-items-{size}-start
+		.align-items-{size}-center
+		.align-items-{size}-end
+	// align self
+	.align-self-start
+	.align-self-center
+	.align-self-end
+		.align-self-{size}-start
+		.align-self-{size}-center
+		.align-self-{size}-end	
+	
 clases Flexbox
 
 	.d-flex
