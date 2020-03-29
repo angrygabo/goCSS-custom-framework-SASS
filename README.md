@@ -2,14 +2,14 @@
 	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200"></br>
 	CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)</br></br>
 	(100% compatible con desarrollos basados en Boostrap 4.1.1)</br></br>
-	<a href="#breakpoints">breackpoints</a>
-	 | <a href="#contendores-y-sistema-de-columnas-grid" style="color: #b873ff!important">grid</a>
-	 | <a href="href="#child-cols-con-tres-3-niveles-de-espaciado-child-spacing-123-añade-tamaño-en-común-a-todos-los-hijos-de-un-child-cold-único-en-boogo">Child-col (nuevo)</a>
-	 | <<a href="#ordene-la-posición-de-sus-elementos-en-la-web-con-nuestras-clases-order-y-aplique-reglas-para-los-diferentes-breakpoints-único-en-boogo">order (nuevo)</a>
-	 | <<a href="#row-cols-divide-en-columnas-a-hijos-de-un-row">row-cols (nuevo)</a>
-	 | <<a href="#offset">offset</a>
-	 | <<a href="#margenes-y-espaciados">márgenes y espaciados</a>
-	 | <<a href="#borders">borders</a>
+	<a href="#breakpoints">breackpoints</a> | 
+	<a href="#contendores-y-sistema-de-columnas-grid">grid</a> |  
+	<a href="#child-cols-con-tres-3-niveles-de-espaciado-child-spacing-123-añade-tamaño-en-común-a-todos-los-hijos-de-un-child-cold-único-en-boogo">Child-col (nuevo)</a> | 
+	<a href="#ordene-la-posición-de-sus-elementos-en-la-web-con-nuestras-clases-order-y-aplique-reglas-para-los-diferentes-breakpoints-único-en-boogo">order (nuevo)</a> | 
+	<a href="#row-cols-divide-en-columnas-a-hijos-de-un-row">row-cols (nuevo)</a>
+	<a href="#offset">offset</a> | 
+	<a href="#margenes-y-espaciados">márgenes y espaciados</a>
+	<a href="#borders">borders</a> | 
 	<a href="#botones" style="color: #b873ff!important">botones</a>
 </p>
 
