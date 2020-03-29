@@ -41,7 +41,7 @@ Estamos incorporando las librerias JS más potentes.
 
 	$cols:                     12;
 
-# breakpoints
+# Breakpoints
 
 	'xs':                      460px,
 	'sm':                      760px,
@@ -49,7 +49,7 @@ Estamos incorporando las librerias JS más potentes.
 	'lg':                      1536px,
 	'xl':                      1700px
 
-# grid
+# Grid
 
 	.row
 	.col
@@ -94,7 +94,7 @@ clases Flexbox
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
 
-# child-cols (Único en booGO)
+# Child-cols (Único en booGO)
 
 Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold, también puedes aplicar reglas en distintos breakpoints.
 
@@ -122,7 +122,7 @@ Ordene la posición de sus elementos en la web con nuestras clases "order" y apl
 	    <div class="col order-4 order-sm-1 order-md-3">4</div>
 	</div>
 
-# .row-cols (Nuevo)
+# Row cols (Nuevo)
 
 Use estas clases de columnas de fila para crear rápidamente diseños de cuadrícula básicos o para controlar los diseños de sus tarjetas.
 
@@ -136,12 +136,12 @@ Use estas clases de columnas de fila para crear rápidamente diseños de cuadrí
 	    <div class="col"></div>
 	</div>
 
-# offset
+# Offset
 	.offset-{cols}
 	.offset-{sizes}-{cols}
 
 	
-# márgenes y espaciados
+# Márgenes y espaciados
 
 Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}" con nuestros breakpoints y cinco (5) niveles de espaciado.
 
@@ -168,7 +168,7 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 	    <div class="col"></div>
 	</div>
 
-# borders
+# Borders
 
 	.rounded-circle
 	.rounded-left
@@ -188,7 +188,7 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 	.border-warning
 	.border-danger
 
-# botones
+# Botones
 
 	.btn
 	
@@ -215,16 +215,6 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 		.btn-outline-dark
 		.btn-link
 	
-	<div class="row">
-		<button type="button" class="btn btn-primary">Primary</button>
-		<button type="button" class="btn btn-secondary">Secondary</button>
-		<button type="button" class="btn btn-success">Success</button>
-		<button type="button" class="btn btn-danger disabled">Danger</button>
-		<button type="button" class="btn btn-warning">Warning</button>
-		<button type="button" class="btn btn-info">Info</button>
-		<button type="button" class="btn btn-light">Light</button>
-		<button type="button" class="btn btn-dark">Dark</button>
-	</div>
 
 <p>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer">
