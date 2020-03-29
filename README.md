@@ -212,8 +212,6 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 		<button type="button" class="btn btn-dark">Dark</button>
 	</div>
 
-# booGO pasa la prueba de validación w3c
-
 <p>
 	<a href="http://jigsaw.w3.org/css-validator/check/referer">
 		<img style="border:0;width:88px;height:31px"
