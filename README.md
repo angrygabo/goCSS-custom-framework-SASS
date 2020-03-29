@@ -1,5 +1,6 @@
 <p align="center">
-    <img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200">
+	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200">
+	CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)
 </p>
 
 # booGO 1.0 beta
