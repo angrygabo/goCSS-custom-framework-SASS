@@ -2,7 +2,15 @@
 	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200"></br>
 	CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)</br></br>
 	(100% compatible con desarrollos basados en Boostrap 4.1.1)</br></br>
-	<a href="#breakpoints">link</a>
+	<a href="#breakpoints" style="color: #B873FF">breackpoints</a>
+	<a href="#contendores-y-sistema-de-columnas-grid" style="color: #B873FF">grid>
+	<a href="href="#child-cols-con-tres-3-niveles-de-espaciado-child-spacing-123-añade-tamaño-en-común-a-todos-los-hijos-de-un-child-cold-único-en-boogo"" style="color: #B873FF">Child-col (nuevo)</a>
+	<a href="#ordene-la-posición-de-sus-elementos-en-la-web-con-nuestras-clases-order-y-aplique-reglas-para-los-diferentes-breakpoints-único-en-boogo" style="color: #B873FF>order (nuevo)</a>
+	<a href="#row-cols-divide-en-columnas-a-hijos-de-un-row" style="color: #B873FF">row-cols (nuevo)</a>
+	<a href="#offset" style="color: #B873FF">offset</a>
+	<a href="#margenes-y-espaciados" style="color: #B873FF">márgenes y espaciados</a>
+	<a href="#borders" style="color: #B873FF">borders</a>
+	<a href="#botones" style="color: #B873FF">botones</a>
 </p>
 
 
