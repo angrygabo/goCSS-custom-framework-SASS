@@ -220,3 +220,26 @@
         }
     }
 }
+
+// defaults backgrounds
+.bg-success {
+    background-color: $success-color;
+}
+.bg-warning {
+    background-color: $warning-color;
+}
+.bg-danger {
+    background-color: $danger-color;
+}
+.bg-white {
+    background-color: $white;
+}
+.bg-black {
+    background-color: $black;
+}
+.bg-light-gray {
+    background-color: $light-color;
+}
+.bg-dark-gray {
+    background-color: $dark-gray;
+}
