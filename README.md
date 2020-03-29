@@ -1,7 +1,7 @@
 <p align="center">
 	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200"></br>
 	CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)</br></br>
-	(100% compatible con desarrollos basados en Boostrap 4.4.x)</br></br>
+	(100% compatible con desarrollos basados en Boostrap 4.4)</br></br>
 	<a href="#breakpoints">breackpoints</a> | 
 	<a href="#grid">grid</a> |  
 	<a href="#child-col-único-en-boogo">Child-col (nuevo)</a> | 
