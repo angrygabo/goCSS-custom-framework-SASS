@@ -94,9 +94,9 @@ clases Flexbox
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
 
-# child-cols 
+# child-cols (Único en booGO)
 
-Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold, también puedes aplicar reglas en distintos breakpoints (Único en booGO)
+Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold, también puedes aplicar reglas en distintos breakpoints.
 
 	.child-col-{cols}
 		.child-col-{sizes}-{cols}
