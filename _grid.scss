@@ -49,7 +49,7 @@
 
 @each $size in $screen {
     @for $col from 1 through $cols {
-        @include media-breakpoint-down($size) {
+        @include media-breakpoint-only($size) {
             .row-cols-#{$size}-#{$col} > * {
                 @include row-cols($col);
             }
