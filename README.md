@@ -81,7 +81,7 @@ Estamos incorporando las librerias JS más potentes.
 	.offset-{cols}
 	.offset-{sizes}-{cols}
 
-# contendores
+# contendores y sistema de columnas (grid)
 
 	.row
 	.col
