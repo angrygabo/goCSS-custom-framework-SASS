@@ -1,0 +1,51 @@
+form {
+    width: $w-100;
+    .form-group {
+        width: auto;
+        margin-bottom: $rem;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        label {
+            display: block;
+            margin-bottom: $rem*.5;
+        }
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            display: block;
+            width: $w-100;
+            padding: .375rem .75rem;
+            font-size: $rem;
+            line-height: $line-height-base;
+            color: #495057;
+            background-color: $white;
+            border: 1px solid $light-color;
+            border-radius: $rem*.25;
+            transition: border-color .15s ease-in-out,
+            box-shadow .15s ease-in-out;
+        }
+        textarea {
+            min-height: 100px;
+        }
+        input:focus,
+        select:focus,
+        textarea:focus, {
+            border: 1px solid $primary-color;
+        }
+    }
+    .form-check {
+        width: auto;
+        margin-bottom: $rem;
+        font-family: $font-family-sans-serif;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        .form-check-input {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
