@@ -39,7 +39,7 @@ Estamos incorporando las librerias JS más potentes.
 	'xl':                      1700px
 
 
-# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)"  (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
+# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold (Único en booGO)
 
 "child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
 
@@ -87,7 +87,7 @@ Aplique clases a contenedores
 	.h-100 (height 100%)
 	.h-vh (height viewport)
 
-Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints (único en booGO)
+Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
 
 	.order-{cols}
 	.order-{sizes}-{cols}
