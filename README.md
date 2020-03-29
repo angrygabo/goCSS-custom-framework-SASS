@@ -49,7 +49,7 @@ Estamos incorporando las librerias JS más potentes.
 	'lg':                      1536px,
 	'xl':                      1700px
 
-# contendores y sistema de columnas (grid)
+# grid
 
 	.row
 	.col
@@ -94,9 +94,9 @@ clases Flexbox
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
 
-# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold (Único en booGO)
+# child-cols 
 
-"child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
+Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold, también puedes aplicar reglas en distintos breakpoints (Único en booGO)
 
 	.child-col-{cols}
 		.child-col-{sizes}-{cols}
@@ -108,7 +108,9 @@ clases Flexbox
 	    <div class="col"></div>
 	</div>
 	
-# Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
+# Order (Único en booGO)
+
+Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
 
 	.order-{cols}
 		.order-{sizes}-{cols}
@@ -120,7 +122,9 @@ clases Flexbox
 	    <div class="col order-4 order-sm-1 order-md-3">4</div>
 	</div>
 
-# .row-cols (divide en columnas a hijos de un row)
+# .row-cols (Nuevo)
+
+Use estas clases de columnas de fila para crear rápidamente diseños de cuadrícula básicos o para controlar los diseños de sus tarjetas.
 
 	.row-cols-{cols}
 	.row-cols-{sizes}-{cols}
