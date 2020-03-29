@@ -99,9 +99,9 @@ clases Flexbox
 "child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
 
 	.child-col-{cols}
-	.child-col-{sizes}-{cols}
+		.child-col-{sizes}-{cols}
 
-	<div class="row child-col-6 child-spacing-1">
+	<div class="row child-col-4 child-col-md-12 child-col-sm-6 child-spacing-2">
 	    <div class="col"></div>
 	    <div class="col"></div>
 	    <div class="col"></div>
