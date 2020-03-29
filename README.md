@@ -80,7 +80,7 @@ Justifique la posición de sus elementos con "jutify-content" y aplique reglas p
 		.justify-content-#{$size}-between
 		.justify-content-#{$size}-around
 	
-Alinee verticalmente elementos y plique reglas para los diferentes breakpoints
+Alinee verticalmente elementos y aplique reglas para los diferentes breakpoints
 
 	.align-items-start
 	.align-items-center
