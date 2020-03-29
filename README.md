@@ -19,11 +19,9 @@ booGO viene configurado con un conjunto de parámetros generales como un punto d
 
 Estamos incorporando las librerias JS más potentes.
 
-	Swiper Slider
 	Una amplia galería de componentes propios
-	Componentes JS de materializecss (https://materializecss.com/)
 	Layaouts
-	Templates móviles y web
+	Pack de templates móviles gratuitos y pagos
 	Pack de iconos (Fuentes y SVG)
 	Parallax
 	Animaciones y más...
