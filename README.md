@@ -39,49 +39,6 @@ Estamos incorporando las librerias JS más potentes.
 	'lg':                      1536px,
 	'xl':                      1700px
 
-
-# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold (Único en booGO)
-
-"child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
-
-	.child-col-{cols}
-	.child-col-{sizes}-{cols}
-
-	<div class="row child-col-6 child-spacing-1">
-	    <div class="col"></div>
-	    <div class="col"></div>
-	    <div class="col"></div>
-	    <div class="col"></div>
-	</div>
-	
-# Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
-
-	.order-{cols}
-	.order-{sizes}-{cols}
-	
-	<div class="row">
-	    <div class="col order-sm-4 order-md-2">1</div>
-	    <div class="col order-sm-3 order-md-4">2</div>
-	    <div class="col order-sm-2 order-md-1">3</div>
-	    <div class="col order-sm-1 order-md-3">4</div>
-	</div>
-
-# .row-cols (divide en columnas a hijos de un row)
-
-	.row-cols-{cols}
-	.row-cols-{sizes}-{cols}
-
-	<div class="row row-col-6 row-cols-sm-2 row-cols-md-4">
-	    <div class="col"></div>
-	    <div class="col"></div>
-	    <div class="col"></div>
-	    <div class="col"></div>
-	</div>
-
-# offset
-	.offset-{cols}
-	.offset-{sizes}-{cols}
-
 # contendores y sistema de columnas (grid)
 
 	.row
@@ -126,6 +83,49 @@ clases Flexbox
         .flex-#{$size}-row-reverse
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
+
+# .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold (Único en booGO)
+
+"child-spacing" (tres (3) niveles de espacio entre columnas, solo aplica a hijos de .child-col)
+
+	.child-col-{cols}
+	.child-col-{sizes}-{cols}
+
+	<div class="row child-col-6 child-spacing-1">
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	</div>
+	
+# Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
+
+	.order-{cols}
+	.order-{sizes}-{cols}
+	
+	<div class="row">
+	    <div class="col order-sm-4 order-md-2">1</div>
+	    <div class="col order-sm-3 order-md-4">2</div>
+	    <div class="col order-sm-2 order-md-1">3</div>
+	    <div class="col order-sm-1 order-md-3">4</div>
+	</div>
+
+# .row-cols (divide en columnas a hijos de un row)
+
+	.row-cols-{cols}
+	.row-cols-{sizes}-{cols}
+
+	<div class="row row-col-6 row-cols-sm-2 row-cols-md-4">
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	    <div class="col"></div>
+	</div>
+
+# offset
+	.offset-{cols}
+	.offset-{sizes}-{cols}
+
 	
 # márgenes y espaciados
 
