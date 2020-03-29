@@ -5,7 +5,7 @@
 
 # booGO 1.0 beta
 
-Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
+booGO fue pensado y desarrollado para sacar su máximo provecho para desarrollos en dispositivos móviles pero tambien puede usarse perfectamente en desarrollos desktop. Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
 booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en Boostrap 4.1.1 para reducir al máximo la curva de aprendizaje, es decir, si conoces boostrap no tendrás problemas con booGO.
 
