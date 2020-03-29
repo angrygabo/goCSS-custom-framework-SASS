@@ -4,7 +4,7 @@
 	(100% compatible con desarrollos basados en Boostrap 4.1.1)</br></br>
 	<a href="#breakpoints">breackpoints</a> | 
 	<a href="#grid">grid</a> |  
-	<a href="#child-cols-único-en-boogo">Child-col (nuevo)</a> | 
+	<a href="#child-col-único-en-boogo">Child-col (nuevo)</a> | 
 	<a href="#order-único-en-boogo">order (nuevo)</a> </br>
 	<a href="#row-cols-nuevo">row-cols (nuevo)</a> | 
 	<a href="#offset">offset</a> | 
@@ -94,7 +94,7 @@ clases Flexbox
         .flex-#{$size}-column
         .flex-#{$size}-column-reverse
 
-# Child-cols (Único en booGO)
+# Child-col (Único en booGO)
 
 Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en común a todos los hijos de un child-cold, también puedes aplicar reglas en distintos breakpoints.
 
