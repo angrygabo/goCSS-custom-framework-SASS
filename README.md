@@ -94,6 +94,13 @@ Ordene la posición de sus elementos en la web con nuestras clases "order" y apl
 	.order-{cols}
 	.order-{sizes}-{cols}
 	
+	<div class="row">
+	    <div class="col order-sm-4 order-md-2">1</div>
+	    <div class="col order-sm-3 order-md-4">2</div>
+	    <div class="col order-sm-2 order-md-1">3</div>
+	    <div class="col order-sm-1 order-md-3">4</div>
+	</div>
+	
 Justifique la posición de sus elementos con "jutify-content" y aplique reglas para los diferentes breakpoints.
 
 	.justify-content-start
