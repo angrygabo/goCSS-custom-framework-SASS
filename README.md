@@ -7,7 +7,7 @@
 
 booGO fue pensado y desarrollado para sacar su máximo provecho en desarrollos móviles pero tambien puede usarse perfectamente en desarrollos desktop. Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
-booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en otras versiones de frameworks más famosos, reduciendo al máximo la curva de aprendizaje, es decir, si conoces otros frameworks no tendrás problemas con booGO.
+booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en otras versiones de frameworks más famosos, reduciendo al máximo la curva de aprendizaje, es decir, si ya has trabajado con otros frameworks CSS no tendrás problemas con booGO.
 
 Además booGO cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}" abriendo un mundo de posibilidades, ideal para dispositivos móviles.
 
