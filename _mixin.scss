@@ -193,6 +193,7 @@
 
 // cols
 @mixin col-default($col) {
+  flex-wrap: wrap;
   @if $col == 1 {
       flex: $size-col-1-flex;
       max-width: $size-col-1;
@@ -245,6 +246,7 @@
 
 // cols
 @mixin col($col,$spacing) {
+    flex-wrap: wrap;
     @if $col == 1 {
         @if $spacing == 1 {
           flex: 0 0 calc(#{$size-col-1} - #{$rem}*.5);
