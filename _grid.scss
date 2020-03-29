@@ -1,9 +1,11 @@
 // col
 .col-auto {
     @include col-flex;
+    flex-wrap: wrap;
 }
 .col {
     @include col-flex;
+    flex-wrap: wrap;
     min-height: 50px;
     flex-wrap: wrap;
     flex-grow: 1;
