@@ -203,7 +203,7 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 		.btn-outline-dark
 		.btn-link
 	
-    <div class="row">
+	<div class="row">
 		<button type="button" class="btn btn-primary">Primary</button>
 		<button type="button" class="btn btn-secondary">Secondary</button>
 		<button type="button" class="btn btn-success">Success</button>
@@ -212,7 +212,7 @@ Añada reglas de responsives a sus márgenes y espaciados "mt-{size}-{1/2/3/4/5}
 		<button type="button" class="btn btn-info">Info</button>
 		<button type="button" class="btn btn-light">Light</button>
 		<button type="button" class="btn btn-dark">Dark</button>
-    </div>
+	</div>
 
 # booGO pasa la prueba de validación w3c
 
