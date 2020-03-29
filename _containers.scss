@@ -115,8 +115,30 @@
 .justify-content-around {
     justify-content: space-around;
 }
+// align items
+.align-items-start{
+    align-items: flex-start;
+}
+.align-items-center {
+    align-items: center;
+}
+.align-items-end {
+    align-items: flex-end;
+}
+// align self
+.align-self-start{
+    align-self: flex-start;
+}
+.align-self-center {
+    align-self: center;
+}
+.align-self-end {
+    align-self: flex-end;
+}
+
 @each $size in $screen {
     @include media-breakpoint-down($size) {
+        // justify content
         .justify-content-#{$size}-start {
             justify-content: flex-start;
         }
@@ -131,6 +153,26 @@
         }
         .justify-content-#{$size}-around {
             justify-content: space-around;
+        }
+        // align items
+        .align-items-#{$size}-start{
+            align-items: flex-start;
+        }
+        .align-items-#{$size}-center {
+            align-items: center;
+        }
+        .align-items-#{$size}-end {
+            align-items: flex-end;
+        }
+        // align self
+        .align-self-#{$size}-start{
+            align-self: flex-start;
+        }
+        .align-self-#{$size}-center {
+            align-self: center;
+        }
+        .align-self-#{$size}-end {
+            align-self: flex-end;
         }
     }
 }
