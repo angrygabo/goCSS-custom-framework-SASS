@@ -34,11 +34,11 @@ Estamos incorporando las librerias JS más potentes.
 
 # breakpoints
 
-	'xs'       :             460px,
-	'sm'       :             760px,
-	'md'       :             1366px,
-	'lg'       :             1536px,
-	'xl'       :             1700px
+	'xs':                      460px,
+	'sm':                      760px,
+	'md':                      1366px,
+	'lg':                      1536px,
+	'xl':                      1700px
 
 
 # .child-cols con tres (3) niveles de espaciado "child-spacing-(1,2,3)"  (añade tamaño en común a todos los hijos de un child-cold) (Único en booGO)
