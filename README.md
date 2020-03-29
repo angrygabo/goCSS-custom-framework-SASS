@@ -10,6 +10,7 @@
 	<a href="#offset">offset</a> | 
 	<a href="#margenes-y-espaciados">márgenes y espaciados</a>
 	<a href="#borders">borders</a> | 
+	<a href="#backgrounds">backgrounds</a> | 
 	<a href="#botones" style="color: #b873ff!important">botones</a>
 </p>
 
