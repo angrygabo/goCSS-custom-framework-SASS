@@ -1,0 +1,35 @@
+INSTALAR GULP Y PAQUETE AUTOPREFIXER
+
+install --save-dev gulp
+npm install --save-dev gulp-autoprefixer
+
+CREAR ARCHIVO package.json
+
+{
+    "browserslist": [
+        "> 1%",
+        "ie >= 8",
+        "edge >= 15",
+        "ie_mob >= 10",
+        "ff >= 45",
+        "chrome >= 45",
+        "safari >= 7",
+        "opera >= 23",
+        "ios >= 7",
+        "android >= 4",
+        "bb >= 10"
+      ]
+}
+CREAR ARCHIVO GULPFILE.JS
+
+const gulp = require('gulp');
+const autoprefixer = require('gulp-autoprefixer');
+
+
+gulp.task('prefix', () =>
+    gulp.src('boogo.min.css') // LEE
+        .pipe(autoprefixer())
+    .pipe(gulp.dest('prefix/boogo.min.css')) // EXPORTA
+);
+
+EJECUTAR gulp prefix

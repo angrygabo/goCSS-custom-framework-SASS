@@ -1,0 +1,146 @@
+// breakpoints
+$breakpoints: (
+  'xs'       :             460px,
+  'sm'       :             760px,
+  'md'       :             1366px,
+  'lg'       :             1536px,
+  'xl'       :             1700px
+) !default;
+
+// breakpoints sizes
+$screen:                   xl, lg, md, sm, xs;
+
+// cols
+$cols:                     12;
+
+// cols-margin
+$child-spacing:            3;//5
+
+// cols-spacing
+$spacings:                 5;
+
+// default containers
+$container-xs:             100%;
+$container-sm:             calc(100% - 10px);
+$container-md:             calc(100% - 20px);
+$container-lg:             1300px;
+$container-xl:             1500px;
+
+// colors
+$primary-color:            #007bff;
+$secondary-color:          #6C757D;
+$success-color:            #28A745;
+$warning-color:            #ffc107;
+$danger-color:             #DC3545;
+$white:                    white;
+$black:                    black;
+$light-color:              #ebebeb;
+$dark-gray:                #1a1a1a;
+
+// metricals
+$percent:                  100%;
+$auto:                     auto;
+$rem:                      1rem;
+$em:                       1em;
+
+// widths
+$w-auto:                   $auto;
+$w-100:                    $percent;
+$w-vh:                     100vh;
+
+// heights
+$h-auto:                   $auto;
+$h-100:                    $percent;
+$h-vh:                     100vh;
+
+// fluid containers
+$container-fluid:          $percent;
+$container-fluid-90:       90%;
+$container-fluid-80:       80%;
+
+// body
+$body-color:               $black;
+$body-bg:                  $white;
+
+// sizes col default
+$size-col-1:               8.333333%;
+$size-col-2:               16.666667%;
+$size-col-3:               25%;
+$size-col-4:               33.333333%;
+$size-col-5:               41.666667%;
+$size-col-6:               50%;
+$size-col-7:               58.333333%;
+$size-col-8:               66.666667%;
+$size-col-9:               75%;
+$size-col-10:              83.333333%;
+$size-col-11:              91.666667%;
+$size-col-12:              100%;
+
+// sizes col default
+$size-col-1-flex:          0 0 #{$size-col-1};
+$size-col-2-flex:          0 0 #{$size-col-2};
+$size-col-3-flex:          0 0 #{$size-col-3};
+$size-col-4-flex:          0 0 #{$size-col-4};
+$size-col-5-flex:          0 0 #{$size-col-5};
+$size-col-6-flex:          0 0 #{$size-col-6};
+$size-col-7-flex:          0 0 #{$size-col-7};
+$size-col-8-flex:          0 0 #{$size-col-8};
+$size-col-9-flex:          0 0 #{$size-col-9};
+$size-col-10-flex:         0 0 #{$size-col-10};
+$size-col-11-flex:         0 0 #{$size-col-11};
+$size-col-12-flex:         0 0 #{$size-col-12};
+
+// row cols default
+$row-col-1-flex:           0 0  calc(#{$size-col-12} / 1);
+$row-col-2-flex:           0 0  calc(#{$size-col-12} / 2);
+$row-col-3-flex:           0 0  calc(#{$size-col-12} / 3);
+$row-col-4-flex:           0 0  calc(#{$size-col-12} / 4);
+$row-col-5-flex:           0 0  calc(#{$size-col-12} / 5);
+$row-col-6-flex:           0 0  calc(#{$size-col-12} / 6);
+$row-col-7-flex:           0 0  calc(#{$size-col-12} / 7);
+$row-col-8-flex:           0 0  calc(#{$size-col-12} / 8);
+$row-col-9-flex:           0 0  calc(#{$size-col-12} / 9);
+$row-col-10-flex:          0 0  calc(#{$size-col-12} / 10);
+$row-col-11-flex:          0 0  calc(#{$size-col-12} / 11);
+$row-col-12-flex:          0 0  calc(#{$size-col-12} / 12);
+
+// sizes col x1
+$row-col-1:                calc(#{$size-col-12} / 1);
+$row-col-2:                calc(#{$size-col-12} / 2);
+$row-col-3:                calc(#{$size-col-12} / 3);
+$row-col-4:                calc(#{$size-col-12} / 4);
+$row-col-5:                calc(#{$size-col-12} / 5);
+$row-col-6:                calc(#{$size-col-12} / 6);
+$row-col-7:                calc(#{$size-col-12} / 7);
+$row-col-8:                calc(#{$size-col-12} / 8);
+$row-col-9:                calc(#{$size-col-12} / 9);
+$row-col-10:               calc(#{$size-col-12} / 10);
+$row-col-11:               calc(#{$size-col-12} / 11);
+$row-col-12:               calc(#{$size-col-12} / 12);
+
+// typography
+$font-family-sans-serif:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:        Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:    Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-family-base:         $font-family-sans-serif;
+$font-size-base:           $rem;
+$font-size-large:          calc($font-size-base * 1.125); // ~18px
+$font-size-small:          calc($font-size-base * 0.875); // ~14px
+$font-weight-base:         400;
+$font-weight-bolder:       600;
+$line-height-base:         1.5;
+$headings-font-family:     $font-family-base;
+$headings-font-weight:     500;
+$headings-line-height:     1.1;
+$headings-margin-bottom:   $rem;
+$paragraph-margin-bottom:  $rem;
+
+// links
+$link-color:               $secondary-color;
+$link-color-hover:         $black;
+$link-decoration:          none;
+
+// table
+$table-cell-padding:       0;
+$table-caption-color:      $dark-gray;
+$table-caption-color:      $black;

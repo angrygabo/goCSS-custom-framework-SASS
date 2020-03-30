@@ -1,0 +1,82 @@
+// col
+.col-auto {
+    @include col-flex;
+    flex-wrap: wrap;
+}
+.col {
+    @include col-flex;
+    flex-wrap: wrap;
+    min-height: 50px;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 100%;
+    border: 1px solid rgba(86,61,124,.2);
+    left: 0;
+}
+
+// grid
+@each $size in $screen {
+    // se cumple
+    @for $col from 1 through $cols {
+        @include media-breakpoint-down($size) {
+            .col-#{$size}-#{$col} {
+                @include col-flex;
+            }
+        }
+    }
+    @include media-breakpoint-down($size) {
+        .col-#{$size}-auto {
+            @include col-flex;
+        }
+    }
+    @for $col from 1 through $cols {
+        // se cumple
+        @include media-breakpoint-only($size) {
+            .row-cols-#{$size}-#{$col} > * {
+                @include row-cols($col);
+            }
+            .child-col-#{$size}-#{$col} > *,
+            .col-#{$size}-#{$col} {
+                @include col-default($col);
+            }
+            @for $spacing from 1 through $child-spacing {
+                .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
+                    @include col($col,$spacing);
+                }
+            }
+        }
+    }
+}
+@for $col from 1 through $cols {
+    // se cumple y deroga row-cols-{sizes} y child-col{sizes}
+    .row .col-#{$col} ,
+    .child-col-#{$col} > * {
+         @include col-default($col);
+    }
+    .row-cols-#{$col} > * {
+        @include row-cols($col);
+    }
+    @for $spacing from 1 through $child-spacing {
+        // se cumple y deroga col-{cols}
+        .row .child-col-#{$col}.child-spacing-#{$spacing} > *,
+        .col-#{$col}.child-spacing-#{$spacing} {
+            @include col($col,$spacing);
+        }
+    }
+}
+
+// row col
+.row {
+    @include col-flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: $percent;
+    margin-left: -15px;
+    margin-right: -15px;
+    left: 15px;
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+    }
+}
