@@ -40,7 +40,7 @@
                 @include col-default($col);
             }
             @for $spacing from 1 through $child-spacing {
-                .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
+                .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
                     @include col($col,$spacing);
                 }
             }
