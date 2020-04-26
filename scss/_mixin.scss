@@ -140,406 +140,126 @@
 }
 
 // row cols
-@mixin row-cols($row-col) {
-  @if $row-col == 1 {
-    flex: $row-col-1-flex;
-    max-width: $row-col-1;
-  }
-  @if $row-col == 2 {
-    flex: $row-col-2-flex;
-    max-width: $row-col-2;
-  }
-  @if $row-col == 3 {
-    flex: $row-col-3-flex;
-    max-width: $row-col-3;
-  }
-  @if $row-col == 4 {
-    flex: $row-col-4-flex;
-    max-width: $row-col-4;
-  }
-  @if $row-col == 5 {
-    flex: $row-col-5-flex;
-    max-width: $row-col-5;
-  }
-  @if $row-col == 6 {
-    flex: $row-col-6-flex;
-    max-width: $row-col-6;
-  }
-  @if $row-col == 7 {
-    flex: $row-col-7-flex;
-    max-width: $row-col-7;
-  }
-  @if $row-col == 8 {
-    flex: $row-col-8-flex;
-    max-width: $row-col-8;
-  }
-  @if $row-col == 9 {
-    flex: $row-col-9-flex;
-    max-width: $row-col-9;
-  }
-  @if $row-col == 10 {
-    flex: $row-col-10-flex;
-    max-width: $row-col-10;
-  }
-  @if $row-col == 11 {
-    flex: $row-col-11-flex;
-    max-width: $row-col-11;
-  }
-  @if $row-col == 12 {
-    flex: $row-col-12-flex;
-    max-width: $row-col-12;
+@mixin row-cols($row-col) { //se cumple
+  @for $col from 1 through $cols {
+    @if $row-col == $col {
+      flex:  0 0 calc(100% / #{$row-col});
+      max-width: calc(100% / #{$row-col});
+    }
   }
 }
 
 // cols
-@mixin col-default($col) {
+@mixin col-default($col-calc) {
   flex-wrap: wrap;
+  @for $col from 1 through $cols {
+    @if $col-calc  == $col {
+        flex: 0 0 calc((#{$col} / 12) * 100%);
+        max-width: calc((#{$col} / 12) * 100%);
+    }
+  }
+}
+
+@mixin ajuste-margen($col) {
   @if $col == 1 {
-      flex: $size-col-1-flex;
-      max-width: $size-col-1;
+    &:nth-of-type(12n) {
+      margin-right: 0;
+    }
+    &:nth-last-child(-n+12) {
+      margin-bottom: 0;
+    }
   }
-  @if $col == 2 {
-      flex: $size-col-2-flex;
-      max-width: $size-col-2;
+  @else if $col == 2 {
+      &:nth-of-type(6n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+6) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 3 {
-      flex: $size-col-3-flex;
-      max-width: $size-col-3;
+  @else if $col == 3 {
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+4) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 4 {
-      flex: $size-col-4-flex;
-      max-width: $size-col-4;
+  @else if $col == 4 {
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 5 {
-      flex: $size-col-5-flex;
-      max-width: $size-col-5;
+  @else if $col == 5 {
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 6 {
-      flex: $size-col-6-flex;
-      max-width: $size-col-6;
+  @else if $col == 6 {
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 7 {
-      flex: $size-col-7-flex;
-      max-width: $size-col-7;
+  @else if $col == 7 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 8 {
-      flex: $size-col-8-flex;
-      max-width: $size-col-8;
+  @else if $col == 8 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 9 {
-      flex: $size-col-7-flex;
-      max-width: $size-col-7;
+  @else if $col == 9 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 10 {
-      flex: $size-col-10-flex;
-      max-width: $size-col-10;
+  @else if $col == 10 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 11 {
-      flex: $size-col-11-flex;
-      max-width: $size-col-11;
+  @else if $col == 11 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
-  @if $col == 12 {
-      flex: $size-col-12-flex;
-      max-width: $size-col-12;
+  @else if $col == 12 {
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
   }
 }
 
-// cols
+
 @mixin col($col,$spacing) {
-    flex-wrap: wrap;
-    @if $col == 1 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-1} - #{$rem}*.5);
-          max-width: calc(#{$size-col-1} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-1} - #{$rem});
-          max-width: calc(#{$size-col-1} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-1} - #{$rem}*2);
-          max-width: calc(#{$size-col-1} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-of-type(12n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+12) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 2 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-2} - #{$rem}*.5);
-          max-width: calc(#{$size-col-2} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-2} - #{$rem});
-          max-width: calc(#{$size-col-2} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-2} - #{$rem}*2);
-          max-width: calc(#{$size-col-2} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-of-type(6n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+6) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 3 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-3} - #{$rem}*.5);
-          max-width: calc(#{$size-col-3} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-3} - #{$rem});
-          max-width: calc(#{$size-col-3} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-3} - #{$rem}*2);
-          max-width: calc(#{$size-col-3} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-         }
-        &:nth-of-type(4n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+4) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 4 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-4} - #{$rem}*.5);
-          max-width: calc(#{$size-col-4} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-4} - #{$rem});
-          max-width: calc(#{$size-col-4} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-4} - #{$rem}*2);
-          max-width: calc(#{$size-col-4} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-of-type(3n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+3) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 5 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-5} - #{$rem}*.5);
-          max-width: calc(#{$size-col-5} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-5} - #{$rem});
-          max-width: calc(#{$size-col-5} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-5} - #{$rem}*2);
-          max-width: calc(#{$size-col-5} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-of-type(2n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+2) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 6 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-6} - #{$rem}*.5);
-          max-width: calc(#{$size-col-6} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-6} - #{$rem});
-          max-width: calc(#{$size-col-6} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-6} - #{$rem}*2);
-          max-width: calc(#{$size-col-6} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-of-type(2n) {
-          margin-right: 0;
-        }
-        &:nth-last-child(-n+2) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 7 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-7} - #{$rem}*.5);
-          max-width: calc(#{$size-col-7} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-7} - #{$rem});
-          max-width: calc(#{$size-col-7} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-7} - #{$rem}*2);
-          max-width: calc(#{$size-col-7} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 8 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-8} - #{$rem}*.5);
-          max-width: calc(#{$size-col-8} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-8} - #{$rem});
-          max-width: calc(#{$size-col-8} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-8} - #{$rem}*2);
-          max-width: calc(#{$size-col-8} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 9 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-9} - #{$rem}*.5);
-          max-width: calc(#{$size-col-9} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-9} - #{$rem});
-          max-width: calc(#{$size-col-9} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-9} - #{$rem}*2);
-          max-width: calc(#{$size-col-9} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-         }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 10 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-10} - #{$rem}*.5);
-          max-width: calc(#{$size-col-10} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-10} - #{$rem});
-          max-width: calc(#{$size-col-10} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-10} - #{$rem}*2);
-          max-width: calc(#{$size-col-10} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 11 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-11} - #{$rem}*.5);
-          max-width: calc(#{$size-col-11} - #{$rem}*.5);
-          margin-right: $rem*.5;
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-11} - #{$rem});
-          max-width: calc(#{$size-col-11} - #{$rem});
-          margin-right: $rem;
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-11} - #{$rem}*2);
-          max-width: calc(#{$size-col-11} - #{$rem}*2);
-          margin-right: $rem*2;
-          margin-bottom: $rem*2;
-        }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
-    @if $col == 12 {
-        @if $spacing == 1 {
-          flex: 0 0 calc(#{$size-col-12} - #{$rem}*.5);
-          max-width: calc(#{$size-col-12} - #{$rem}*.5);
-          margin-bottom: $rem*.5;
-        }
-        @if $spacing == 2 {
-          flex: 0 0 calc(#{$size-col-12} - #{$rem});
-          max-width: calc(#{$size-col-12} - #{$rem});
-          margin-bottom: $rem;
-        }
-        @if $spacing == 3 {
-          flex: 0 0 calc(#{$size-col-12} - #{$rem}*2);
-          max-width: calc(#{$size-col-12} - #{$rem}*2);
-          margin-bottom: $rem*2;
-        }
-        &:nth-last-child(-n+1) {
-          margin-bottom: 0;
-        }
-    }
+  flex-wrap: wrap;
+  @if $spacing == 1 {
+    flex: 0 0 calc(((#{$col} / 12) * 100%) - 0.5rem);
+    max-width: calc(((#{$col} / 12) * 100%) - 0.5rem);
+    @include ajuste-margen(#{$col});
+  }
+  @if $spacing == 2 {
+    flex: 0 0 calc(((#{$col} / 12) * 100%) - 1rem);
+    max-width: calc(((#{$col} / 12) * 100%) - 1rem);
+    @include ajuste-margen(#{$col});
+  }
+  @if $spacing == 3 {
+    flex: 0 0 calc(((#{$col} / 12) * 100%) - 2rem);
+    max-width: calc(((#{$col} / 12) * 100%) - 2rem);
+    @include ajuste-margen(#{$col});
+  }
 }
-
 // cont flex
 @mixin col-flex {
   position: relative;
