@@ -62,34 +62,6 @@ $container-fluid-80:       80%;
 $body-color:               $black;
 $body-bg:                  $white;
 
-// sizes col default
-$size-col-1:               8.333333%; // 100 / 12
-$size-col-2:               16.666667%; // 100 / 6
-$size-col-3:               25%; // 100 / 4
-$size-col-4:               33.333333%; // 100 / 3
-$size-col-5:               41.666667%; // 100 / 23.999999808
-$size-col-6:               50%; // 100 / 2
-$size-col-7:               58.333333%; // 100 / 12
-$size-col-8:               66.666667%; // 100 / 12
-$size-col-9:               75%; // 100 / 12
-$size-col-10:              83.333333%; // 100 / 12
-$size-col-11:              91.666667%; // 100 / 12
-$size-col-12:              100%; // 100 / 1
-
-// sizes col default
-$size-col-1-flex:          0 0 #{$size-col-1};
-$size-col-2-flex:          0 0 #{$size-col-2};
-$size-col-3-flex:          0 0 #{$size-col-3};
-$size-col-4-flex:          0 0 #{$size-col-4};
-$size-col-5-flex:          0 0 #{$size-col-5};
-$size-col-6-flex:          0 0 #{$size-col-6};
-$size-col-7-flex:          0 0 #{$size-col-7};
-$size-col-8-flex:          0 0 #{$size-col-8};
-$size-col-9-flex:          0 0 #{$size-col-9};
-$size-col-10-flex:         0 0 #{$size-col-10};
-$size-col-11-flex:         0 0 #{$size-col-11};
-$size-col-12-flex:         0 0 #{$size-col-12};
-
 // typography
 $font-family-sans-serif:   "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif:        Georgia, "Times New Roman", Times, serif;
