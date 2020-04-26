@@ -97,45 +97,12 @@
     }
 }
 
+// offset
 @mixin offset($offset) {
-  @if $offset == 0 {
-    margin-left: 0;
-  }
-  @if $offset == 1 {
-      margin-left: $size-col-1;
-  }
-  @if $offset == 2 {
-      margin-left: $size-col-2;
-  }
-  @if $offset == 3 {
-      margin-left: $size-col-3;
-  }
-  @if $offset == 4 {
-      margin-left: $size-col-4;
-  }
-  @if $offset == 5 {
-      margin-left: $size-col-5;
-  }
-  @if $offset == 6 {
-      margin-left: $size-col-6;
-  }
-  @if $offset == 7 {
-      margin-left: $size-col-7;
-  }
-  @if $offset == 8 {
-      margin-left: $size-col-8;
-  }
-  @if $offset == 9 {
-      margin-left: $size-col-7;
-  }
-  @if $offset == 10 {
-      margin-left: $size-col-10;
-  }
-  @if $offset == 11 {
-      margin-left: $size-col-11;
-  }
-  @if $offset == 12 {
-      margin-left: $size-col-12;
+  @for $col from 1 through $cols {
+    @if $offset == $col {
+      margin-left: calc((#{$offset} / 12) * 100%);
+    }
   }
 }
 
