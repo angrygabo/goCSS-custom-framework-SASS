@@ -1,10 +1,11 @@
 .btn {
+    position: relative;
     display: inline-block;
     margin-top: $rem;
     margin-right: $rem*.5;
     border: 0;
     min-width: 100px;
-    padding: 10px 20px;
+    padding: 15px 25px;
     border-radius: 5px;
     background: none;
     cursor: pointer;
@@ -31,6 +32,7 @@
     // default buttons
     &.btn-primary {
         background: $primary-color;
+        background: linear-gradient(45deg,#3fa2f7,#{$primary-color});
     }
     &.btn-secondary {
         background: $secondary-color;
