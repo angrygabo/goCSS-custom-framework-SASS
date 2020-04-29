@@ -21,9 +21,10 @@
 }
 .col {
     min-height: 100px;
-    background:  $light-color;
+    border: 1px solid rgba(86,61,124,.2);
     align-items: center;
     justify-content: center;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    col {
+        background:  $light-color;
+    }
 }
