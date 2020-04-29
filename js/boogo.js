@@ -10,7 +10,7 @@ function viewportTrigger()  {
     var docViewTop = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
     var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height()/2;
+    var elemBottom = elemTop + $(elem).height()-100;
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }  
 }  
