@@ -33,7 +33,7 @@ booGO viene configurado con un conjunto de parámetros generales como un punto d
 
 Estamos incorporando las librerias JS más potentes.
 
-	Una amplia galería de componentes propios
+	Una amplia galería de componentes
 	Layaouts
 	Pack de templates móviles gratuitos y pagos
 	Pack de iconos (Fuentes y SVG)
