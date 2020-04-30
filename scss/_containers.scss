@@ -238,6 +238,37 @@
     }
 }
 
+// text atributes
+.text-center {
+    text-align: center;
+}
+.text-left {
+    text-align: left;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+
+// position
+.position-static {
+    position: static;
+}
+.position-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+.position-fixed {
+    position: fixed;
+}
+.position-sticky {
+    position: sticky;
+}
+
 // defaults backgrounds
 .bg-success {
     background-color: $success-color;
