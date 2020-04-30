@@ -20,7 +20,16 @@ $color-primary: #BB72FE;
 }
 
 // custom
-
+.scroll-indicator__text {
+    position: absolute;
+    top: -60px;
+    right: -30px;
+    font-size: .8rem;
+    color: #555;
+    transform: rotate(270deg);
+    white-space: nowrap;
+    width: auto;
+}
 .scroll-indicator__line {
 	position: absolute;
 	bottom: 50px;
@@ -34,16 +43,6 @@ $color-primary: #BB72FE;
 	background: linear-gradient(180deg, #c70360 50%, hsla(0, 0%, 100%, 0) 0);
 	background-size: 100% 200%;
     background-position: 0 -80px
-    .scroll-indicator__text {
-        position: absolute;
-        top: -60px;
-        right: -30px;
-        font-size: .8rem;
-        color: #555;
-        transform: rotate(270deg);
-        white-space: nowrap;
-        width: auto;
-    }
 }
 @-webkit-keyframes line-scroll {
 	0% {
