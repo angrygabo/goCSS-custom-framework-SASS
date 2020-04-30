@@ -3,6 +3,23 @@
     @include clearfix;
 }
 
+// header
+.main-header--ghost {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #ebebeb;
+    transition: all .5s cubic-bezier(.165,.84,.44,1);
+    &.show-header {
+        transform: translateY(0);
+    }
+    &.hidden-header {
+        transform: translateY(-100%);
+    }
+}
+
 //default container width
 .container {
     @include wrap-flex;
@@ -39,8 +56,8 @@
 .w-100 {
     width: $w-100;
 }
-.w-vh {
-    width: $w-vh;
+.w-vw {
+    width: $w-vw;
 }
 
 // heights

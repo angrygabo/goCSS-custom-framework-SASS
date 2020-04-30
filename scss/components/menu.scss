@@ -1,0 +1,68 @@
+nav.main-menu  {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 80px;
+        align-items: center;
+        margin: 0;
+        li {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            margin: 0 1rem;
+            user-select: none;
+            span {
+                position: absolute;
+                display:block;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background: #fff;
+                transition: 1s;
+            }
+            li:hover {
+                background: #BB72FE; 
+            }
+            li, a {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                color: #fff;
+            }
+            ul {
+                display: none;
+                position: absolute;
+                left: -50px;
+                top: 100%; 
+                width: calc(100% + 100px);
+                background: rgba(187,114,254,0.9);
+                transition: all 0.1s ease;         
+            }
+            li {
+                width: 100%;
+                height: auto;
+                margin: 0;
+                a {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    padding: 10px 20px;
+                    color: #fff;     
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        & > li:hover > ul {
+            display:block;         
+        }  
+        & > li:hover > span {
+            width: 100%;   
+            transition: .2s;     
+        }
+    }	
+}

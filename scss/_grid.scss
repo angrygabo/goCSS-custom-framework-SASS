@@ -7,7 +7,6 @@
     @include col-flex;
     flex-wrap: wrap;
     min-height: 50px;
-    flex-wrap: wrap;
     flex-grow: 1;
     max-width: 100%;
     left: 0;
@@ -32,14 +31,17 @@
         // se cumple
         @include media-breakpoint-only($size) {
             .row-cols-#{$size}-#{$col} > * {
+                @include col-flex;
                 @include row-cols($col);
             }
             .child-col-#{$size}-#{$col} > *,
             .col-#{$size}-#{$col} {
+                @include col-flex;
                 @include col-default($col);
             }
             @for $spacing from 1 through $child-spacing {
                 .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
+                    @include col-flex;
                     @include col($col,$spacing);
                 }
             }
@@ -50,15 +52,18 @@
     // se cumple y deroga row-cols-{sizes} y child-col{sizes}
     .row .col-#{$col} ,
     .child-col-#{$col} > * {
-         @include col-default($col);
+        @include col-flex;
+        @include col-default($col);
     }
     .row-cols-#{$col} > * {
+        @include col-flex;
         @include row-cols($col);
     }
     @for $spacing from 1 through $child-spacing {
         // se cumple y deroga col-{cols}
         .row .child-col-#{$col}.child-spacing-#{$spacing} > *,
         .col-#{$col}.child-spacing-#{$spacing} {
+            @include col-flex;
             @include col($col,$spacing);
         }
     }
