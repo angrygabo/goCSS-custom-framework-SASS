@@ -6,24 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport--trigger" content="width=device-width, user-scalable=no">
     <meta name="description" content="boogo test">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text/css" href="boogo.min.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="css/icofont.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/smooth-scrollbar@latest/dist/smooth-scrollbar.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/is-in-viewport/3.0.4/isInViewport.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
 </head>
 
-<body class="sidebar">
+<body>
     <header class="main-header--ghost bg-transparent" id="header">
         <div class="container flex-row justify-content-between align-items-center">
-            <div class="logo d-flex w-auto justify-self-start viewport--trigger">
+            <div class="logo d-flex w-auto justify-self-start viewport--trigger viewport">
                 <a href="/" class="text-mask-gradient">boogo</a>
             </div>
             <!-- menu principal-->
-            <nav class="main-menu viewport--trigger" role="navigation" aria-label="Main">
+            <nav class="main-menu viewport--trigger viewport" role="navigation" aria-label="Main">
                 <ul>
                     <li>
                         <a href="#!">Home</a>
@@ -51,64 +51,61 @@
             </nav>
         </div>
     </header>
-    <section class="d-flex h-vh w-100 align-items-center ">
-        <div class="container">
+
+    <section class="d-flex h-vh w-100 home">
+        <div class="container justify-content-center h-100 position-relative">
             <div class="row">
-                <h1 class="home-title text-mask-gradient viewport--trigger">
-                    <span>Make<br></span>
+                <h1 class="home-title text-mask-gradient viewport--trigger viewport">
+                    <span>make<br></span>
                     <span>something<br></span>
                     <span>different...</span>
                 </h1>
-                <hr class="home-hr">
-                <span class="home-info col-6 viewport--trigger">
-                    Use our powerful flexbox grid to create custom designs... boogo is a CSS Framework Mobile First SASS version
+                <hr class="home-hr viewport--trigger viewport">
+                <span class="home-info col-6 viewport--trigger viewport">
+                    Use our powerful flexbox grid to create advanced custom designs... boogo is a CSS Framework Mobile First SASS version.
                 </span>
+                <div class="code-home"></div>
+            </div>
+            <div class="home-version viewport--trigger viewport">Currently - boogo v1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read documentation</a></div>
+            <div class="scroll-indicator__line viewport--trigger viewport">
+                <div class="scroll-indicator__text">scroll down</div>
             </div>
         </div>
     </section>
-    <section>
+
+    <section class="position-relative parallax-content section-content">
+        <div class="row justify-content-center">
+            <h2 class="col-8 title-section justify-content-center viewport--trigger viewport">
+                Build anything like</br> a proffesional
+            </h2>
+            <span class="col-6 info-section text-center viewport--trigger viewport">
+                Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+            </span>
+        </div>
         <div class="container">
             <div class="row">
-                <aside class="sidebar">
-                    aside
-                </aside>
                 <div class="content">
                     <div class="row child-col-6 child-spacing-1">
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
-                        <div class="col viewport--trigger"></div>
+                        <div class="col viewport--trigger viewport"></div>
+                        <div class="col viewport--trigger viewport"></div>
                     </div>
 
-                    <div class="row mt-4 mt-md-5 mt-sm-1">
-                        <div class="col order-sm-4 order-md-2 viewport--trigger">1</div>
-                        <div class="col order-sm-3 order-md-4 viewport--trigger">2</div>
-                        <div class="col order-sm-2 order-md-1 viewport--trigger">3</div>
-                        <div class="col order-sm-1 order-md-3 viewport--trigger">4</div>
-                    </div>
+                    <!-- <div class="row mt-4 mt-md-5 mt-sm-1">
+                        <div class="col order-sm-4 order-md-2 viewport--trigger viewport">1</div>
+                        <div class="col order-sm-3 order-md-4 viewport--trigger viewport">2</div>
+                        <div class="col order-sm-2 order-md-1 viewport--trigger viewport">3</div>
+                        <div class="col order-sm-1 order-md-3 viewport--trigger viewport">4</div>
+                    </div> -->
 
                     <div class="row">
-                        <div class="col col-6 viewport--trigger">
+                        <div class="col col-6 viewport--trigger viewport">
                             <div class="col item_hover--animation"></div>
                         </div>
-                        <div class="col col-6 viewport--trigger">
-                            <div class="col item_hover--animation"></div>
-                        </div>
-                        <div class="col col-6 viewport--trigger">
-                            <div class="col item_hover--animation"></div>
-                        </div>
-                        <div class="col col-6 viewport--trigger">
+                        <div class="col col-6 viewport--trigger viewport">
                             <div class="col item_hover--animation"></div>
                         </div>
                     </div>
+
                     <div class="container-fluid">
                         <hr />
                         <h1><abbr>container</abbr> clearfix</h1>
