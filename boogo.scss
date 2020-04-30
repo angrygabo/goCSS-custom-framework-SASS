@@ -1,3 +1,4 @@
+// boogo scss
 @import 'scss/mixin';
 @import 'scss/global';
 @import 'scss/presets';
@@ -9,3 +10,6 @@
 @import 'scss/buttons';
 @import 'scss/forms';
 @import 'scss/animated';
+
+// componets
+@import 'scss/components/menu.scss';

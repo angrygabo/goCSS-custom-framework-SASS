@@ -1,8 +1,37 @@
 @import 'boogo';
 
+// custom
+$color-primary: #BB72FE;
+@mixin gradient-bg {
+    background: linear-gradient(-45deg, #BB72FE, #C483FE, #F17E8A, #FB6281);
+	background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+}
+.text-mask-gradient {
+    @include gradient-bg;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    background-clip: text;
+}
+.bg-gradient {
+    @include gradient-bg;
+}
+
 
 .container {
-    min-height: 100px;
+    min-height: 50px;
 }
 
 .imagen {
@@ -19,13 +48,88 @@
 .row {
     margin-bottom: $rem;
 }
-.col {
-    min-height: 100px;
-    border: 1px solid rgba(86,61,124,.2);
-    align-items: center;
-    justify-content: center;
-    background: #ebebeb;
-    col {
-        background:  $light-color;
+
+.logo {
+    font-family: "Lobster",cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    user-select: none;
+    a {
+        position: relative;
+        top: -10px;
     }
+}
+.main-header--ghost {
+    background: #fff;
+    box-shadow: 0 0px 10px rgba(0,0,0,0);
+    .logo {
+        a {
+            color: transparent; 
+            padding: 0 2px;
+        }
+    }
+    nav.main-menu  {
+        ul {
+            li {
+                span {
+                    background: linear-gradient(-45deg, #BB72FE, #C483FE, #F17E8A, #FB6281);
+                    background-size: 400% 400%;
+                    animation: gradient 15s ease infinite;
+                }
+                li, a {
+                    color: #242424;
+                }
+            }	
+        }
+        .version {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 80px;
+            align-items: center;
+            margin: 0 0 0 40px;
+            color: #555;
+            font-weight: lighter;
+            font-size: 0.8rem;
+        }
+        .btn {
+            @include gradient-bg;
+            height: 50px;
+            margin: 0 0 0 30px;
+            display: block;
+            align-self: center;
+            border: 0;
+            color: #fff;
+            box-shadow: 0 0px 10px rgba(0,0,0,0);
+            &:hover {
+                border: 0;
+                box-shadow: 0 0px 10px rgba(0,0,0,.2);
+            }
+        }
+    }  
+}
+.sticky-header {
+    box-shadow: 0 0px 10px rgba(0,0,0,.1);
+}
+
+//home
+.home-title {
+    font-size: 8rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    line-height: .7;
+    color: transparent;
+    padding: 5px 0;
+    user-select: none;
+}
+.home-hr {
+    position: relative;
+    width: 70%;
+    left: -25%;
+    height: 2px;
+    background: #ebebeb;
+    margin: 1.5rem 0;
+}
+.home-info {
+    color: #555;
+    user-select: none;
 }
