@@ -19,14 +19,7 @@
 </head>
 
 <body>
-    <span class="cursor">
-        <span class="cursor-move-inner">
-          <span class="cursor-inner"></span>
-        </span>
-        <span class="cursor-move-outer">
-          <span class="cursor-outer"></span>
-        </span>
-    </span>
+    <i id="scrollLine" class="viewport--trigger viewport"></i>
 
     <header class="main-header--ghost bg-transparent" id="header">
         <div class="container flex-row justify-content-between align-items-center">
@@ -94,30 +87,28 @@
         </div>
         <div class="container">
             <div class="row mb-5">
-                <div class="content">
-                    <div class="row section-info--wrapper justify-content-center">
-                        <div class="col col-sm-12 col-md-10 col-lg-11 justify-content-center">
-                            <div class="col col-5 col-sm-12 pr-5 align-items-center">
-                                <div>
-                                    <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
-                                    <p class="py-5 viewport--trigger viewport">
-                                        Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
-                                    </p>
-                                    <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">See more</a>
+                <div class="row section-info--wrapper justify-content-center">
+                    <div class="col col-8 col-sm-12 col-lg-11 justify-content-center align-items-center">
+                        <div class="col col-5 col-sm-12 pr-5 align-items-center">
+                            <div>
+                                <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
+                                <p class="py-5 viewport--trigger viewport">
+                                    Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
+                                </p>
+                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">See more</a>
+                            </div>
+                        </div>
+                        <div class="col col-6 col-sm-12 justify-content-end  viewport--trigger viewport">
+                            <figure class="info--image vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1" data-tilt data-tilt-reverse="true">
+                                <video autoplay muted loop id="video" class="object-fit-cover">
+                                    <source src="assets/multimedia/video-resource.mp4" type="video/mp4">
+                                </video>
+                                <div class="wrapper-icon ">
+                                    <i class="icon-boogo text-mask-gradient">b</i>
                                 </div>
-                            </div>
-                            <div class="col col-6 col-sm-12 justify-content-end  viewport--trigger viewport">
-                                <figure class="info--image vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1" data-tilt data-tilt-reverse="true">
-                                    <video autoplay muted loop id="video" class="object-fit-cover">
-                                        <source src="assets/multimedia/video-resource.mp4" type="video/mp4">
-                                    </video>
-                                    <div class="wrapper-icon ">
-                                        <i class="icon-boogo text-mask-gradient">b</i>
-                                    </div>
-                                    <img src="assets/images/image-resources.png" alt="boogo library examples"/>
-                                </figure>
-                                <div class="image--backing"></div>
-                            </div>
+                                <img src="assets/images/image-resources.png" alt="boogo library examples"/>
+                            </figure>
+                            <div class="image--backing"></div>
                         </div>
                     </div>
                 </div>
