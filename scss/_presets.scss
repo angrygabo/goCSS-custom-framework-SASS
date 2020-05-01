@@ -136,7 +136,9 @@ img {
   border-style: none;
 }
 .object-fit-cover img,
-img.object-fit-cover {
+img.object-fit-cover,
+.object-fit-cover video,
+video.object-fit-cover  {
     height: $percent;
     width: $percent;
     max-width: $percent;
