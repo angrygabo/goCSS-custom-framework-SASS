@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="css/icofont.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    
 </head>
 
 <body>
@@ -50,13 +52,9 @@
                         <a href="#!">Themes</a>
                         <span></span>
                     </li>
-                    <li>
-                        <a href="#!">Blog</a>
-                        <span></span>
-                    </li>
                 </ul>
                 <!-- <span class="version">v1.0 beta</span> -->
-                <a class="btn btn-gradient ml-4">download v1.0 beta</a>
+                <a class="btn btn-gradient ml-4 btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">download v1.0 beta</a>
             </nav>
         </div>
     </header>
@@ -105,12 +103,18 @@
                                     <p class="py-5 viewport--trigger viewport">
                                         Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
                                     </p>
-                                    <a class="btn btn-gradient viewport--trigger viewport">See more</a>
+                                    <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">See more</a>
                                 </div>
                             </div>
                             <div class="col col-6 col-sm-12 justify-content-end  viewport--trigger viewport">
-                                <figure class="info--image">
-                                    <img src="assets/images/img-hand-laptop.jpg" alt="boogo library examples"/>
+                                <figure class="info--image vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1" data-tilt data-tilt-reverse="true">
+                                    <video autoplay muted loop id="video" class="object-fit-cover">
+                                        <source src="assets/multimedia/video-resource.mp4" type="video/mp4">
+                                    </video>
+                                    <div class="wrapper-icon ">
+                                        <i class="icon-boogo text-mask-gradient">b</i>
+                                    </div>
+                                    <img src="assets/images/image-resources.png" alt="boogo library examples"/>
                                 </figure>
                                 <div class="image--backing"></div>
                             </div>

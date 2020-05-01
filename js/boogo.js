@@ -57,3 +57,14 @@ $(document).ready(function () {
         stickymenu();
     });
 });
+
+VanillaTilt.init(document.querySelector(".vanilla-tilt"), {
+    max: 10,
+    speed: 500
+}); 
+VanillaTilt.init(document.querySelector(".btn-vanilla"), {
+    max: 0,
+    speed: 500
+}); 
+//It also supports NodeList
+VanillaTilt.init(document.querySelectorAll(".vanilla-tilt,.btn-vanilla"));
