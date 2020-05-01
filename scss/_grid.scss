@@ -12,42 +12,6 @@
     left: 0;
 }
 
-// grid
-@each $size in $screen {
-    // se cumple
-    @for $col from 1 through $cols {
-        @include media-breakpoint-down($size) {
-            .col-#{$size}-#{$col} {
-                @include col-flex;
-            }
-        }
-    }
-    @include media-breakpoint-down($size) {
-        .col-#{$size}-auto {
-            @include col-flex;
-        }
-    }
-    @for $col from 1 through $cols {
-        // se cumple
-        @include media-breakpoint-only($size) {
-            .row-cols-#{$size}-#{$col} > * {
-                @include col-flex;
-                @include row-cols($col);
-            }
-            .child-col-#{$size}-#{$col} > *,
-            .col-#{$size}-#{$col} {
-                @include col-flex;
-                @include col-default($col);
-            }
-            @for $spacing from 1 through $child-spacing {
-                .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
-                    @include col-flex;
-                    @include col($col,$spacing);
-                }
-            }
-        }
-    }
-}
 @for $col from 1 through $cols {
     // se cumple y deroga row-cols-{sizes} y child-col{sizes}
     .row .col-#{$col} ,
@@ -65,6 +29,45 @@
         .col-#{$col}.child-spacing-#{$spacing} {
             @include col-flex;
             @include col($col,$spacing);
+        }
+    }
+}
+
+// grid
+@each $size in $screen {
+    // se cumple
+    // @for $col from 1 through $cols {
+    //     @include media-breakpoint-down($size) {
+    //         .col-#{$size}-#{$col},
+    //         .row .col-#{$size}-#{$col} {
+    //             @include col-flex;
+    //         }
+    //     }
+    // }
+    @include media-breakpoint-down($size) {
+        .col-#{$size}-auto {
+            @include col-flex;
+        }
+    }
+    @for $col from 1 through $cols {
+        // se cumple
+        @include media-breakpoint-only($size) {
+            .row-cols-#{$size}-#{$col} > * {
+                @include col-flex;
+                @include row-cols($col);
+            }
+            .child-col-#{$size}-#{$col} > *,
+            .col-#{$size}-#{$col},
+            .row .col-#{$size}-#{$col} {
+                @include col-flex;
+                @include col-default($col);
+            }
+            @for $spacing from 1 through $child-spacing {
+                .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *{
+                    @include col-flex;
+                    @include col($col,$spacing);
+                }
+            }
         }
     }
 }

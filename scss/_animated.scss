@@ -30,12 +30,12 @@
 	transform: translateX(-50%);
 	width: 2px;
 	height: 80px;
-	-webkit-animation: line-scroll 3s ease-in-out forwards infinite;
 	animation: line-scroll 3s ease-in-out forwards infinite;
 	background: #c70360;
 	background: linear-gradient(180deg, #c70360 50%, hsla(0, 0%, 100%, 0) 0);
 	background-size: 100% 200%;
-    background-position: 0 -80px;
+	background-position: 0 -80px;
+	z-index: 2;
     .scroll-indicator__text {
         position: absolute;
         top: -60px;
