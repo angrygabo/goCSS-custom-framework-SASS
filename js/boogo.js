@@ -14,7 +14,7 @@ function viewportTrigger() {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height() - 300;
+        var elemBottom = elemTop + $(elem).height() - 150;
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
 }
@@ -49,22 +49,43 @@ function stickymenu() {
     }
 }
 
+// scroll line
+var $i = $('#scrollLine');
+var $window = $(window);
+var offset = 0;
+var minHeight = 0;
+
+function scrollLine() {
+    var scrollPercentage = 100 * $window.scrollTop() / ($('html').height() - $window.height());
+    var maxHeight = $(window).height() - (offset * 2) - minHeight;
+    var newHeight = ((maxHeight / 100) * scrollPercentage) + minHeight;
+    $i.css('height', newHeight);
+}
+
+
 $(document).ready(function () {
     viewportTrigger();
+    scrollLine();
+    setTimeout(function () {
+        $('#scrollLine').removeClass('viewport--trigger viewport');
+    }, 100);
     $(window).on('scroll', function () {
         viewportTrigger();
         parallaxScroll();
         stickymenu();
+        scrollLine();
     });
 });
 
 VanillaTilt.init(document.querySelector(".vanilla-tilt"), {
     max: 10,
     speed: 500
-}); 
+});
 VanillaTilt.init(document.querySelector(".btn-vanilla"), {
     max: 0,
     speed: 500
-}); 
+});
 //It also supports NodeList
 VanillaTilt.init(document.querySelectorAll(".vanilla-tilt,.btn-vanilla"));
+
+

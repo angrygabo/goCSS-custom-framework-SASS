@@ -38,6 +38,18 @@ h6 {
 .trans-05 {
     transition: .5s !important;
 }
+
+// scroll line
+#scrollLine {
+    @include gradient-bg;
+    width: 10px;
+    height: 0;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    z-index: 5;
+}
+
 // custom
 .btn {
     &:hover {
