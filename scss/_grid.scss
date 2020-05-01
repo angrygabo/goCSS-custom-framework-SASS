@@ -19,7 +19,7 @@
         @include col-flex;
         @include col-default($col);
     }
-    .row-cols-#{$col} > * {
+    .row.row-cols-#{$col} > * {
         @include col-flex;
         @include row-cols($col);
     }
@@ -52,7 +52,7 @@
     @for $col from 1 through $cols {
         // se cumple
         @include media-breakpoint-only($size) {
-            .row-cols-#{$size}-#{$col} > * {
+            .row.row-cols-#{$size}-#{$col} > * {
                 @include col-flex;
                 @include row-cols($col);
             }
