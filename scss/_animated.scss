@@ -21,3 +21,51 @@
         transform: translateY(-10px);
     }
 }
+
+// scroll indicador
+.scroll-indicator__line {
+	position: absolute;
+	bottom: 50px;
+	right: 0;
+	transform: translateX(-50%);
+	width: 2px;
+	height: 80px;
+	-webkit-animation: line-scroll 3s ease-in-out forwards infinite;
+	animation: line-scroll 3s ease-in-out forwards infinite;
+	background: #c70360;
+	background: linear-gradient(180deg, #c70360 50%, hsla(0, 0%, 100%, 0) 0);
+	background-size: 100% 200%;
+    background-position: 0 -80px;
+    .scroll-indicator__text {
+        position: absolute;
+        top: -60px;
+        right: -30px;
+        font-size: .8rem;
+        color: #555;
+        transform: rotate(270deg);
+        white-space: nowrap;
+        width: auto;
+    }
+}
+@-webkit-keyframes line-scroll {
+	0% {
+		background-position: 0 -80px
+	}
+	80% {
+		background-position: 0 0
+	}
+	to {
+		background-position: 0 80px
+	}
+}
+@keyframes line-scroll {
+	0% {
+		background-position: 0 -80px
+	}
+	80% {
+		background-position: 0 0
+	}
+	to {
+		background-position: 0 80px
+	}
+}

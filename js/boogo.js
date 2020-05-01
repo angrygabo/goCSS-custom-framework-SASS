@@ -1,39 +1,32 @@
 // reveal items
 function viewportTrigger() {
     $('.viewport').each(function (i) {
-            if (onview($(this))) {
-                $(this).delay(150 * i).animate({ opacity: 1 }, function () {
-                    $(this).addClass('in-viewport');
-                    setTimeout(function() {
-                        $('.in-viewport').removeClass('viewport');
-                    }, 200);
-                });
-            }
+        if (onview($(this))) {
+            $(this).delay(150 * i).animate({ opacity: 1 }, function () {
+                $(this).addClass('in-viewport');
+                setTimeout(function () {
+                    $('.in-viewport').removeClass('viewport');
+                }, 10);
+            });
+        }
     });
     function onview(elem) {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height()-300;
+        var elemBottom = elemTop + $(elem).height() - 300;
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
 }
 
+// parallax content
 function parallaxScroll() {
     var scrolled = $(window).scrollTop();
-    $('.parallax-content').css('top', (0 - (scrolled * 0.8)) + 'px');
+    $('.parallax-content').css('top', (0 - (scrolled * -0.5)) + 'px');
 }
 
-$(document).ready(function () {
-    viewportTrigger();
-    $(window).on('scroll', function () {
-        viewportTrigger();
-        parallaxScroll();
-    });
-});
-
 // ghost header
-$(function () {
+function stickymenu() {
     var obj = $(document);
     var obj_top = obj.scrollTop();
     obj.scroll(function () {
@@ -48,12 +41,20 @@ $(function () {
         }
         obj_top = obj_act_top;
     });
-});
-$(document).on('scroll', function () {
     if (jQuery(document).scrollTop() > 200) {
-        $('#header').addClass('sticky-header');    
+        $('#header').addClass('sticky-header');
     }
     else {
         $('#header').removeClass('sticky-header');
     }
+}
+
+$(document).ready(function () {
+    viewportTrigger();
+    $(window).on('scroll', function () {
+        viewportTrigger();
+        parallaxScroll();
+        stickymenu();
+    });
 });
+
