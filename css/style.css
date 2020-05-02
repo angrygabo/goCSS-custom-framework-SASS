@@ -1,0 +1,118 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gwlogd');
+  src:  url('fonts/icomoon.eot?gwlogd#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gwlogd') format('truetype'),
+    url('fonts/icomoon.woff?gwlogd') format('woff'),
+    url('fonts/icomoon.svg?gwlogd#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zoom-out:before {
+  content: "\e909";
+}
+.icon-zoom-in:before {
+  content: "\e90a";
+}
+.icon-zoom_out_map:before {
+  content: "\e90b";
+}
+.icon-keyboard_arrow_up:before {
+  content: "\e903";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e904";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e905";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e906";
+}
+.icon-magnifying-glass:before {
+  content: "\e908";
+}
+.icon-target:before {
+  content: "\e901";
+}
+.icon-goal:before {
+  content: "\e901";
+}
+.icon-copy:before {
+  content: "\e92c";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+.icon-download3:before {
+  content: "\e9c7";
+}
+.icon-credit-card:before {
+  content: "\e900";
+}
+.icon-card:before {
+  content: "\e900";
+}
+.icon-target:before {
+  content: "\e901";
+}
+.icon-goal:before {
+  content: "\e901";
+}
+.icon-copy:before {
+  content: "\e92c";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-cloud-download:before {
+  content: "\e9c2";
+}
+.icon-download3:before {
+  content: "\e9c7";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-lamp:before {
+  content: "\e902";
+}
+.icon-light:before {
+  content: "\e902";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e904";
+}
+.icon-keyboard_arrow_left:before {
+  content: "\e905";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e906";
+}
+.icon-slack:before {
+  content: "\e907";
+  color: #4a154b;
+}

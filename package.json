@@ -11,5 +11,11 @@
         "ios >= 7",
         "android >= 4",
         "bb >= 10"
-      ]
+    ],
+    "dependencies": {
+        "gulp": "^4.0.2"
+    },
+    "devDependencies": {
+        "gulp-autoprefixer": "^7.0.1"
+    }
 }
