@@ -61,9 +61,43 @@ nav.main-menu  {
         & > li:hover > ul {
             display:block;         
         }  
-        & > li:hover > span {
+        & > li:hover > span,
+        & > li.active > span {
             width: 100%;   
             transition: .2s;     
+        }
+    }	
+}
+
+nav.footer-menu  {
+    display: flex;
+    flex-wrap: wrap;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+        li {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            margin: 0 1rem;
+            font-weight: lighter;
+            font-size: 1em;
+            user-select: none;
+            &:first-child {
+                margin-left: 0;
+            }
+            li, a {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                color: transparent;
+                font-weight: lighter;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }	
 }

@@ -6,7 +6,9 @@ $color-primary: #BB72FE;
 body {
     overflow-x: hidden;
 }
-a {
+
+a,
+.link-gradient {
     color: transparent;
     @include gradient-bg;
     -webkit-background-clip: text;
@@ -22,6 +24,13 @@ a {
         -o-background-clip: text;
         background-clip: text;
         opacity: 0.8;
+    }   
+}
+
+a.link-gradient {
+    color: transparent !important;
+    &:hover {
+        color: transparent !important;
     }   
 }
 
@@ -42,12 +51,12 @@ h6 {
 // scroll line
 #scrollLine {
     @include gradient-bg;
-    width: 10px;
+    width: 5px;
     height: 0;
     position: fixed;
     top: 0;
     left: 0px;
-    z-index: 5;
+    z-index: 6;
 }
 
 // custom
@@ -65,11 +74,19 @@ h6 {
     font-weight: lighter;;
     box-shadow: 0 0px 10px rgba(0,0,0,0);
     margin: 0;
+    transform: translate(0) scale(1) rotate(0);
+    user-select: none;
     &:hover {
         color: #fff;
         @include gradient-bg;
         border: 0;
         box-shadow: 0 0px 10px rgba(0,0,0,.2);
+    }
+    i {
+        font-size: 1.2rem;
+        position: relative;
+        top: 2px;
+        margin-right: 5px;
     }
 }
 .text-mask-gradient {
@@ -80,18 +97,8 @@ h6 {
     background-clip: text;
 }
 
-.bg-gradient {
-    @include gradient-bg;
-}
-
 .container {
     min-height: 50px;
-}
-
-.imagen {
-    display: block;
-    width: 100%;
-    height: 300px;
 }
 
 .selector {
@@ -101,23 +108,28 @@ h6 {
     }
 }
 
-.logo {
+.logo--version {
     font-family: "Lobster",cursive;
-    font-size: 3rem;
-    user-select: none;
-    a {
-        position: relative;
-        top: -5px;
-        padding: 0 2px;
-        font-weight: 400;
-        &:hover {
-            text-decoration: none;
-        }
-    }
+    font-size: 1rem;
+    font-weight: lighter;
 }
 
 // header
 .main-header--ghost {
+    .logo {
+        font-family: "Lobster",cursive;
+        font-size: 3rem;
+        user-select: none;
+        a {
+            position: relative;
+            top: -5px;
+            padding: 0 2px;
+            font-weight: 400;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
     background: rgba(255, 255, 255,0);
     box-shadow: 0 0px 10px rgba(0,0,0,0);
     nav.main-menu  {
@@ -141,10 +153,20 @@ h6 {
     box-shadow: 0 0px 10px rgba(0,0,0,.1);
 }
 
+
+// social links
+nav.main-menu {
+    .social--links {
+        li {
+            font-size: 1.2rem;
+            margin: 0 0.5rem;
+        }
+    }
+}
 //home
 .home {
     z-index: -1;
-    background: rgba(255,255,255,1);
+    background: rgba(235,235,235,1);
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(235,235,235,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ebebeb', GradientType=1 );
     .home--title {
@@ -192,7 +214,7 @@ h6 {
         font-family: "Lobster",cursive;
         user-select: none;
         pointer-events: none;
-        opacity: .4;
+        opacity: .5;
         z-index: 0;
     }
 }
@@ -224,19 +246,19 @@ h6 {
         line-height: 1.1;
     } 
     .section-info--wrapper {
-        .wrapper-icon {
+        .wrapper-logo {
             position: absolute;
             width: 100%;
             height: 100%;
             right: 0;
             top: 0;
-            z-index: 3;
-            .icon-boogo {
+            z-index: -1;
+            .small-boogo {
                 position: absolute;
                 width: 100%;
-                height: auto;
+                height: 100%;
                 top: 0;
-                left: 0;
+                left: -20px;
                 text-align: center;
                 color: transparent;
                 font-family: "Lobster",cursive;
@@ -274,6 +296,20 @@ h6 {
             top: 2rem;
             z-index: 0;
             @include gradient-bg;
+        }
+    }
+}
+
+footer {
+    border-top: 1px solid #ebebeb;
+    background: rgba(2235,235,235,1);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(235,235,235,1) 100%);
+    color: #555;
+    .footer-info {
+        font-size: .87rem;
+        a {
+            display: inline-block;
+            width: auto;
         }
     }
 }

@@ -62,21 +62,7 @@ function scrollLine() {
     $i.css('height', newHeight);
 }
 
-
-$(document).ready(function () {
-    viewportTrigger();
-    scrollLine();
-    setTimeout(function () {
-        $('#scrollLine').removeClass('viewport--trigger viewport');
-    }, 100);
-    $(window).on('scroll', function () {
-        viewportTrigger();
-        parallaxScroll();
-        stickymenu();
-        scrollLine();
-    });
-});
-
+// vanilla require <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 VanillaTilt.init(document.querySelector(".vanilla-tilt"), {
     max: 10,
     speed: 500
@@ -85,7 +71,25 @@ VanillaTilt.init(document.querySelector(".btn-vanilla"), {
     max: 0,
     speed: 500
 });
-//It also supports NodeList
-VanillaTilt.init(document.querySelectorAll(".vanilla-tilt,.btn-vanilla"));
 
+$(document).ready(function () {
 
+    viewportTrigger();
+    scrollLine();
+    setTimeout(function () {
+        $('#scrollLine').removeClass('viewport--trigger viewport');
+    }, 100);
+
+    // require <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
+
+    $(window).on('scroll', function () {
+        viewportTrigger();
+        parallaxScroll();
+        stickymenu();
+        scrollLine();
+    });
+
+});

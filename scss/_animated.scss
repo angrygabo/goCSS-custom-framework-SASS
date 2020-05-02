@@ -28,11 +28,11 @@
 	bottom: 50px;
 	right: 0;
 	transform: translateX(-50%);
-	width: 2px;
+	width: 1px;
 	height: 80px;
 	animation: line-scroll 3s ease-in-out forwards infinite;
-	background: #555;
-	background: linear-gradient(180deg, #555 50%, hsla(0, 0%, 100%, 0) 0);
+	background: #CACACA;
+	background: linear-gradient(180deg, #CACACA 50%, hsla(0, 0%, 100%, 0) 0);
 	background-size: 100% 200%;
 	background-position: 0 -80px;
 	z-index: 2;
