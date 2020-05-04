@@ -11,9 +11,6 @@
 
 // item hover effect animation
 .item_hover--animation {
-    border-radius: .25rem;
-    border: 1px solid #e5e5e5;
-    background-color: #fff;
     transition: all .2s cubic-bezier(.165,.84,.44,1);
     cursor: pointer;
     &:hover {
