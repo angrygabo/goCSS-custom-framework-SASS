@@ -215,34 +215,34 @@
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 0.5rem);
     max-width: calc(((#{$col} / 12) * 100%) - 0.5rem);
     margin-bottom: 1rem;
-    @include ajuste-margen(#{$col});
     &.col-sm-12 {
       margin-left: .25rem;
       margin-right: .25rem;
-      margin-bottom: .25rem;
+      margin-bottom: .50rem;
     }
+    @include ajuste-margen(#{$col});
   }
   @if $spacing == 2 {
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 1rem);
     max-width: calc(((#{$col} / 12) * 100%) - 1rem);
     margin-bottom: 2rem;
-    @include ajuste-margen(#{$col});
     &.col-sm-12 {
       margin-left: .5rem;
       margin-right: .5rem;
-      margin-bottom: .5rem;
+      margin-bottom: 1rem;
     }
+    @include ajuste-margen(#{$col});
   }
   @if $spacing == 3 {
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 2rem);
     max-width: calc(((#{$col} / 12) * 100%) - 2rem);
     margin-bottom: 4rem;
-    @include ajuste-margen(#{$col});
     &.col-sm-12 {
       margin-left: 1rem;
       margin-right: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
+    @include ajuste-margen(#{$col});
   }
 }
 
