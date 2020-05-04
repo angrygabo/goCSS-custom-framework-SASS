@@ -89,6 +89,7 @@ h6 {
     user-select: none;
     @include media-breakpoint-down(sm) {
     font-weight: 600;
+    border-radius: 50px;
     }
     &:hover {
         color: #fff;
@@ -376,6 +377,11 @@ nav.main-menu {
     }
     .hr--title {
         background: #fff;
+    }
+    .item-cards {
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
     }
 }
 
