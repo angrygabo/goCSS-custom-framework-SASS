@@ -50,10 +50,6 @@ h6 {
     transition: .5s !important;
 }
 
-.col {
-    background: #ebebeb;
-}
-
 // scroll line
 #scrollLine {
     position: fixed;
@@ -111,7 +107,17 @@ h6 {
     -o-background-clip: text;
     background-clip: text;
 }
-
+// backgrounds
+.bg-gray-right {
+    border: 1px solid #ebebeb;
+    background: rgba(2235,235,235,1);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(235,235,235,1) 100%);
+}
+.bg-gray-left {
+    border: 1px solid #ebebeb;
+    background: rgba(2235,235,235,1);
+    background: linear-gradient(-25deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(235,235,235,1) 100%);
+}
 .container {
     min-height: 50px;
 }
@@ -293,6 +299,7 @@ nav.main-menu {
                 color: transparent;
                 font-family: "Lobster",cursive;
                 font-size: 22rem;
+                font-weight: lighter;
                 line-height: 1;
                 user-select: none;
             }
@@ -331,8 +338,19 @@ nav.main-menu {
     }
 }
 
+// how to use
+#how-to-use {
+    @include gradient-bg;
+    .section--title,
+    .section--info {
+        color: #fff;
+    }
+    .hr--title {
+        background: #fff;
+    }
+}
+
 footer {
-    border-top: 1px solid #ebebeb;
     background: rgba(2235,235,235,1);
     background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 18%, rgba(235,235,235,1) 100%);
     color: #555;

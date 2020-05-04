@@ -4,6 +4,7 @@ function parallaxScroll() {
     $('.parallax-content').css('transform', 'translate3d(0px, '+ scrolled*0.5 + 'px, 0px)');
 }
 
+// boogo smothscrolling
 function boogoscrolling() {
     // boogo scrolling v1.0
     var scrolled = $(window).scrollTop();
@@ -49,7 +50,7 @@ function viewportTrigger() {
         var docViewTop = $(window).scrollTop();
         var docViewBottom = docViewTop + $(window).height();
         var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height() - 250;
+        var elemBottom = elemTop + $(elem).height() - 300;
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
 }

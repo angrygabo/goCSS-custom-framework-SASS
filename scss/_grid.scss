@@ -35,21 +35,15 @@
 
 // grid
 @each $size in $screen {
+
     // se cumple
-    // @for $col from 1 through $cols {
-    //     @include media-breakpoint-down($size) {
-    //         .col-#{$size}-#{$col},
-    //         .row .col-#{$size}-#{$col} {
-    //             @include col-flex;
-    //         }
-    //     }
-    // }
     @include media-breakpoint-down($size) {
         .col-#{$size}-auto {
             @include col-flex;
         }
     }
     @for $col from 1 through $cols {
+
         // se cumple
         @include media-breakpoint-only($size) {
             .row.row-cols-#{$size}-#{$col} > * {
@@ -78,10 +72,10 @@
     @include col-flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: $percent;
+    width: calc(#{$percent} - 15px);
     margin-left: -15px;
     margin-right: -15px;
-    left: 15px;
+    left: 0;
     .row {
         margin-left: 0;
         margin-right: 0;
