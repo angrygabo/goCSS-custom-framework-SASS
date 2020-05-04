@@ -118,78 +118,87 @@
 
 // justify content
 .justify-content-start {
-    justify-content: flex-start!important;
+    justify-content: flex-start;
 }
 .justify-content-end {
-    justify-content: flex-end!important;
+    justify-content: flex-end;
 }
 .justify-content-center {
-    justify-content: center!important;
+    justify-content: center;
 }
 .justify-content-between {
-    justify-content: space-between!important;
+    justify-content: space-between;
 }
 .justify-content-around {
-    justify-content: space-around!important;
+    justify-content: space-around;
 }
 // align items
 .align-items-start{
-    align-items: flex-start!important;
+    align-items: flex-start;
 }
 .align-items-center {
-    align-items: center!important;
+    align-items: center;
 }
 .align-items-end {
-    align-items: flex-end!important;
+    align-items: flex-end;
 }
 // align self
 .align-self-start{
-    align-self: flex-start!important;
+    align-self: flex-start;
+    &.row {
+        left: 0;
+    }
 }
 .align-self-center {
-    align-self: center!important;
+    align-self: center;
+    &.row {
+        left: 0;
+    }
 }
 .align-self-end {
-    align-self: flex-end!important;
+    align-self: flex-end;
+    &.row {
+        left: 0;
+    }
 }
 
 @each $size in $screen {
     @include media-breakpoint-down($size) {
         // justify content
         .justify-content-#{$size}-start {
-            justify-content: flex-start!important;
+            justify-content: flex-start;
         }
         .justify-content-#{$size}-end {
-            justify-content: flex-end!important;
+            justify-content: flex-end;
         }
         .justify-content-#{$size}-center {
-            justify-content: center!important;
+            justify-content: center;
         }
         .justify-content-#{$size}-between {
-            justify-content: space-between!important;
+            justify-content: space-between;
         }
         .justify-content-#{$size}-around {
-            justify-content: space-around!important;
+            justify-content: space-around;
         }
         // align items
         .align-items-#{$size}-start{
-            align-items: flex-start!important;
+            align-items: flex-start;
         }
         .align-items-#{$size}-center {
-            align-items: center!important;
+            align-items: center;
         }
         .align-items-#{$size}-end {
-            align-items: flex-end!important;
+            align-items: flex-end;
         }
         // align self
-        .align-self-#{$size}-start{
-            align-self: flex-start!important;
+        .align-self-#{$size}-start {
+            align-self: flex-start;
         }
         .align-self-#{$size}-center {
-            align-self: center!important;
+            align-self: center;
         }
         .align-self-#{$size}-end {
-            align-self: flex-end!important;
+            align-self: flex-end;
         }
     }
 }
@@ -290,4 +299,78 @@
 }
 .bg-dark-gray {
     background-color: $dark-gray;
+}
+
+
+@mixin hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+//hidden elements down
+@media (min-width: #{$xl}) { 
+    .hidden-xl-down {
+       @include hidden;
+    }
+}
+@media (max-width: #{$xl}) { 
+    .hidden-xl-down {
+        @include hidden;
+    }
+}
+@media (max-width: #{$lg}) { 
+    .hidden-lg-down {
+        @include hidden;
+    }
+}
+@media (max-width: #{$md}) { 
+    .hidden-md-down {
+        @include hidden;
+    }
+}
+@media (max-width: #{$sm}) { 
+    .hidden-sm-down {
+        @include hidden;
+    }
+}
+@media (max-width: #{$xs}) { 
+    .hidden-xs-down {
+        @include hidden;
+    }
+}
+
+//hidden elements up
+@media (min-width: #{$xl}) { 
+    .hidden-xl-up {
+       @include hidden;
+    }
+}
+@media (min-width: #{$xl}) { 
+    .hidden-xl-up {
+        @include hidden;
+    }
+}
+@media (min-width: #{$lg}) { 
+    .hidden-lg-up {
+        @include hidden;
+    }
+}
+@media (min-width: #{$md}) { 
+    .hidden-md-up {
+        @include hidden;
+    }
+}
+@media (min-width: #{$sm}) { 
+    .hidden-sm-up {
+        @include hidden;
+    }
+}
+@media (min-width: #{$xs}) { 
+    .hidden-xs-up {
+        @include hidden;
+    }
+}
+@media (max-width: #{$xs}) { 
+    .hidden-xs-up {
+        @include hidden;
+    }
 }
