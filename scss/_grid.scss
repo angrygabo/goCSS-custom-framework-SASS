@@ -14,6 +14,7 @@
 
 @for $col from 1 through $cols {
     // se cumple y deroga row-cols-{sizes} y child-col{sizes}
+    .row.col-#{$col} ,
     .row .col-#{$col} ,
     .child-col-#{$col} > * {
         @include col-flex;
@@ -35,21 +36,15 @@
 
 // grid
 @each $size in $screen {
+
     // se cumple
-    // @for $col from 1 through $cols {
-    //     @include media-breakpoint-down($size) {
-    //         .col-#{$size}-#{$col},
-    //         .row .col-#{$size}-#{$col} {
-    //             @include col-flex;
-    //         }
-    //     }
-    // }
     @include media-breakpoint-down($size) {
         .col-#{$size}-auto {
             @include col-flex;
         }
     }
     @for $col from 1 through $cols {
+
         // se cumple
         @include media-breakpoint-only($size) {
             .row.row-cols-#{$size}-#{$col} > * {
@@ -58,6 +53,7 @@
             }
             .child-col-#{$size}-#{$col} > *,
             .col-#{$size}-#{$col},
+            .row.col-#{$size}-#{$col},
             .row .col-#{$size}-#{$col} {
                 @include col-flex;
                 @include col-default($col);

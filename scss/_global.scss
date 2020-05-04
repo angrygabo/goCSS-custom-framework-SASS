@@ -1,10 +1,16 @@
 // breakpoints
+$xs:                       460px;
+$sm:                       760px;
+$md:                       1366px;
+$lg:                       1700px;
+$xl:                       460px;
+
 $breakpoints: (
-  'xs'       :             460px,
-  'sm'       :             760px,
-  'md'       :             1366px,
-  'lg'       :             1536px,
-  'xl'       :             1700px
+  'xs':                    $xs,
+  'sm':                    $sm,
+  'md':                    $md,
+  'lg':                    $lg,
+  'xl':                    $xl
 ) !default;
 
 // breakpoints sizes

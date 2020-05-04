@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>BOOGO CSS</title>
+    <title>BOOGO Framework - Free libraries JS, HMTL & CSS - Free templates and more... Have Fun!</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <meta name="description" content="boogo test">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <i id="scrollLine">
+    <i id="scrollLine" class="hidden-sm-down">
         <div class="trackLine"></div>
     </i>
     <header class="main-header--ghost bg-transparent" id="header">
@@ -26,7 +26,7 @@
             </div>
             <!-- menu principal-->
             <nav class="main-menu viewport--trigger viewport" role="navigation" aria-label="Main">
-                <ul>
+                <ul class="hidden-sm-down">
                     <li class="active">
                         <a href="#!">Home</a>
                         <span></span>
@@ -46,19 +46,19 @@
                 </ul>
                 <ul class="social--links ml-4">
                     <li>
-                        <a href="#!" class="icon-twitter link-gradient" title="twitter"></a>
+                        <a href="http://twitter.com" target="_blank" class="icon-twitter link-gradient" title="twitter"></a>
                     </li>
                     <li>
-                        <a href="#!" class="icon-github link-gradient" title="github"></a>
+                        <a href="https://github.com/angrygabo/boogo" target="_blank" class="icon-github link-gradient" title="github"></a>
                     </li>
                     <li>
-                        <a href="#!" class="icon-slack link-gradient" title="Slack community"></a>
+                        <a href="https://join.slack.com/t/boogo/shared_invite/zt-e2bx193m-JN26GnO7LCKBPWNoLRtlrQ" target="_blank" class="icon-slack link-gradient" title="Slack community"></a>
                     </li>
                 </ul>
                 <!-- <span class="version">v1.0 beta</span> -->
-                <a class="btn btn-gradient ml-4 btn-vanilla  viewport--trigger viewport" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                <a class="btn btn-gradient ml-4 btn-vanilla hidden-sm-down viewport--trigger viewport" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
                     <i class="icon-download3"></i>
-                    download v1.0 beta
+                    download v1.0 b
                 </a>
             </nav>
         </div>
@@ -68,17 +68,16 @@
             <div class="container justify-content-center h-100 position-relative parallax-content">
                 <div class="row">
                     <h1 class="home--title text-mask-gradient viewport--trigger viewport">
-                        <span>make<br></span>
-                        <span>something<br></span>
-                        <span>different...</span>
+                        <span>less code,<br></span>
+                        <span>better results!</span>
                     </h1>
                     <hr class="home--hr viewport--trigger viewport">
-                    <span class="home--info col-6 viewport--trigger viewport">
+                    <span class="home--info col-6 col-sm-12 viewport--trigger viewport">
                         Use our powerful flexbox grid to create advanced custom designs... boogo is a CSS Framework Mobile First SASS version.
                     </span>
                 </div>
-                <div class="version--info viewport--trigger viewport">Current version, <span class="home-logo--version">boogo</span> 1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read documentation</a></div>
-                <div class="scroll-indicator__line viewport--trigger viewport">
+                <div class="version--info viewport--trigger viewport hidden-sm-down">Current version, <span class="home-logo--version">boogo</span> 1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read documentation</a></div>
+                <div class="scroll-indicator__line viewport--trigger viewport hidden-sm-down">
                     <div class="scroll-indicator__text">scroll down</div>
                 </div>
                 <div class="home-logo--watermark">
@@ -87,19 +86,19 @@
             </div>
         </section>
 
-        <section class="section--wrapper position-relative">
-            <div class="row flex-column align-items-center wrap-section--title">
-                <h2 class="col-8 section--title justify-content-center m-0 viewport--trigger viewport">
-                    Create templates </br>like professionals
-                </h2>
-                <hr class="hr--title my-4 viewport--trigger viewport"/>
-                <span class="col-6 section--info text-center viewport--trigger viewport">
-                    Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
-                </span>
-            </div>
+        <section class="section--wrapper position-relative" id="create-templates">
             <div class="container">
-                <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-6 child-col-sm-12 child-spacing-3 align-self-center section-info--wrapper mt-5">
-                    <div class="col-5 col-sm-12 col-md-12 pr-5 align-items-center">
+                <div class="row flex-column align-items-center wrap-section--title">
+                    <h2 class="col-8 col-sm-12 px-3 section--title justify-content-center m-0 viewport--trigger viewport">
+                        Pages templates </br>like professionals
+                    </h2>
+                    <hr class="hr--title my-4 viewport--trigger viewport"/>
+                    <span class="col-6 col-sm-12 px-3 section--info text-center viewport--trigger viewport">
+                        Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
+                    </span>
+                </div>
+                <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-sm-12 child-col-6 child-spacing-3 align-self-center section-info--wrapper mt-5 mt-sm-1">
+                    <div class="col col-sm-12 align-items-center">
                         <div>
                             <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
                             <p class="py-5 viewport--trigger viewport">
@@ -111,7 +110,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-12 justify-content-end  viewport--trigger viewport">
+                    <div class="col col-sm-12 justify-content-end hidden-sm-down viewport--trigger viewport">
                         <figure class="info--image vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1" data-tilt data-tilt-reverse="true">
                             <div class="wrapper-logo">
                                 <div class="small-boogo text-mask-gradient">bg</div>
@@ -124,23 +123,49 @@
                         <div class="image--backing"></div>
                     </div>
                 </div>
-
-                <div class="row flex-column align-items-center wrap-section--title mt-5">
-                    <h2 class="col-8 section--title justify-content-center m-0 viewport--trigger viewport">
+            </div>
+        </section>
+        <section class="section--wrapper position-relative" id="how-to-use">
+            <div class="container">
+                <div class="row flex-column align-items-center wrap-section--title">
+                    <h2 class="col-8 col-sm-12 px-3 section--title justify-content-center m-0 viewport--trigger viewport">
                         How to use
                     </h2>
                     <hr class="hr--title my-4 viewport--trigger viewport"/>
-                    <span class="col-6 section--info text-center viewport--trigger viewport">
+                    <span class="col-6 col-sm-12 px-3 section--info info-title text-center viewport--trigger viewport">
                         boogo is an open source toolkit for developing with HTML, CSS, and JS.
                     </span>
                 </div>
-
-                <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-6 child-col-sm-12 child-spacing-3 align-self-center section-info--wrapper mt-5">
-                    <div class="col justify-content-center align-items-center item_hover--animation">
-                        dd
+                <div class="row col-10 col-sm-12 align-self-center child-col-6 child-col-sm-12 child-spacing-3 justify-content-sm-center section-info--wrapper">
+                    <div class="col col-sm-12 justify-content-center align-items-center viewport--trigger viewport">
+                        <div class="row flex-column align-items-center item_hover--animation bg-gray-left py-5 px-5">
+                            <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
+                                View documentation
+                            </h3>
+                            <hr class="hr--item my-4"/>
+                            <span class="w-100 text-center">
+                                Get started with boogo, a completly framework for building professionals templates page.
+                            </span>
+                            <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                <i class="icon-keyboard_arrow_right"></i>
+                                See more
+                            </a>
+                        </div>
                     </div>
-                    <div class="col justify-content-center align-items-center item_hover--animation">
-                        dd
+                    <div class="col col-sm-12 justify-content-center align-items-center viewport--trigger viewport">
+                        <div class="row flex-column align-items-center item_hover--animation bg-gray-right py-5 px-5">
+                            <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
+                                Get a template (free)
+                            </h3>
+                            <hr class="hr--item my-4"/>
+                            <span class="w-100 text-center">
+                                Get your website templates here and use them on your website, multipurpose, e-commerce and more!
+                            </span>
+                            <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                <i class="icon-target"></i>
+                                Pick one
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -162,7 +187,7 @@
         <footer class="py-5">
             <div class="container">
                 <div class="row">
-                    <nav class="footer-menu" role="navigation" aria-label="Main">
+                    <nav class="footer-menu hidden-sm-down" role="navigation" aria-label="Main">
                         <ul>
                             <li class="active">
                                 <a href="#!">Home</a>
