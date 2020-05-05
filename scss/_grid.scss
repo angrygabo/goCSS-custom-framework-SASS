@@ -3,6 +3,7 @@
     @include col-flex;
     flex-wrap: wrap;
 }
+
 [class^=col-],
 .col {
     position: relative;
@@ -13,6 +14,12 @@
         padding-right: 0;
         padding-left: 0;
     }
+}
+
+.child-spacing-1,
+.child-spacing-2,
+.child-spacing-3 {
+    justify-content: space-between!important;
 }
 
 @for $col from 1 through $cols {
@@ -31,6 +38,7 @@
         // se cumple y deroga col-{cols}
         .row .child-col-#{$col}.child-spacing-#{$spacing} > *,
         .child-col-#{$col}.child-spacing-#{$spacing} > * {
+            justify-content: space-between;
             @include col($col,$spacing);
         }
     }
@@ -63,6 +71,7 @@
             @for $spacing from 1 through $child-spacing {
                 .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *,
                 .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > * {
+                    justify-content: space-between;
                     @include col($col,$spacing);
                 }
             }
@@ -80,9 +89,8 @@
 // row col
 .row {
     @include col-flex;
+    position: relative;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: $percent;
     margin-left: -15px;
     margin-right: -15px;
     left: 15px;
