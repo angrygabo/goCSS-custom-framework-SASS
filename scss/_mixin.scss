@@ -106,6 +106,13 @@
   }
 }
 
+// col-size
+@mixin col-size($size) { //se cumple
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 // row cols
 @mixin row-cols($row-col) { //se cumple
   @for $col from 1 through $cols {
@@ -118,7 +125,6 @@
 
 // cols
 @mixin col-default($col-calc) {
-  flex-wrap: wrap;
   @for $col from 1 through $cols {
     @if $col-calc  == $col {
         flex: 0 0 calc((#{$col} / 12) * 100%);
@@ -127,128 +133,38 @@
   }
 }
 
-// ajuste márgenes últimos elementos
-@mixin ajuste-margen($col) {
-  @if $col == 1 {
-    &:nth-of-type(12n) {
-      margin-right: 0;
-    }
-    &:nth-last-child(-n+12) {
-      margin-bottom: 0;
-    }
-  }
-  @else if $col == 2 {
-      &:nth-of-type(6n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n+6) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 3 {
-      &:nth-of-type(4n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n+4) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 4 {
-      &:nth-of-type(3n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n+3) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 5 {
-      &:nth-of-type(2n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n+2) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 6 {
-      &:nth-of-type(2n) {
-        margin-right: 0;
-      }
-      &:nth-last-child(-n+2) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 7 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 8 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 9 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 10 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 11 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-  @else if $col == 12 {
-      &:nth-last-child(-n+1) {
-        margin-bottom: 0;
-      }
-  }
-}
-
 @mixin col($col,$spacing) {
-  flex-wrap: wrap;
   @if $spacing == 1 {
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 0.5rem);
     max-width: calc(((#{$col} / 12) * 100%) - 0.5rem);
     margin-bottom: 1rem;
-    &.col-sm-12 {
-      margin-left: .25rem;
-      margin-right: .25rem;
-      margin-bottom: .50rem;
+    @if $col == 12 {
+      flex: 0 0 calc((#{$col} / 12) * 100%);
+      max-width: calc((#{$col} / 12) * 100%);
     }
-    @include ajuste-margen(#{$col});
   }
   @if $spacing == 2 {
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 1rem);
     max-width: calc(((#{$col} / 12) * 100%) - 1rem);
     margin-bottom: 2rem;
-    &.col-sm-12 {
-      margin-left: .5rem;
-      margin-right: .5rem;
-      margin-bottom: 1rem;
+    @if $col == 12 {
+      flex: 0 0 calc((#{$col} / 12) * 100%);
+      max-width: calc((#{$col} / 12) * 100%);
     }
-    @include ajuste-margen(#{$col});
   }
   @if $spacing == 3 {
     flex: 0 0 calc(((#{$col} / 12) * 100%) - 2rem);
     max-width: calc(((#{$col} / 12) * 100%) - 2rem);
     margin-bottom: 4rem;
-    &.col-sm-12 {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      margin-bottom: 2rem;
+    @if $col == 12 {
+      flex: 0 0 calc((#{$col} / 12) * 100%);
+      max-width: calc((#{$col} / 12) * 100%);
     }
-    @include ajuste-margen(#{$col});
   }
 }
 
 // cont flex
 @mixin col-flex {
-  position: relative;
   display: flex;
 }
 
