@@ -6,7 +6,9 @@
 
 [class^=col-],
 .col {
+    @include col-flex;
     position: relative;
+    flex-wrap: wrap;
     padding-right: 15px;
     padding-left: 15px;
     [class^=col-],
@@ -27,11 +29,9 @@
     .row.col-#{$col} ,
     .row .col-#{$col} ,
     .child-col-#{$col} > * {
-        @include col-flex;
         @include col-default($col);
     }
     .row.row-cols-#{$col} > * {
-        @include col-flex;
         @include row-cols($col);
     }
     @for $spacing from 1 through $child-spacing {
@@ -48,24 +48,17 @@
 @each $size in $screen {
 
     // se cumple
-    @include media-breakpoint-down($size) {
-        .col-#{$size}-auto {
-            @include col-flex;
-        }
-    }
     @for $col from 1 through $cols {
 
         // se cumple
         @include media-breakpoint-only($size) {
             .row.row-cols-#{$size}-#{$col} > * {
-                @include col-flex;
                 @include row-cols($col);
             }
             .child-col-#{$size}-#{$col} > *,
             .col-#{$size}-#{$col},
             .row.col-#{$size}-#{$col},
             .row .col-#{$size}-#{$col} {
-                @include col-flex;
                 @include col-default($col);
             }
             @for $spacing from 1 through $child-spacing {
@@ -90,6 +83,7 @@
 .row {
     @include col-flex;
     position: relative;
+    width: $percent;
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
