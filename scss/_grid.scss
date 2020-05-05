@@ -1,9 +1,4 @@
-// col
-.col-auto {
-    @include col-flex;
-    flex-wrap: wrap;
-}
-
+// col presets
 [class^=col-],
 .col {
     @include col-flex;
@@ -26,7 +21,6 @@
 
 @for $col from 1 through $cols {
     // se cumple y deroga row-cols-{sizes} y child-col{sizes}
-    .row.col-#{$col} ,
     .row .col-#{$col} ,
     .child-col-#{$col} > * {
         @include col-default($col);
@@ -57,7 +51,6 @@
             }
             .child-col-#{$size}-#{$col} > *,
             .col-#{$size}-#{$col},
-            .row.col-#{$size}-#{$col},
             .row .col-#{$size}-#{$col} {
                 @include col-default($col);
             }
@@ -72,8 +65,7 @@
     }
     @include media-breakpoint-down($size) {
         .col-#{$size},
-        .row .col-#{$size},
-        .row.col-#{$size} {
+        .row .col-#{$size} {
             @include col-size($size);
         }
     }
