@@ -20,61 +20,65 @@
         <div class="trackLine"></div>
     </i>
     <header class="main-header--ghost bg-transparent" id="header">
-        <div class="container flex-row justify-content-between align-items-center">
-            <div class="logo d-flex w-auto justify-self-start viewport--trigger viewport">
-                <a href="/">boogo</a>
+        <div class="container">
+            <div class="row flex-row justify-content-between align-items-center">
+                <div class="logo d-flex w-auto justify-self-start viewport--trigger viewport">
+                    <a href="/">boogo</a>
+                </div>
+                <!-- menu principal-->
+                <nav class="main-menu viewport--trigger viewport" role="navigation" aria-label="Main">
+                    <ul class="hidden-sm-down">
+                        <li class="active">
+                            <a href="#!">Home</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#!">Documentation</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#!">Examples</a>
+                            <span></span>
+                        </li>
+                        <li>
+                            <a href="#!">Themes</a>
+                            <span></span>
+                        </li>
+                    </ul>
+                    <ul class="social--links ml-4">
+                        <li>
+                            <a href="http://twitter.com" target="_blank" class="icon-twitter link-gradient" title="twitter"></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/angrygabo/boogo" target="_blank" class="icon-github link-gradient" title="github"></a>
+                        </li>
+                        <li>
+                            <a href="https://join.slack.com/t/boogo/shared_invite/zt-e2bx193m-JN26GnO7LCKBPWNoLRtlrQ" target="_blank" class="icon-slack link-gradient" title="Slack community"></a>
+                        </li>
+                    </ul>
+                    <!-- <span class="version">v1.0 beta</span> -->
+                    <a class="btn btn-gradient ml-4 btn-vanilla hidden-sm-down viewport--trigger viewport" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                        <i class="icon-download3"></i>
+                        download v1.0 b
+                    </a>
+                </nav>
             </div>
-            <!-- menu principal-->
-            <nav class="main-menu viewport--trigger viewport" role="navigation" aria-label="Main">
-                <ul class="hidden-sm-down">
-                    <li class="active">
-                        <a href="#!">Home</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a href="#!">Documentation</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a href="#!">Examples</a>
-                        <span></span>
-                    </li>
-                    <li>
-                        <a href="#!">Themes</a>
-                        <span></span>
-                    </li>
-                </ul>
-                <ul class="social--links ml-4">
-                    <li>
-                        <a href="http://twitter.com" target="_blank" class="icon-twitter link-gradient" title="twitter"></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/angrygabo/boogo" target="_blank" class="icon-github link-gradient" title="github"></a>
-                    </li>
-                    <li>
-                        <a href="https://join.slack.com/t/boogo/shared_invite/zt-e2bx193m-JN26GnO7LCKBPWNoLRtlrQ" target="_blank" class="icon-slack link-gradient" title="Slack community"></a>
-                    </li>
-                </ul>
-                <!-- <span class="version">v1.0 beta</span> -->
-                <a class="btn btn-gradient ml-4 btn-vanilla hidden-sm-down viewport--trigger viewport" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-                    <i class="icon-download3"></i>
-                    download v1.0 b
-                </a>
-            </nav>
         </div>
     </header>
     <div id="boogo-scrolling">
         <section class="d-flex h-vh w-100 home">
-            <div class="container justify-content-center h-100 position-relative parallax-content">
-                <div class="row">
-                    <h1 class="home--title text-mask-gradient viewport--trigger viewport">
-                        <span>less code,<br></span>
-                        <span>better results!</span>
-                    </h1>
-                    <hr class="home--hr viewport--trigger viewport">
-                    <span class="home--info col-6 col-sm-12 viewport--trigger viewport">
-                        Use our powerful flexbox grid to create advanced custom designs... boogo is a CSS Framework Mobile First SASS version.
-                    </span>
+            <div class="container position-relative parallax-content">
+                <div class="row h-100 align-items-center">
+                    <div class="home-info">
+                        <h1 class="home--title text-mask-gradient viewport--trigger viewport">
+                            <span>less code,<br></span>
+                            <span>better results!</span>
+                        </h1>
+                        <hr class="home--hr viewport--trigger viewport">
+                        <span class="home--desc col-6 col-sm-12 viewport--trigger viewport">
+                            Use our powerful flexbox grid to create advanced custom designs... boogo is a CSS Framework Mobile First SASS version.
+                        </span>
+                    </div>
                 </div>
                 <div class="version--info viewport--trigger viewport hidden-sm-down">Current version, <span class="home-logo--version">boogo</span> 1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read documentation</a></div>
                 <div class="scroll-indicator__line viewport--trigger viewport hidden-sm-down">
@@ -97,30 +101,32 @@
                         Build responsive, mobile-first projects on the web with the world’s most popular front-end component library.
                     </span>
                 </div>
-                <div class="row col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-sm-12 child-col-6 child-spacing-3 align-self-center section-info--wrapper mt-5 mt-sm-1">
-                    <div class="col align-items-center">
-                        <div>
-                            <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
-                            <p class="py-5 viewport--trigger viewport">
-                                Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
-                            </p>
-                            <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-                                <i class="icon-lamp"></i>
-                                See more
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col justify-content-end hidden-sm-down viewport--trigger viewport">
-                        <figure class="info--image circle-item vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1" data-tilt data-tilt-reverse="true">
-                            <div class="wrapper-logo">
-                                <div class="small-boogo text-mask-gradient">bg</div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-sm-12 child-col-6 child-spacing-3 section-info--wrapper mt-5 mt-sm-1">
+                        <div class="col align-items-center">
+                            <div>
+                                <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
+                                <p class="py-5 viewport--trigger viewport">
+                                    Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
+                                </p>
+                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                    <i class="icon-lamp"></i>
+                                    See more
+                                </a>
                             </div>
-                            <img src="assets/images/image-resources.png" alt="boogo library examples"/>
-                            <video autoplay muted loop id="video" class="object-fit-cover">
-                                <source src="assets/multimedia/video-resource-ux.mp4" type="video/mp4">
-                            </video>
-                        </figure>
-                        <div class="image--backing circle-item"></div>
+                        </div>
+                        <div class="col justify-content-end hidden-sm-down viewport--trigger viewport">
+                            <figure class="info--image circle-item vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1" data-tilt data-tilt-reverse="true">
+                                <div class="wrapper-logo">
+                                    <div class="small-boogo text-mask-gradient">bg</div>
+                                </div>
+                                <img src="assets/images/image-resources.png" alt="boogo library examples"/>
+                                <video autoplay muted loop id="video" class="object-fit-cover">
+                                    <source src="assets/multimedia/video-resource-ux.mp4" type="video/mp4">
+                                </video>
+                            </figure>
+                            <div class="image--backing circle-item"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,39 +142,40 @@
                         boogo is an open source toolkit for developing with HTML, CSS, and JS.
                     </span>
                 </div>
-                <div class="row col-10 col-sm-12 align-self-center child-col-6 child-col-sm-12 child-spacing-3 justify-content-sm-center section-info--wrapper">
-                    <div class="col col-sm-12 col-md-12 justify-content-center align-items-center viewport--trigger viewport">
-                        <div class="row flex-column align-items-center item_hover--animation item-cards py-5 px-5 px-sm-3 py-sm-3">
-                            <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
-                                View documentation
-                            </h3>
-                            <hr class="hr--item my-4"/>
-                            <span class="w-100 text-center">
-                                Get started with boogo, a completly framework for building professionals templates page.
-                            </span>
-                            <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-                                <i class="icon-keyboard_arrow_right"></i>
-                                See more
-                            </a>
+                <div class="row justify-content-center">
+                    <div class="col-10 col-sm-12 child-col-6 child-col-sm-12 child-spacing-3 section-info--wrapper">
+                        <div class="col col-sm-12 col-md-12 justify-content-center align-items-center viewport--trigger viewport">
+                            <div class="row flex-column align-items-center item_hover--animation item-cards py-5 px-5 px-sm-3 py-sm-3">
+                                <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
+                                    View documentation
+                                </h3>
+                                <hr class="hr--item my-4"/>
+                                <span class="w-100 text-center">
+                                    Get started with boogo, a completly framework for building professionals templates page.
+                                </span>
+                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                    <i class="icon-keyboard_arrow_right"></i>
+                                    See more
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col col-sm-12 col-md-12 justify-content-center align-items-center viewport--trigger viewport">
-                        <div class="row flex-column align-items-center item_hover--animation item-cards py-5 px-5 px-sm-3 py-sm-3">
-                            <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
-                                Get a template (free)
-                            </h3>
-                            <hr class="hr--item my-4"/>
-                            <span class="w-100 text-center">
-                                Get your website templates here and use them on your website, multipurpose, e-commerce and more!
-                            </span>
-                            <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
-                                <i class="icon-target"></i>
-                                Pick one
-                            </a>
+                        <div class="col col-sm-12 col-md-12 justify-content-center align-items-center viewport--trigger viewport">
+                            <div class="row flex-column align-items-center item_hover--animation item-cards py-5 px-5 px-sm-3 py-sm-3">
+                                <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
+                                    Get a template (free)
+                                </h3>
+                                <hr class="hr--item my-4"/>
+                                <span class="w-100 text-center">
+                                    Get your website templates here and use them on your website, multipurpose, e-commerce and more!
+                                </span>
+                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                    <i class="icon-target"></i>
+                                    Pick one
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- <div class="container-fluid viewport--trigger viewport">
                     <pre>
                         <code>
