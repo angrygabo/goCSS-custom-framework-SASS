@@ -3,13 +3,16 @@
     @include col-flex;
     flex-wrap: wrap;
 }
+[class^=col-],
 .col {
-    @include col-flex;
-    flex-wrap: wrap;
-    min-height: 50px;
-    flex-grow: 1;
-    max-width: 100%;
-    left: 0;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    [class^=col-],
+    .col {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 @for $col from 1 through $cols {
@@ -28,7 +31,6 @@
         // se cumple y deroga col-{cols}
         .row .child-col-#{$col}.child-spacing-#{$spacing} > *,
         .child-col-#{$col}.child-spacing-#{$spacing} > * {
-            @include col-flex;
             @include col($col,$spacing);
         }
     }
@@ -61,10 +63,16 @@
             @for $spacing from 1 through $child-spacing {
                 .row .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > *,
                 .child-col-#{$size}-#{$col}.child-spacing-#{$spacing} > * {
-                    @include col-flex;
                     @include col($col,$spacing);
                 }
             }
+        }
+    }
+    @include media-breakpoint-down($size) {
+        .col-#{$size},
+        .row .col-#{$size},
+        .row.col-#{$size} {
+            @include col-size($size);
         }
     }
 }

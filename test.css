@@ -1,0 +1,7 @@
+.user-select{
+    user-select: none;
+}
+
+.user-select{
+    display: flex;
+}
