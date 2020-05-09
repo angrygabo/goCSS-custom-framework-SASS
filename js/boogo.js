@@ -1,7 +1,7 @@
 // parallax content
 function parallaxScroll() {
     var scrolled = $(window).scrollTop();
-    $('.parallax-content').css('transform', 'translate3d(0px, '+ scrolled*0.5 + 'px, 0px)');
+    $('.parallax-content').css('transform', 'translate3d(0, '+ scrolled*0.5 + 'px, 0)');
 }
 
 // boogo smothscrolling
@@ -10,7 +10,14 @@ function boogoscrolling() {
     var scrolled = $(window).scrollTop();
     var docheight = $('#boogo-scrolling').height(); // get content height
     $('body').css('height', +  docheight + 'px'); // set body content height
-    $('#boogo-scrolling').css('transform', 'translate3d(0px, '+ -scrolled + 'px, 0px)'); // scroll content when scrolling
+    $('#boogo-scrolling').css('transform', 'translate3d(0, '+ -scrolled + 'px, 0)'); // scroll content when scrolling
+    $('.corregir').css('transform', 'translate3d(0, '+ scrolled + 'px, 0)'); // scroll content when scrolling
+}
+
+// text horizontal
+function textcross() { 
+    var scrolled = $(window).scrollTop();
+    $('.textcross').css('transform', 'translate3d('+ -scrolled + 'px, 0, 0)'); // scroll content when scrolling
 }
 
 // ghost header
@@ -35,7 +42,7 @@ function stickymenu() {
 }
 
 // reveal items
-function viewportTrigger() {
+function inviewport() {
     $('.viewport').each(function (i) {
         if (onview($(this))) {
             $(this).delay(150 * i).animate({ opacity: 1 }, function () {
@@ -46,14 +53,37 @@ function viewportTrigger() {
             });
         }
     });
-    function onview(elem) {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height() - 300;
-        return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    function onview(item) {
+        var scrollTop = $(window).scrollTop();
+        var viewporth = $(window).height();
+        var offset = $(item).offset().top;
+        var docViewBottom = scrollTop + viewporth;
+        var elemBottom = offset;
+        return (elemBottom <= docViewBottom) && (offset >= scrollTop);
+        //return ((elemBottom <= docViewBottom) && (offset >= scrollTop));
     }
 }
+
+// function inviewport() {
+//     $('.viewport').each(function (i) {
+//         if (onview($(this))) {
+//             $(this).delay(150 * i).animate({ opacity: 1 }, function () {
+//                 $(this).addClass('in-viewport');
+//                 setTimeout(function () {
+//                     $('.in-viewport').removeClass('viewport');
+//                 }, 10);
+//             });
+//         }
+//     });
+//     function onview(item) {
+//         var scrollTop = $(window).scrollTop();
+//         var viewporth = $(window).height();
+//         var docViewBottom = scrollTop + viewporth;
+//         var offset = $(item).offset().top;
+//         var elemBottom = elemTop + $(item).height() - 300;
+//         return ((elemBottom <= docViewBottom) && (offset >= docViewTop));
+//     }
+// }
 
 // scroll line
 function scrollLine() {
@@ -63,19 +93,6 @@ function scrollLine() {
     var maxHeight = $(window).height() - (offset * 2) - minHeight;
     var newHeight = ((maxHeight / 100) * scrollPercentage) + minHeight;
     $('#scrollLine').css('height', newHeight);
-}
-
-// vanilla
-function vanilla() {
-    // vanilla require <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    VanillaTilt.init(document.querySelector(".vanilla-tilt"), {
-        max: 10,
-        speed: 500
-    });
-    VanillaTilt.init(document.querySelector(".btn-vanilla"), {
-        max: 0,
-        speed: 500
-    });
 }
 
 // scroll line
@@ -88,17 +105,16 @@ function precode() {
 
 $(document).ready(function () {
     boogoscrolling() 
-    viewportTrigger();
+    inviewport();
     scrollLine();
     precode();
-    vanilla();
-
     $(window).on('scroll', function () {
         boogoscrolling() 
         parallaxScroll();
         stickymenu();
-        viewportTrigger();
+        inviewport();
         scrollLine();
+        textcross()
     });
 
 });

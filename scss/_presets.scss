@@ -101,6 +101,7 @@ sup { top: -$rem*.5; }
 
 // links
 a {
+  display: contents;
   color: $link-color;
   text-decoration: $link-decoration;
   background-color: transparent; // Remove the gray background on active links in IE 10.

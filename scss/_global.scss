@@ -2,8 +2,8 @@
 $xs:                       460px;
 $sm:                       760px;
 $md:                       1366px;
-$lg:                       1700px;
-$xl:                       460px;
+$lg:                       1536px;
+$xl:                       1700px;
 
 $breakpoints: (
   'xs':                    $xs,
@@ -20,7 +20,7 @@ $screen:                   xl, lg, md, sm, xs;
 $cols:                     12;
 
 // cols-margin
-$child-spacing:            3;//5
+$child-spacing:            3;
 
 // cols-spacing
 $spacings:                 5;
