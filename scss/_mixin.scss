@@ -107,7 +107,7 @@
 }
 
 // col-size
-@mixin col-size($size) { //se cumple
+@mixin col-size() { //se cumple
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
@@ -163,16 +163,9 @@
   }
 }
 
-// cont flex
-@mixin col-flex {
-  display: flex;
-}
-
-// display
-@mixin wrap-flex {
-  display: flex;
+// flex
+@mixin flex-wrap {
   flex-wrap: wrap;
-  flex-direction: column;
 }
 @mixin d-flex {
   display: flex;
@@ -198,6 +191,9 @@
   @if $spacing == 1 {
     padding-top: $rem*.25!important;
   }
+  @if $spacing == 0 {
+    padding-top: 0!important;
+  }
 }
 
 @mixin spacing-pb($spacing) {
@@ -215,6 +211,9 @@
   }
   @if $spacing == 1 {
     padding-bottom: $rem*.25!important;
+  }
+  @if $spacing == 0 {
+    padding-bottom: 0!important;
   }
 }
 
@@ -234,6 +233,9 @@
   @if $spacing == 1 {
     padding-right: $rem*.25!important;
   }
+  @if $spacing == 0 {
+    padding-right: 0!important;
+  }
 }
 
 @mixin spacing-pl($spacing) {
@@ -251,6 +253,9 @@
   }
   @if $spacing == 1 {
     padding-left: $rem*.25!important;
+  }
+  @if $spacing == 0 {
+    padding-left: 0!important;
   }
 }
 
@@ -271,6 +276,9 @@
   @if $spacing == 1 {
     margin-top: $rem*.25!important;
   }
+  @if $spacing == 0 {
+    margin-top: 0!important;
+  }
 }
 
 @mixin spacing-mb($spacing) {
@@ -288,6 +296,9 @@
   }
   @if $spacing == 1 {
     margin-bottom: $rem*.25!important;
+  }
+  @if $spacing == 0 {
+    margin-bottom: 0!important;
   }
 }
 
@@ -307,6 +318,9 @@
   @if $spacing == 1 {
     margin-right: $rem*.25!important;
   }
+  @if $spacing == 0 {
+    margin-right: 0!important;
+  }
 }
 
 @mixin spacing-ml($spacing) {
@@ -325,22 +339,72 @@
   @if $spacing == 1 {
     margin-left: $rem*.25!important;
   }
+  @if $spacing == 0 {
+    margin-left: 0!important;
+  }
 }
 
-// animated background
-@mixin gradient-bg {
-  background: linear-gradient(-45deg, #BB72FE, #C483FE, #F17E8A, #FB6281);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-  @keyframes gradient {
-      0% {
-          background-position: 0% 50%;
-      }
-      50% {
-          background-position: 100% 50%;
-      }
-      100% {
-          background-position: 0% 50%;
-      }
-  }
+// floats
+@mixin float-left() {
+  float: left;
+}
+@mixin float-right() {
+  float: right;
+}
+@mixin float-none() {
+  float: none;
+}
+
+// hidden elements
+@mixin hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+// text align
+@mixin text-center() {
+  text-align: center;
+}
+@mixin text-left() {
+  text-align: left;
+}
+@mixin text-right() {
+  text-align: right;
+}
+@mixin text-justify() {
+  text-align: justify;
+}
+
+// justify-content
+@mixin justify-content-flex-start() {
+  justify-content: flex-start;
+}
+@mixin justify-content-flex-end() {
+  justify-content: flex-end;
+}
+@mixin justify-content-center() {
+  justify-content: center;
+}
+@mixin justify-content-space-between() {
+  justify-content: space-between;
+}
+@mixin justify-content-space-around() {
+  justify-content: space-around;
+}
+
+// positions
+@mixin position-static () {
+  position: static;
+}
+@mixin position-relative() {
+  position: relative;
+}
+@mixin position-absolute() {
+  position: absolute;
+}
+@mixin position-fixed() {
+  position: fixed;
+}
+@mixin position-sticky() {
+  position: sticky;
 }

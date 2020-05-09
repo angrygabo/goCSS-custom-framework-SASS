@@ -1,4 +1,4 @@
-nav.main-menu  {
+.main-menu  {
     display: flex;
     flex-wrap: wrap;
     ul {
@@ -14,23 +14,23 @@ nav.main-menu  {
             margin: 0 1rem;
             user-select: none;
             span {
+                content: '';
                 position: absolute;
                 display:block;
                 top: 0;
                 left: 0;
                 width: 0;
                 height: 3px;
-                background: #fff;
+                background: #555;
                 transition: 1s;
             }
             li:hover {
-                background: #BB72FE; 
+                background: #ebebeb; 
             }
             li, a {
                 align-items: center;
                 display: flex;
                 height: 100%;
-                color: #fff;
                 font-weight: lighter;
             }
             ul {
@@ -50,8 +50,7 @@ nav.main-menu  {
                     display: block;
                     width: 100%;
                     height: auto;
-                    padding: 10px 20px;
-                    color: #fff;     
+                    padding: 10px 20px;   
                 }
             }
             &:last-child {
@@ -62,7 +61,7 @@ nav.main-menu  {
             display:block;         
         }  
         & > li:hover > span,
-        & > li.active > span {
+        & > li.current-menu-item > span {
             width: 100%;   
             transition: .2s;     
         }
@@ -92,8 +91,7 @@ nav.footer-menu  {
                 align-items: center;
                 display: flex;
                 height: 100%;
-                color: transparent;
-                font-weight: lighter;
+                font-weight: normal;
             }
             &:last-child {
                 margin-right: 0;
