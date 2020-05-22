@@ -11,23 +11,23 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.png">
     <!-- <link rel="stylesheet" type="text/css" href="boogo.min.css"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="css/iconmoon.css">
+    <!-- <link rel="stylesheet" href="css/iconmoon.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/styles/github.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <i id="scrollLine" class="hidden-sm-down">
+    <!-- <i id="scrollLine" class="hidden-md-down">
         <div class="trackLine"></div>
-    </i>
+    </i> -->
     <header class="main-header--ghost bg-transparent" id="header">
-        <div class="container">
+        <div class="container-fluid px-5 px-md-3 px-sm-3">
             <div class="row flex-row justify-content-between align-items-center">
                 <div class="logo d-flex w-auto justify-self-start viewport--trigger viewport">
-                    <a href="/">boogo</a>
+                    <a class="text-gradient" href="/">boogo</a>
                 </div>
                 <!-- menu principal-->
                 <nav class="main-menu viewport--trigger viewport" role="navigation" aria-label="Main">
-                    <ul class="hidden-sm-down">
+                    <ul class="hidden-md-down">
                         <li class="active">
                             <a href="#!">Home</a>
                             <span></span>
@@ -47,21 +47,21 @@
                     </ul>
                     <ul class="social--links ml-4">
                         <li>
-                            <a href="http://twitter.com" target="_blank" class="icon-twitter link-gradient" title="twitter"></a>
+                            <a href="http://twitter.com" target="_blank" class="icon-twitter text-gradient" title="twitter"></a>
                         </li>
                         <li>
-                            <a href="https://github.com/angrygabo/boogo" target="_blank" class="icon-github link-gradient" title="github"></a>
+                            <a href="https://github.com/angrygabo/boogo" target="_blank" class="icon-github text-gradient" title="github"></a>
                         </li>
                         <li>
-                            <a href="https://join.slack.com/t/boogo/shared_invite/zt-e2bx193m-JN26GnO7LCKBPWNoLRtlrQ" target="_blank" class="icon-slack link-gradient" title="Slack community"></a>
+                            <a href="https://join.slack.com/t/boogo/shared_invite/zt-e2bx193m-JN26GnO7LCKBPWNoLRtlrQ" target="_blank" class="icon-slack text-gradient" title="Slack community"></a>
                         </li>
                     </ul>
                     <!-- <span class="version">v1.0 beta</span> -->
-                    <a class="btn btn-gradient ml-4 btn-vanilla hidden-sm-down viewport--trigger viewport" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                    <a href="/boogo-v1.0--beta.zip" class="btn btn-gradient ml-4 btn-vanilla hidden-md-down" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="y" data-tilt-axis="x">
                         <i class="icon-download3"></i>
                         download v1.0 b
                     </a>
-                </nav>
+                </div>
             </div>
         </div>
     </header>
@@ -70,7 +70,7 @@
             <div class="container position-relative parallax-content">
                 <div class="row h-100 align-items-center">
                     <div class="home-info">
-                        <h1 class="home--title text-mask-gradient viewport--trigger viewport">
+                        <h1 class="home--title viewport--trigger viewport">
                             <span>less code,<br></span>
                             <span>better results!</span>
                         </h1>
@@ -80,18 +80,25 @@
                         </div>
                     </div>
                 </div>
-                <div class="version--info viewport--trigger viewport hidden-sm-down">Current version, <span class="home-logo--version">boogo</span> 1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read documentation</a></div>
-                <div class="scroll-indicator__line viewport--trigger viewport hidden-sm-down">
-                    <div class="scroll-indicator__text">scroll down</div>
+                <div class="version--info viewport--trigger viewport hidden-md-down">
+                    Current version, <span class="home-logo--version">boogo</span> 1.0 beta - Code licensed GNU, <a href="https://github.com/angrygabo/boogo/blob/master/LICENSE" target="_blank">read license</a>
+                </div>
+                <div class="scroll-indicator__line viewport--trigger viewport hidden-md-down">
+                    <div class="scroll-indicator__text">
+                        scroll down
+                    </div>
                 </div>
                 <div class="home-logo--watermark">
                     boogo
                 </div>
             </div>
         </section>
-
+    
         <section class="section--wrapper position-relative" id="create-templates">
             <div class="container">
+                <div class="textcross hidden-md-down">
+                    boogo boogo boogo boogo boogo 
+                </div>
                 <div class="row flex-column align-items-center wrap-section--title">
                     <h2 class="col-8 col-sm-12 px-3 section--title justify-content-center m-0 viewport--trigger viewport">
                         Pages templates </br>like professionals
@@ -102,23 +109,25 @@
                     </span>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 child-col-sm-12 child-col-6 child-spacing-3 section-info--wrapper mt-5 mt-sm-1">
-                        <div class="col align-items-center">
+                    <div class="col-10 col-sm-12 col-md-12 child-col-sm-12 child-col-6 child-spacing-3 section-info--wrapper mt-5 mt-sm-1">
+                        <div class="col align-items-center viewport--trigger viewport">
                             <div>
-                                <h3 class="item-title--info viewport--trigger viewport m-0">Check out our extensive library of examples</h3>
-                                <p class="py-5 viewport--trigger viewport">
+                                <h3 class="item-title--info m-0">
+                                    Check out our extensive library of examples
+                                </h3>
+                                <p class="py-5">
                                     Your projects in record time and with amazing results, our sample guide will make your job easier, from using frame parts to custom components and designs.
                                 </p>
-                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                <a class="btn btn-gradient btn-vanilla" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="y" data-tilt-axis="x">
                                     <i class="icon-lamp"></i>
                                     See more
                                 </a>
-                            </div>
+                            </div>  
                         </div>
                         <div class="col justify-content-end hidden-sm-down viewport--trigger viewport">
                             <figure class="info--image circle-item vanilla-tilt" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1" data-tilt data-tilt-reverse="true">
                                 <div class="wrapper-logo">
-                                    <div class="small-boogo text-mask-gradient">bg</div>
+                                    <div class="small-boogo text-mask-gradient">go</div>
                                 </div>
                                 <img src="assets/images/image-resources.png" alt="boogo library examples"/>
                                 <video autoplay muted loop id="video" class="object-fit-cover">
@@ -131,9 +140,10 @@
                 </div>
             </div>
         </section>
+    
         <section class="section--wrapper position-relative" id="how-to-use">
             <div class="container">
-                <div class="row flex-column align-items-center wrap-section--title">
+                <div class="row flex-column align-items-center wrap-section--title" id="use">
                     <h2 class="col-8 col-sm-12 px-3 section--title justify-content-center m-0 viewport--trigger viewport">
                         How to use?
                     </h2>
@@ -143,7 +153,7 @@
                     </span>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-10 col-sm-12 child-col-6 child-col-sm-12 child-spacing-3 section-info--wrapper">
+                    <div class="col-10 col-sm-12 col-md-12 child-col-6 child-col-sm-12 child-spacing-3 section-info--wrapper">
                         <div class="col col-sm-12 col-md-12 justify-content-center align-items-center viewport--trigger viewport">
                             <div class="row flex-column align-items-center item_hover--animation item-cards py-5 px-5 px-sm-3 py-sm-3">
                                 <h3 class="w-100 item-title--info  text-center justify-content-center mt-4">
@@ -153,7 +163,7 @@
                                 <span class="w-100 text-center">
                                     Get started with boogo, a completly framework for building professionals templates page.
                                 </span>
-                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                <a href="/documentation" class="btn btn-gradient btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="y" data-tilt-axis="x">
                                     <i class="icon-keyboard_arrow_right"></i>
                                     See more
                                 </a>
@@ -168,7 +178,7 @@
                                 <span class="w-100 text-center">
                                     Get your website templates here and use them on your website, multipurpose, e-commerce and more!
                                 </span>
-                                <a class="btn btn-gradient viewport--trigger viewport btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                                <a href="/templates" class="btn btn-gradient btn-vanilla my-4" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt-axis="y" data-tilt-axis="x">
                                     <i class="icon-target"></i>
                                     Pick one
                                 </a>
@@ -176,23 +186,23 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="container-fluid viewport--trigger viewport">
-                    <pre>
-                        <code>
-                            &lt;h1 class="home--title text-mask-gradient viewport--trigger viewport"&gt;
-                                &lt;span&gt;make&lt;br&gt;&lt;/span&gt;
-                                &lt;span&gt;something&lt;br&gt;&lt;/span&gt;
-                                &lt;span&gt;different...&lt;/span&gt;
-                            &lt;/h1&gt;
-                        </code>
-                    </pre>
-                </div> -->
-
             </div>
         </section>
-<!-- 
-        <section>
-            <div class="container">
+
+        <!-- <div class="container-fluid viewport--trigger viewport">
+            <pre>
+                <code>
+                    &lt;h1 class="home--title text-mask-gradient viewport--trigger viewport"&gt;
+                        &lt;span&gt;make&lt;br&gt;&lt;/span&gt;
+                        &lt;span&gt;something&lt;br&gt;&lt;/span&gt;
+                        &lt;span&gt;different...&lt;/span&gt;
+                    &lt;/h1&gt;
+                </code>
+            </pre>
+        </div> -->
+        <!-- 
+            <section>
+                <div class="container">
                 <div class="row child-col-4 child-spacing-3 mt-5 mt-sm-1">
                     <div class="col">11</div>
                     <div class="col">11</div>
@@ -210,10 +220,10 @@
 
         <footer class="py-5">
             <div class="container">
-                <div class="row">
-                    <nav class="footer-menu hidden-sm-down" role="navigation" aria-label="Main">
-                        <ul>
-                            <li class="active">
+                <div class="row justify-content-sm-center">
+                    <nav class="footer-menu" role="navigation" aria-label="Main">
+                        <ul class="justify-content-sm-center">
+                            <li>
                                 <a href="#!">Home</a>
                             </li>
                             <li>
@@ -241,9 +251,21 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.1/highlight.min.js"></script>
     <script src="js/boogo.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        // vanilla require
+        VanillaTilt.init(document.querySelector(".vanilla-tilt"), {
+            max: 10,
+            speed: 500
+        });
+        VanillaTilt.init(document.querySelector(".btn-vanilla"), {
+            max: 0,
+            speed: 500
+        });
+    </script>
 
     </body>
 </html>

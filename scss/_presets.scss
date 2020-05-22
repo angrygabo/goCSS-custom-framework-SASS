@@ -61,6 +61,10 @@ abbr[data-original-title] {
   text-decoration: underline;
 }
 
+details {
+  width: $percent;
+}
+
 // list default style
 ol,
 ul,
@@ -83,7 +87,10 @@ dl {
 
 // font style
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $rem*1.5;
+  padding: $rem*2;
+  background: #f6f6f6;
+  border-left: $rem*0.5 solid #ebebeb;
 }
 b,
 strong {
