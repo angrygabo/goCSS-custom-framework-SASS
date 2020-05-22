@@ -1,23 +1,80 @@
 // parallax content
 function parallaxScroll() {
     var scrolled = $(window).scrollTop();
-    $('.parallax-content').css('transform', 'translate3d(0, '+ scrolled*0.5 + 'px, 0)');
+    var transformValue = '.8s cubic-bezier(.1,.3,.1,1) 0s';
+    $('.parallax-content').css({
+        'position':'relative',
+        '-webkit-transform':'translate3d(0, '+ scrolled*0.5 + 'px, 0)',
+        'transform':'translate3d(0, '+ scrolled*0.5 + 'px, 0)',
+        '-webkit-transition': '-webkit-transform '+ transformValue,
+        'transition': '-webkit-transform '+ transformValue,
+        '-o-transition': 'transform '+ transformValue,
+        'transition': 'transform '+ transformValue,
+        'transition': 'transform '+ transformValue +', -webkit-transform '+ transformValue,
+        'filter': 'blur(' + scrolled*0.01 + 'px)'
+    })
+}
+
+// anchors
+// var hash = $(location).attr('hash');
+// var scrolled = $(hash).offset().top;
+// alert(hash + '-' + scrolled);
+
+// if (scrolled != null) {
+//     $(window).scrollTop(scrolled);
+//     $('#boogo-scrolling').css({
+//         '-webkit-transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+//         'transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+//     })
+// }
+
+function boogoscrollingAnchor() {
+    $('a').click(function () { 
+        var anchor = $(this).attr('href');
+        var scrolled = $(anchor).offset().top;
+        if (scrolled != null && scrolled >= 0) {
+            $(window).scrollTop(scrolled);
+            $('#boogo-scrolling').css({
+                '-webkit-transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+                'transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+            })
+        }
+    });
 }
 
 // boogo smothscrolling
 function boogoscrolling() {
+    var transformValue = '.8s cubic-bezier(.1,.3,.1,1) 0s';
     // boogo scrolling v1.0
     var scrolled = $(window).scrollTop();
     var docheight = $('#boogo-scrolling').height(); // get content height
     $('body').css('height', +  docheight + 'px'); // set body content height
-    $('#boogo-scrolling').css('transform', 'translate3d(0, '+ -scrolled + 'px, 0)'); // scroll content when scrolling
-    $('.corregir').css('transform', 'translate3d(0, '+ scrolled + 'px, 0)'); // scroll content when scrolling
+
+    // scroll
+    $('#boogo-scrolling').css({
+        'position': 'fixed',
+        'width': '100%',
+        'height': 'auto',
+        'top': '0',
+        'left': '0',
+        'overflow-x': 'hidden',
+        '-webkit-transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+        'transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
+        '-webkit-transition': '-webkit-transform '+ transformValue,
+        'transition': '-webkit-transform '+ transformValue,
+        '-o-transition': 'transform '+ transformValue,
+        'transition': 'transform '+ transformValue,
+        'transition': 'transform '+ transformValue +', -webkit-transform '+ transformValue,
+        'z-index': '0',
+     })
 }
 
-// text horizontal
+// scroll content when scrolling (require css)
 function textcross() { 
     var scrolled = $(window).scrollTop();
-    $('.textcross').css('transform', 'translate3d('+ -scrolled + 'px, 0, 0)'); // scroll content when scrolling
+    // scroll content when scrolling
+    $('.textcross').css('-webkit-transform', 'translate3d('+ -scrolled + 'px, 0, 0)'); 
+    $('.textcross').css('transform', 'translate3d('+ -scrolled + 'px, 0, 0)');
 }
 
 // ghost header
@@ -34,10 +91,10 @@ function stickymenu() {
         onTop = elScroll;
     });
     if (jQuery(window).scrollTop() > 200) {
-        $('#header').addClass('sticky-header');
+        $('#header').addClass('home-header');
     } 
     else {
-        $('#header').removeClass('sticky-header');
+        $('#header').removeClass('home-header');
     }
 }
 
@@ -60,30 +117,8 @@ function inviewport() {
         var docViewBottom = scrollTop + viewporth;
         var elemBottom = offset;
         return (elemBottom <= docViewBottom) && (offset >= scrollTop);
-        //return ((elemBottom <= docViewBottom) && (offset >= scrollTop));
     }
 }
-
-// function inviewport() {
-//     $('.viewport').each(function (i) {
-//         if (onview($(this))) {
-//             $(this).delay(150 * i).animate({ opacity: 1 }, function () {
-//                 $(this).addClass('in-viewport');
-//                 setTimeout(function () {
-//                     $('.in-viewport').removeClass('viewport');
-//                 }, 10);
-//             });
-//         }
-//     });
-//     function onview(item) {
-//         var scrollTop = $(window).scrollTop();
-//         var viewporth = $(window).height();
-//         var docViewBottom = scrollTop + viewporth;
-//         var offset = $(item).offset().top;
-//         var elemBottom = elemTop + $(item).height() - 300;
-//         return ((elemBottom <= docViewBottom) && (offset >= docViewTop));
-//     }
-// }
 
 // scroll line
 function scrollLine() {
@@ -103,18 +138,45 @@ function precode() {
     });
 }
 
+// is mobile
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+// listen functions
 $(document).ready(function () {
-    boogoscrolling() 
+    if(!isMobile.any()) {
+        boogoscrolling();
+        boogoscrollingAnchor();
+    }
     inviewport();
     scrollLine();
     precode();
     $(window).on('scroll', function () {
-        boogoscrolling() 
-        parallaxScroll();
+        if(!isMobile.any()) {
+            boogoscrolling();
+            parallaxScroll();
+        }
         stickymenu();
         inviewport();
         scrollLine();
         textcross()
     });
-
 });

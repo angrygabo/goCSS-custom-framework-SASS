@@ -84,6 +84,24 @@
     }
 }
 
+// flex wrap
+.flex-wrap{
+    @include flex-wrap;
+}
+.flex-nowrap{
+    @include flex-nowrap;
+}
+@each $size in $screen {
+    @include media-breakpoint-only($size) {
+        .flex-#{$size}-wrap{
+            @include flex-wrap;
+        }
+        .flex-#{$size}-nowrap{
+            @include flex-nowrap;
+        }
+    }
+}
+
 // flex direction
 .flex-row {
     flex-direction: row;
