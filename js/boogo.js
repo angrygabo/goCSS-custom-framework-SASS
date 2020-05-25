@@ -15,23 +15,20 @@ function parallaxScroll() {
     })
 }
 
-// anchors
-// var hash = $(location).attr('hash');
-// var scrolled = $(hash).offset().top;
-// alert(hash + '-' + scrolled);
-
-// if (scrolled != null) {
-//     $(window).scrollTop(scrolled);
-//     $('#boogo-scrolling').css({
-//         '-webkit-transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
-//         'transform': 'translate3d(0, '+ -scrolled + 'px, 0)',
-//     })
-// }
-
 function boogoscrollingAnchor() {
+    $(function () { 
+        var hash = $(location).attr('hash');
+        var scrolled = $(hash).position().top;
+        //alert(scrolled);
+        if (scrolled != null && scrolled >= 0) {
+            setTimeout(function() { 
+                $(window).scrollTop(scrolled);
+             }, 100);
+        }
+    });
     $('a').click(function () { 
         var anchor = $(this).attr('href');
-        var scrolled = $(anchor).offset().top;
+        var scrolled = $(anchor).position().top;
         if (scrolled != null && scrolled >= 0) {
             $(window).scrollTop(scrolled);
             $('#boogo-scrolling').css({
@@ -49,7 +46,6 @@ function boogoscrolling() {
     var scrolled = $(window).scrollTop();
     var docheight = $('#boogo-scrolling').height(); // get content height
     $('body').css('height', +  docheight + 'px'); // set body content height
-
     // scroll
     $('#boogo-scrolling').css({
         'position': 'fixed',
