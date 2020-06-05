@@ -1,5 +1,6 @@
 @import 'boogo';
 
+
 // default theme
 @mixin gradient-bg {
     background: linear-gradient(-45deg, #BB72FE, #C483FE, #F17E8A, #FB6281);
@@ -161,6 +162,36 @@ a {
                 span  {
                     @include gradient-bg;
                 }
+                ul {
+                    i {
+                        position: absolute;
+                        left: calc(50% - 8px);
+                        top: -17px;
+                        width: 0;
+                        height: 0;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid transparent;
+                        border-left: 8px solid transparent;
+                        border-bottom: 8px solid #f3f3f3;
+                        background-color: transparent;
+                    }
+                    top: 100%;
+                    border-radius: 0 0 5px 5px;
+                    background: #f3f3f3;
+                    border: 1px solid #ebebeb;
+                    border-top: 1px solid #f3f3f3;
+                    li {
+                        a {
+                            color: #242424;
+                        }   
+                        &:hover {
+                            background: #ebebeb;
+                            a {
+                                color: #242424;
+                            }
+                        }
+                    }
+                }
             }	
         }  
     }
@@ -230,12 +261,12 @@ nav.main-menu {
                 text-decoration: underline;
             }
         }
-    } 
+    }
     .home-logo--watermark {
         position: absolute;
         right: -7rem;
         bottom: -7rem;
-        font-size: 30rem;
+        font-size: 50rem;
         color: $white;
         font-family: "Lobster",cursive;
         pointer-events: none;
