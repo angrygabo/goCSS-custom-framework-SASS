@@ -15,6 +15,19 @@
 
 // spacing
 @for $spacing from 0 through $spacings {
+  
+  .p-#{$spacing} {
+    @include spacing-pt($spacing);
+    @include spacing-pb($spacing);
+    @include spacing-pr($spacing);
+    @include spacing-pl($spacing);
+  }
+  .m-#{$spacing} {
+    @include spacing-mt($spacing);
+    @include spacing-mb($spacing);
+    @include spacing-mr($spacing);
+    @include spacing-ml($spacing);
+  }
 
   // padding
   .pt-#{$spacing},.py-#{$spacing} {

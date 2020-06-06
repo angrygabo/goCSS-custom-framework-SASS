@@ -3,8 +3,8 @@ const autoprefixer = require('gulp-autoprefixer');
 
 
 gulp.task('prefix', () =>
-    gulp.src('boogo.min.css')
+    gulp.src('style.css')
         .pipe(autoprefixer())
-    .pipe(gulp.dest('./prefixe/boogo.min.css'))
+    .pipe(gulp.dest('./prefixe/style.css'))
 );
 
