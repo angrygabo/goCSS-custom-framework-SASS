@@ -90,6 +90,90 @@ for (var i = 0; i < el.length; i++) {
 
 }
 
+// parallax axis
+var el = document.getElementsByClassName('parallax-axis'),i;
+
+for (var i = 0; i < el.length; i++) {
+
+    (function () {
+      
+        var datazoom = el[i].dataset.zoom;
+        var dataintensity = el[i].dataset.intensity;
+        var dataaxis = el[i].dataset.axis;
+        var datareverse = el[i].dataset.reverse;
+      
+        if (datazoom == undefined || datazoom < 1) {
+          datazoom = 1;
+        }
+      
+        el[i].className += ' parallax-trigger_' + i;
+        el[i].innerHTML = '<div class="parallax-parent--'+ i +'"> '+ el[i].innerHTML +' </div>';
+        var parallax  = el[i].querySelector('.parallax-parent--' + i);
+        var wrapper  = el[i];
+      
+        var widthdoc= el[i].clientWidth;
+        var heightdoc= el[i].clientHeight;
+    
+        el[i].style.width = el[i].clientWidth + 'px';
+        el[i].style.height = el[i].clientHeight + 'px';
+
+        parallax.style.width = el[i].clientWidth + 'px';
+        parallax.style.height = el[i].clientHeight + 'px';
+
+        function reset(e){
+            e.preventDefault();
+            wrapper.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1,1)';
+        }
+
+        function zoomevent(e){
+            e.preventDefault();
+
+            var intensity = dataintensity;
+
+            if (dataintensity == 0) {
+              var intensity =  0.1;
+            } 
+
+            if (dataintensity == undefined || dataintensity == null) {
+              var intensity =  0.3;
+            } 
+
+            var degYdoc = -(((widthdoc*100) / widthdoc) * intensity)/2;
+            var degY = -(((e.offsetX*100) / widthdoc) * intensity);
+            
+            if (datareverse == 'true') {
+              var calcY =  degY - degYdoc;
+            } else {
+              var calcY = degYdoc - degY;
+            }
+
+            if (dataaxis == 'y' || dataaxis == 'Y') {
+              var calcY = 0;
+            }
+
+            var degXdoc = -(((heightdoc*100) / heightdoc) * intensity)/2;
+            var degX = -(((e.offsetY*100) / heightdoc) *intensity);
+            
+            if (datareverse == 'true') {
+              var calcX =  degXdoc - degX;
+            } else {
+              var calcX = degX - degXdoc;
+            }
+            if (dataaxis == 'x' || dataaxis == 'X') {
+              var calcX = 0;
+            }
+          
+            wrapper.style.transform = 'perspective(1000px) rotateX(' + calcX + 'deg) rotateY(' + calcY + 'deg) scale('+ datazoom +','+ datazoom +')';
+            wrapper.style.zIndex = "1";
+        }
+      
+        el[i].addEventListener("mousemove", zoomevent);
+        el[i].addEventListener("mouseout", reset);
+      
+    }(i));
+
+}
+
 // parallax content
 function parallaxcontent() {
     var scrolled = $(window).scrollTop();

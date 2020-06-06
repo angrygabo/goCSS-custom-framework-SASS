@@ -94,3 +94,31 @@
 		transition: .3s cubic-bezier(.1,.3,.1,1) 0s;
 	}
 }
+
+
+%transition-parallax {
+	-webkit-transition: .3s cubic-bezier(.1,.3,.1,1) 0s;
+	-o-transition: .3s cubic-bezier(.1,.3,.1,1) 0s;
+	transition: .3s cubic-bezier(.1,.3,.1,1) 0s;
+}
+.parallax-axis {
+	cursor: pointer;
+  	width: 500px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	@extend %transition-parallax;
+	[class*=parallax-parent] {
+    position: relative;
+    pointer-events: none;
+    width: 100%;
+	max-width: inherit;
+	@extend %transition-parallax;
+		img {
+			width: 100%;
+			height: auto;
+			vertical-align: middle;
+		}
+	}
+}

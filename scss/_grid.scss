@@ -16,6 +16,7 @@
 
 @for $col from 1 through $cols {
     // se cumple y deroga row-cols-{sizes} y child-col{sizes}
+    .col-#{$col} ,
     .row .col-#{$col} ,
     .child-col-#{$col} > * {
         @include col-default($col);
