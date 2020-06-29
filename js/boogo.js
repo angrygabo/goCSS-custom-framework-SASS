@@ -1,25 +1,3 @@
-// detect mobile
-var isMobile = {
-    Android: function () {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function () {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function () {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function () {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function () {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function () {
-        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-    }
-};
-
 // zoom image
 var el = document.getElementsByClassName('zoom-img'),i;
 
@@ -97,22 +75,22 @@ for (var i = 0; i < el.length; i++) {
 
     (function () {
       
-        var datazoom = el[i].dataset.zoom;
-        var dataintensity = el[i].dataset.intensity;
-        var dataaxis = el[i].dataset.axis;
-        var datareverse = el[i].dataset.reverse;
+        var datazoom = el[i].dataset.zoom,
+            dataintensity = el[i].dataset.intensity,
+            dataaxis = el[i].dataset.axis,
+            datareverse = el[i].dataset.reverse;
       
         if (datazoom == undefined || datazoom < 1) {
-          datazoom = 1;
+            datazoom = 1;
         }
       
         el[i].className += ' parallax-trigger_' + i;
         el[i].innerHTML = '<div class="parallax-parent--'+ i +'"> '+ el[i].innerHTML +' </div>';
-        var parallax  = el[i].querySelector('.parallax-parent--' + i);
-        var wrapper  = el[i];
-      
-        var widthdoc= el[i].clientWidth;
-        var heightdoc= el[i].clientHeight;
+
+        var parallax  = el[i].querySelector('.parallax-parent--' + i),
+            wrapper = el[i],
+            widthdoc = el[i].clientWidth,
+            heightdoc = el[i].clientHeight;
     
         el[i].style.width = el[i].clientWidth + 'px';
         el[i].style.height = el[i].clientHeight + 'px';
@@ -176,15 +154,51 @@ for (var i = 0; i < el.length; i++) {
 
 // parallax content
 function parallaxcontent() {
-    var scrolled = $(window).scrollTop();
-    $('.parallax-content').css({
-        'position': 'relative',
-        '-webkit-transform': 'translate3d(0, ' + scrolled * 0.5 + 'px, 0)',
-        'transform': 'translate3d(0, ' + scrolled * 0.5 + 'px, 0)',
-        'filter': 'blur(' + scrolled * 0.01 + 'px)'
-    })
+
+    $('.parallax-content').each(function (i) {
+            
+            // create wrapper parallax content
+            $(this).wrapInner('<div class="parallax-content-parent--'+ i+1 +'"></div>');
+
+            // get content height
+            var docheight = $('parallax-content-parent--'+ i+1).height();
+            var positionTop = $(this).position().top;
+            var viewportH = $(window).height()+150;
+      
+            // set content height
+            $('.parallax-content-parent--'+ i+1).css('height', docheight);
+
+            $(window).on('scroll', function () {
+
+                var scrolled = $(window).scrollTop();
+                var calcscroll = scrolled - positionTop;
+
+                //if (((scrolled + viewportH) >= positionTop) && ((positionTop + viewportH) <= positionTop)) {
+                if ((scrolled + viewportH) >= positionTop) {   
+                    $('.parallax-content-parent--'+ i+1).css({
+                        '-webkit-transform': 'translate3d(0, ' + calcscroll * 0.4 + 'px, 0)',
+                        'transform': 'translate3d(0, ' + calcscroll * 0.4 + 'px, 0)',
+                        'transition': 'transform 1s cubic-bezier(.1,.3,.1,1) 0s'
+                    });
+                }
+                
+            });
+    });
+
+}
+// smooth anchors
+function ajustinstafeed() {
+    setTimeout(function () {
+        var instafeedheight = $('.eapps-instagram-feed-container').height();
+        $('#eapps-instagram-feed-1').css({
+            'height': instafeedheight,
+            'overflow' : 'hidden'
+        });
+        $('.eui-widget-title, .eapps-instagram-feed-content').addClass('viewport viewport--trigger');
+    }, 5000);
 }
 
+// smooth anchors
 function smoothanchors() {
 
     // get hash anchor
@@ -225,11 +239,12 @@ function smoothpagescroll() {
     // scroll
     $('[data-page-scroll]').css({
         '-webkit-transform': 'translate3d(' + -scrolledleft + 'px, ' + -scrolled + 'px, 0)',
-        'transform': 'translate3d(' + -scrolledleft + 'px, ' + -scrolled + 'px, 0)',
+        'transform': 'translate3d(' + -scrolledleft + 'px, ' + -scrolled + 'px, 0)'
     })
 }
 
-// boogo smothscrolling
+
+// smooth page scrolling
 function smoothpagescroll() {
 
     // boogo scrolling v1.0
@@ -245,6 +260,7 @@ function smoothpagescroll() {
     })
 }
 
+// smoothbox scrolling
 function smoothboxscroll() {
 
     $('[data-box-scroll]').each(function (i) {
@@ -352,6 +368,52 @@ function smoothboxscroll() {
 
 }
 
+// parallax background
+function parallaxscroll() {
+
+    $('.parallax-scroll').each(function (i) {
+            
+        var dataurl = $(this).data('url'), 
+            dataparallax = $(this).data('parallax'); 
+        
+        if (dataurl != undefined) {
+            $(this).append('<div class="parallax-background--'+ i+1 +'"><img src="'+ dataurl +'"/>"</div>');
+        } 
+    
+        // create wrapper parallax content
+        $(this).wrapInner('<div class="parallax-scroll-parent--'+ i+1 +'"></div>');
+
+        // get content height
+        var docheight = $(this).height(),
+            positionTop = $(this).position().top,
+            viewportH = $(window).height()+170;
+    
+        // set content height
+        $('.parallax-scroll-parent--'+ i+1).css('min-height', docheight);
+        $(window).scrollTop(1);
+        $(window).on('scroll', function () {
+
+        var scrolled = $(window).scrollTop(),
+            calcscroll = scrolled - positionTop,
+            datascroll = {
+                '-webkit-transform': 'translate3d(0, ' + calcscroll * 0.4 + 'px, 0)',
+                'transform': 'translate3d(0, ' + calcscroll * 0.4 + 'px, 0)',
+                'transition': 'transform 1s cubic-bezier(.1,.3,.1,1) 0s'
+            };
+
+            if ((scrolled + viewportH) >= positionTop) {
+                if (dataparallax == 'background') {
+                    $('.parallax-background--'+ i+1).css(datascroll);
+                } else {
+                    $('.parallax-scroll-parent--'+ i+1).css(datascroll);
+                }
+            }
+            
+        });
+    });
+
+}
+
 // scroll content when scrolling (require css)
 function textcross() {
     $('.textcross').each(function () {
@@ -423,21 +485,46 @@ function precode() {
     });
 }
 
+// detect mobile
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+};
 
-// functions
-$(document).ready(function () {
+
+$( document ).ready(function() {
+    // functions
     if (!isMobile.any()) {
         smoothpagescroll();
         smoothanchors();
         smoothboxscroll();
+        parallaxcontent();
     }
+    parallaxscroll();
     inviewport();
     scrollLine();
     precode();
+    ajustinstafeed();
+
     $(window).on('scroll', function () {
         if (!isMobile.any()) {
             smoothpagescroll();
-            parallaxcontent();
         }
         stickymenu();
         inviewport();
