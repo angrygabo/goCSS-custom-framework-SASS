@@ -333,6 +333,48 @@
     @include position-sticky;
 }
 
+// overflow
+.overflow-hidden {
+    overflow: hidden;
+}
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+.overflow-y-hidden {
+    overflow-y: hidden;
+}
+.overflow-auto {
+    overflow: auto;
+}
+.overflow-x-auto {
+    overflow-x: auto;
+}
+.overflow-y-auto {
+    overflow-y: auto;
+}
+@each $size in $screen {
+    @include media-breakpoint-only($size) {
+        .overflow-#{$size}-auto {
+            overflow: auto;
+        }
+        .overflow-x-#{$size}-auto {
+            overflow-x: auto;
+        }
+        .overflow-y-#{$size}-auto {
+            overflow-y: auto;
+        }
+        .overflow-#{$size}-hidden {
+            overflow: hidden;
+        }
+        .overflow-x-#{$size}-hidden {
+            overflow-x: hidden;
+        }
+        .overflow-y-#{$size}-hidden {
+            overflow-y: hidden;
+        }
+    }
+}
+
 // defaults backgrounds
 .bg-primary {
     background-color: $primary-color;
