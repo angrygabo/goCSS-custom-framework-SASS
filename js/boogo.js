@@ -1,3 +1,25 @@
+// detect mobile
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+};
+
 // zoom image
 var el = document.getElementsByClassName('zoom-img'),i;
 
@@ -186,17 +208,6 @@ function parallaxcontent() {
     });
 
 }
-// smooth anchors
-function ajustinstafeed() {
-    setTimeout(function () {
-        var instafeedheight = $('.eapps-instagram-feed-container').height();
-        $('#eapps-instagram-feed-1').css({
-            'height': instafeedheight,
-            'overflow' : 'hidden'
-        });
-        $('.eui-widget-title, .eapps-instagram-feed-content').addClass('viewport viewport--trigger');
-    }, 5000);
-}
 
 // smooth anchors
 function smoothanchors() {
@@ -258,6 +269,18 @@ function smoothpagescroll() {
         '-webkit-transform': 'translate3d(' + -scrolledleft + 'px, ' + -scrolled + 'px, 0)',
         'transform': 'translate3d(' + -scrolledleft + 'px, ' + -scrolled + 'px, 0)',
     })
+
+    // disable smoothpagescroll in mobile
+    if (isMobile.any()) {
+        $('body').css('height', 'auto');
+        // scroll
+        $('[data-page-scroll]').css({
+            'position': 'relative',
+            'transition': 'none',
+            'transform': 'none'
+        })
+    }
+
 }
 
 // smoothbox scrolling
@@ -485,47 +508,25 @@ function precode() {
     });
 }
 
-// detect mobile
-var isMobile = {
-    Android: function() {
-        return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function() {
-        return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function() {
-        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function() {
-        return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function() {
-        return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function() {
-        return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-    }
-};
-
 
 $( document ).ready(function() {
     // functions
+    setTimeout(function () {
+        inviewport();
+    }, 500);
+    smoothpagescroll();
     if (!isMobile.any()) {
-        smoothpagescroll();
         smoothanchors();
         smoothboxscroll();
         parallaxcontent();
     }
     parallaxscroll();
-    inviewport();
+
     scrollLine();
     precode();
-    ajustinstafeed();
 
     $(window).on('scroll', function () {
-        if (!isMobile.any()) {
-            smoothpagescroll();
-        }
+        smoothpagescroll();
         stickymenu();
         inviewport();
         scrollLine();
