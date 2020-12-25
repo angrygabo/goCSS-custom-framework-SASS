@@ -71,19 +71,19 @@
 @mixin container($size) {
   .container {
     @if $size == xl {
-      width: $container-xl;
+      max-width: $container-xl;
     }
     @if $size == lg {
-      width: $container-lg;
+      max-width: $container-lg;
     }
     @if $size == md {
-      width: $container-md;
+      max-width: $container-md;
     }
     @if $size == sm {
-      width: $container-sm;
+      max-width: $container-sm;
     }
     @if $size == xs {
-      width: $container-xs;
+      max-width: $container-xs;
     }
   }
 }
@@ -160,6 +160,25 @@
       flex: 0 0 calc((#{$col} / 12) * 100%);
       max-width: calc((#{$col} / 12) * 100%);
     }
+  }
+}
+
+//line-clamp
+@mixin line-clamp($clamp) {
+  @if $clamp == 1 {
+    -webkit-line-clamp: $clamp;
+  }
+  @if $clamp == 2 {
+    -webkit-line-clamp: $clamp;
+  }
+  @if $clamp == 3 {
+    -webkit-line-clamp: $clamp;
+  }
+  @if $clamp == 4 {
+    -webkit-line-clamp: $clamp;
+  }
+  @if $clamp == 5 {
+    -webkit-line-clamp: $clamp;
   }
 }
 

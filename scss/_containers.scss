@@ -3,6 +3,11 @@
     @include clearfix;
 }
 
+//container 
+.container {
+    width: $percent;
+}
+
 // header
 .main-header--ghost {
     position: fixed;
@@ -38,6 +43,22 @@
 @each $size in $screen {
     @include media-breakpoint-only($size) {
         @include container($size);
+    }
+}
+
+//line-clamp
+@for $clamp from 1 through $line-clamp {
+    .line-clamp-#{$clamp} {
+        @include line-clamp($clamp);
+    }
+}
+@each $size in $screen {
+    @for $clamp from 1 through $line-clamp {
+        @include media-breakpoint-only($size) {
+            .line-clamp-#{$size}-#{$clamp} {
+                @include line-clamp($clamp);
+            }
+        }
     }
 }
 
