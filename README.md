@@ -1,7 +1,6 @@
 <p align="center">
-	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="booGO logo" width="200"></br>
-	CSS Framework Mobile First - Release 28/03/2020. versión SASS (LESS próximamente)</br></br>
-	(100% compatible con desarrollos basados en Boostrap 4.4)</br></br>
+	<img src="http://igluehost.com/wp-content/uploads/2016/02/Screenshot_2.jpg" alt="goCSS logo" width="200"></br>
+	CSS Framework Mobile First - Release 28/03/2020. versión SASS</br></br>
 	<a href="#breakpoints">breackpoints</a> | 
 	<a href="#grid">grid</a> |  
 	<a href="#child-col-único-en-boogo">Child-col (nuevo)</a> | 
@@ -15,7 +14,7 @@
 </p>
 
 
-# booGO 1.0 beta 
+# goCSS 1.0 beta 
 
 (La versión 1.0 beta solo dispone del sistema de grid basado en flexbox).
 
