@@ -18,15 +18,15 @@
 
 (La versión 1.0 beta solo dispone del sistema de grid basado en flexbox).
 
-booGO fue pensado y desarrollado para sacar su máximo provecho en desarrollos móviles pero tambien puede usarse perfectamente en desarrollos desktop. Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
+goCSS fue pensado y desarrollado para sacar su máximo provecho en desarrollos móviles pero tambien puede usarse perfectamente en desarrollos desktop. Use nuestra poderosa cuadrícula flexbox para crear diseños de todas las formas y tamaños gracias a un sistema de doce (12) columnas, cinco niveles de respuesta predeterminados, variables Sass y mixins, y docenas de clases predefinidas.
 
-booGO es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en otras versiones de frameworks más famosos, reduciendo al máximo la curva de aprendizaje, es decir, si ya has trabajado con otros frameworks CSS no tendrás problemas con booGO.
+goCSS es livano y potente, tan solo pesa 100 KB en su archivo minificado. Hemos incorporado todas las clases existentes en otras versiones de frameworks más famosos, reduciendo al máximo la curva de aprendizaje, es decir, si ya has trabajado con otros frameworks CSS no tendrás problemas con booGO.
 
-Además booGO cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}" abriendo un mundo de posibilidades, ideal para dispositivos móviles.
+Además goCSS cuenta con clases propias como ".child-col-{cols}, .child-col-{size}-{cols}, .child-spacing-{cols} " y "order-{size}-{cols}" abriendo un mundo de posibilidades, ideal para dispositivos móviles.
 
 # Presets
 
-booGO viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables.
+goCSS viene configurado con un conjunto de parámetros generales como un punto de partida sensible para minimizar las diferencias entre los navegadores y permitir valores predeterminados de representación más agradables.
 
 # ¿Qué será lo nuevo?
 
@@ -128,7 +128,7 @@ Con tres (3) niveles de espaciado "child-spacing-(1,2,3)" añade tamaño en com�
 	
 # Order
 
-Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en booGO)
+Ordene la posición de sus elementos en la web con nuestras clases "order" y aplique reglas para los diferentes breakpoints. (Único en goCSS)
 
 	.order-{cols}
 		.order-{sizes}-{cols}
